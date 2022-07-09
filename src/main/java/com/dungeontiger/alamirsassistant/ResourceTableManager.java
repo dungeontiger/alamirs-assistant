@@ -76,7 +76,7 @@ public class ResourceTableManager implements ITableManager {
                     results.add(tableResult);
                 }
             }
-            TableEntry tableEntry = new TableEntry(min, max, results);
+            TableEntry tableEntry = new TableEntry(dice, min, max, results);
             entries.add(tableEntry);
         }
 

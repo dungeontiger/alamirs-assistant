@@ -7,11 +7,13 @@ public class TableEntry {
     private int min;
     private int max;
     private List<BaseTableResult> results;
+    private Dice dice;
 
-    public TableEntry(int min, int max, List<BaseTableResult> results) {
+    public TableEntry(Dice dice, int min, int max, List<BaseTableResult> results) {
         this.min = min;
         this.max = max;
         this.results = results;
+        this.dice = dice;
     }
 
     boolean matches(int value) {
@@ -22,7 +24,9 @@ public class TableEntry {
         List<BaseTableResult> returns = new ArrayList<>();
         for (BaseTableResult result : results) {
             if (result instanceof TableResult) {
-                returns.add(result);
+                returns.add(new TableResult(dice.replaceRolls(((TableResult) result).getText()),
+                        dice.replaceRolls(((TableResult) result).getNotes()),
+                        ((TableResult) result).getReference()));
             } else if (result instanceof TableReferenceResult) {
                 TableReferenceResult tableRef = (TableReferenceResult) result;
                 returns.addAll(tableRef.roll());

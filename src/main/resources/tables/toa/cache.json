@@ -1,0 +1,189 @@
+{
+  "name": "Cache",
+  "description": "A random cache of supplies and items.",
+  "roll": "1d20",
+  "entries": [
+    {
+      "min": 1,
+      "max": 1,
+      "results": [
+        {
+          "text": "Rain catcher and mess kit."
+        }
+      ]
+    },
+    {
+      "min": 2,
+      "max": 2,
+      "results": [
+        {
+          "text": "10-day supply of preserved rations."
+        }
+      ]
+    } ,
+    {
+      "min": 3,
+      "max": 3,
+      "results": [
+        {
+          "text": "20-day supply of preserved rations."
+        }
+      ]
+    },
+    {
+      "min": 4,
+      "max": 4,
+      "results": [
+        {
+          "text": "50-day supply of preserved rations."
+        }
+      ]
+    },
+    {
+      "min": 5,
+      "max": 5,
+      "results": [
+        {
+          "text": "$roll(1d4) casks of water holding 5 gallons each."
+        }
+      ]
+    },
+    {
+      "min": 6,
+      "max": 6,
+      "results": [
+        {
+          "text": "$roll(1d4) casks of tej.",
+          "reference": "TOA:32"
+        }
+      ]
+    },
+    {
+      "min": 7,
+      "max": 7,
+      "results": [
+        {
+          "text": "$roll(1d4) climber's kits."
+        }
+      ]
+    },
+    {
+      "min": 8,
+      "max": 8,
+      "results": [
+        {
+          "text": "Coffer containing $roll(2d4) vials of antitoxin."
+        }
+      ]
+    },
+    {
+      "min": 9,
+      "max": 9,
+      "results": [
+        {
+          "text": "20-day supply of insect repellent salve in a leather tube.",
+          "reference": "TOA:32"
+        }
+      ]
+    },
+    {
+      "min": 10,
+      "max": 10,
+      "results": [
+        {
+          "text": "$roll(1d4) quivers, each containing $roll(1d20) arrows."
+        }
+      ]
+    },
+    {
+      "min": 11,
+      "max": 11,
+      "results": [
+        {
+          "text": "Canoe with six paddles."
+        }
+      ]
+    },
+    {
+      "min": 12,
+      "max": 12,
+      "results": [
+        {
+          "text": "2 hooded lanters and 10 flasks of lamp oil."
+        }
+      ]
+    },
+    {
+      "min": 13,
+      "max": 13,
+      "results": [
+        {
+          "text": "Two-person tent and $roll(1d4) explorer's packs."
+        }
+      ]
+    },
+    {
+      "min": 14,
+      "max": 14,
+      "results": [
+        {
+          "text": "Wooden box containing $roll(2d10) daggers (low quality used for trading)."
+        }
+      ]
+    },
+    {
+      "min": 15,
+      "max": 15,
+      "results": [
+        {
+          "text": "Set of navigator's tools."
+        }
+      ]
+    },
+    {
+      "min": 16,
+      "max": 16,
+      "results": [
+        {
+          "text": "$roll(1d10) changes of woolen clothing."
+        }
+      ]
+    },
+    {
+      "min": 17,
+      "max": 17,
+      "results": [
+        {
+          "text": "Set of cartographer's tools."
+        }
+      ]
+    },
+    {
+      "min": 18,
+      "max": 18,
+      "results": [
+        {
+          "text": "Two-person tent and $roll(1d4) healer's kits."
+        }
+      ]
+    },
+    {
+      "min": 19,
+      "max": 19,
+      "results": [
+        {
+          "text": "2 two-person tents, folding camp table, and four folding stools."
+        }
+      ]
+    },
+    {
+      "min": 20,
+      "max": 20,
+      "results": [
+        {
+          "text": "Wooden box containing $roll(2d4) potions of healing."
+        }
+      ]
+    }
+  ]
+}
