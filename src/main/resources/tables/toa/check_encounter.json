@@ -1,0 +1,27 @@
+{
+  "name": "Check Encounter",
+  "description": "A simple encounter table for testing.",
+  "roll": "1d20",
+  "entries": [
+    {
+      "min": 1,
+      "max": 15,
+      "results": [
+        {
+          "text": "No encounter."
+        }
+      ]
+    },
+    {
+      "min": 16,
+      "max": 20,
+      "results": [
+        {
+          "text": "Encounter.",
+          "notes": "An encounter occurs. What will the party face?",
+          "reference": "DMG: 56"
+        }
+      ]
+    }
+  ]
+}

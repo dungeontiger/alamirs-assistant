@@ -1,0 +1,37 @@
+{
+    "name": "Chult Weather",
+    "description": "Determines what rain, if any, occurs during an 8 hour period. During periods of heavy rain there is a 25% chance for a tropical storm.",
+    "roll": "1d20",
+    "entries": [
+        {
+            "min": 1,
+            "max": 12,
+            "results": [
+                {
+                    "text": "No rain."
+                }
+            ]
+        }, {
+            "min": 13,
+            "max": 17,
+            "results": [
+                {
+                    "text": "Light rain.",
+                    "notes": "Can collect 0.5 gal of water in 8 hours."
+                }
+            ]
+        }, {
+            "min": 18,
+            "max": 20,
+            "results": [
+                {
+                    "text": "Heavy rain.",
+                    "notes": "Can collect 1.5 gal of water in 8 hours. Visibility is limited to 150 ft. Missile weapon range reduced by half.",
+                    "reference": "TOA: 11"
+                }, {
+                    "table": "chult_tropical_storm"
+                }
+            ]
+        }
+    ]
+}
