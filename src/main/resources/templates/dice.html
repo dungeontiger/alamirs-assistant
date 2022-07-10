@@ -74,8 +74,26 @@
     </head>
     <body onLoad="onLoad()">
         <div th:replace="common/navbar::navbar"></div>
+        <div>
+        </div>
         <main class="p-5" id="main">
             <h1 class="pb-5">Dice Roller</h1>
+            <th:block th:each="i: ${#numbers.sequence(0,9)}">
+                <div class="mb-3 row">
+                    <label th:for="'dice' + ${i}" class="col-sm-1 col-form-label">Dice</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" th:id="'dice'+ ${i}">
+                    </div>
+                    <label th:for="'repeats' + ${i}" class="col-sm-1 col-form-label">Repeats</label>
+                    <div class="col-sm-1">
+                        <input type="text" class="form-control" th:id="'repeats' + ${i}">
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="submit" th:id="${i}" class="btn btn-primary mb-3" onclick="roll(this.id)">Roll</button>
+                    </div>
+                    <div class="h3 col-sm-3" th:id="'results' + ${i}"></div>
+                </div>
+            </th:block>
         </main>
     </body>
 </html>
