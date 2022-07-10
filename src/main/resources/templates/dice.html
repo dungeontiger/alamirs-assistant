@@ -4,7 +4,6 @@
         <script type="text/javascript">
             function onLoad() {
                 setActivePage("dice");
-                drawContent();
             }
 
             const roll = async (clicked_id) => {
@@ -20,55 +19,6 @@
                 const response = await fetch('/roll/' + dice + '/' + repeats);
                 const jsonResponse = await response.json();
                 document.getElementById('results' + clicked_id).textContent = jsonResponse;
-            }
-
-            function drawContent() {
-                var main = document.getElementById('main');
-                for (var i = 0; i < 10; i++) {
-                    var rootDiv = document.createElement('div');
-                    rootDiv.className='mb-3 row';
-                    main.appendChild(rootDiv);
-                    var label = document.createElement('label');
-                    label.for = 'dice' + i;
-                    label.className = 'col-sm-1 col-form-label';
-                    label.textContent = 'Dice';
-                    rootDiv.appendChild(label);
-                    var diceDiv = document.createElement('div');
-                    diceDiv.className = 'col-sm-2';
-                    rootDiv.appendChild(diceDiv);
-                    var diceInput = document.createElement('input');
-                    diceInput.type = "text";
-                    diceInput.id = "dice" + i;
-                    diceInput.className = "form-control";
-                    diceDiv.appendChild(diceInput);
-                    var repeatsLabel = document.createElement('label');
-                    repeatsLabel.for = 'repeats' + i;
-                    repeatsLabel.className = 'col-sm-1 col-form-label';
-                    repeatsLabel.textContent = 'Repeats';
-                    rootDiv.appendChild(repeatsLabel);
-                    var repeatsDiv = document.createElement('div');
-                    repeatsDiv.className = 'col-sm-1';
-                    rootDiv.appendChild(repeatsDiv);
-                    var repeatsInput = document.createElement('input');
-                    repeatsInput.type = 'text';
-                    repeatsInput.id = 'repeats' + i;
-                    repeatsInput.className = 'form-control';
-                    repeatsDiv.appendChild(repeatsInput);
-                    var buttonDiv = document.createElement('div');
-                    buttonDiv.className = 'col-sm-1';
-                    rootDiv.appendChild(buttonDiv);
-                    var button = document.createElement('button');
-                    button.type = 'submit';
-                    button.id = i;
-                    button.className = 'btn btn-primary mb-3';
-                    button.onclick = function() { roll(this.id); };
-                    button.textContent = 'Roll';
-                    buttonDiv.appendChild(button);
-                    var resultsDiv = document.createElement('div');
-                    resultsDiv.id = "results" + i;
-                    resultsDiv.className = "h3 col-sm-3";
-                    rootDiv.append(resultsDiv);
-                }
             }
         </script>
     </head>
@@ -97,20 +47,3 @@
         </main>
     </body>
 </html>
-
-<!--
-            <div class="mb-3 row">
-                <label for="dice0" class="col-sm-1 col-form-label">Dice</label>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" id="dice0">
-                </div>
-                <label for="repeats0" class="col-sm-1 col-form-label">Repeats</label>
-                <div class="col-sm-1">
-                    <input type="text" class="form-control" id="repeats0">
-                </div>
-                <div class="col-sm-1">
-                    <button type="submit" id="0" class="btn btn-primary mb-3" onclick="roll(this.id)">Roll</button>
-                </div>
-                <div class="h3 col-sm-3" id="results0"></div>
-            </div>
--->
