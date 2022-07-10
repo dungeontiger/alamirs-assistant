@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:include="common/head::head"></th:block>
+        <script type="text/javascript">
+            function onLoad() {
+                setActivePage("dice");
+            }
+
+            const roll = async (clicked_id) => {
+                var repeats = document.getElementById('repeats' + clicked_id).value;
+                var dice = document.getElementById('dice' + clicked_id).value;
+                if (!dice) {
+                    alert("Please indicate what dice to rolls");
+                    return;
+                }
+                if (!repeats) {
+                    repeats = 1;
+               }
+                const response = await fetch('/roll/' + dice + '/' + repeats);
+                const jsonResponse = await response.json();
+                document.getElementById('results' + clicked_id).textContent = jsonResponse;
+            }
+        </script>
+    </head>
+    <body onLoad="onLoad()">
+        <div th:replace="common/navbar::navbar"></div>
+        <main class="p-5">
+            <h1 class="p-b-5">Dice Roller</h1>
+
+            <div class="mb-3 row">
+                <label for="dice0" class="col-sm-1 col-form-label">Dice</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="dice0">
+                </div>
+                <label for="repeats0" class="col-sm-1 col-form-label">Repeats</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" id="repeats0">
+                </div>
+                <div class="col-sm-1">
+                    <button type="submit" id="0" class="btn btn-primary mb-3" onclick="roll(this.id)">Roll</button>
+                </div>
+                <div class="h3 col-sm-3" id="results0"></div>
+            </div>
+        </main>
+    </body>
+</html>

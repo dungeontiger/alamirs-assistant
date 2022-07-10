@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:include="common/head::head"></th:block>
+        <script type="text/javascript">
+            function onLoad() {
+                setActivePage("tables");
+            }
+        </script>
+    </head>
+    <body onLoad="onLoad()">
+        <div th:replace="common/navbar::navbar"></div>
+    </body>
+</html>

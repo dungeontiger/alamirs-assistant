@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:include="common/head::head"></th:block>
+        <script type="text/javascript">
+            function onLoad() {
+                setActivePage("home");
+            }
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <div th:replace="common/navbar::navbar"></div>
+        <main class="p-5">
+            <h1>Alamir's Assistant</h1>
+            <p>This is a set of tools to help Dungeon Masters and speed up play.</p>
+        </main>
+    </body>
+</html>

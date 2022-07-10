@@ -2,24 +2,18 @@ package com.dungeontiger.alamirsassistant;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-public class Controller {
+@org.springframework.web.bind.annotation.RestController
+public class RestController {
     private Dice dice = new Dice();
     private ITableManager tableManager;
 
-    public Controller() {
+    public RestController() {
         tableManager = new ResourceTableManager(dice);
-    }
-
-    @GetMapping("/")
-    public String index() {
-        return "Alamir's Assistant";
     }
 
     @GetMapping(value = {"/roll/{diceString}", "/roll/{diceString}/{repeat}"})
