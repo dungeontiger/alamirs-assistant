@@ -1,0 +1,47 @@
+{
+  "name": "Test Table Refs",
+  "description": "Test references to other tables and subtables..",
+  "roll": "1d4",
+  "entries": [
+    {
+      "min": 1,
+      "max": 1,
+      "results": [
+        {
+          "tableRef": "test"
+        }
+      ]
+    },
+    {
+      "min": 2,
+      "max": 2,
+      "results": [
+        {
+          "text": "Result 2",
+          "reference": "TOA:212, MM:15"
+        }
+      ]
+    },
+    {
+      "min": 3,
+      "max": 3,
+      "results": [
+        {
+          "text": "Result 3",
+          "notes": "This is a very nice long note. What do you think? Maybe I should send them a Lich."
+        }
+      ]
+    },
+    {
+      "min": 4,
+      "max": 4,
+      "results": [
+        {
+          "text": "Result 4",
+          "notes": "This is a very nice long note. It is longer than the other one. What do you think? Maybe I should send them a Beholder.",
+          "reference": "MM:115, DMG:15, PH:12"
+        }
+      ]
+    }
+  ]
+}

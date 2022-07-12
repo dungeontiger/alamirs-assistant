@@ -17,7 +17,7 @@
             "max": 20,
             "results": [
                 {
-                    "table": "beach_encounters"
+                    "tableRef": "beach_encounters"
                 }
             ]
         }

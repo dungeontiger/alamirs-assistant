@@ -2,9 +2,10 @@ package com.dungeontiger.alamirsassistant;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
 
 @Controller
-public class HTMLController {
+public class HTMLController extends BaseController {
     @GetMapping("/")
     public String index() {
         return "index";
@@ -16,7 +17,8 @@ public class HTMLController {
     }
 
     @GetMapping("/tables")
-    public String tables() {
+    public String tables(Model model) {
+        model.addAttribute("campaign", tableManager.getCampaigns());
         return "tables";
     }
 }

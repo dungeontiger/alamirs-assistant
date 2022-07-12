@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,8 +55,8 @@ public class ResourceTableManager implements ITableManager {
             JSONArray resultsJSON = entry.getJSONArray("results");
             for (Object f : resultsJSON) {
                 JSONObject resultJSON = (JSONObject) f;
-                if (resultJSON.has("table")) {
-                    File tableRef = new File(tableFile.getParent() + "/" + resultJSON.getString("table") + ".json");
+                if (resultJSON.has("tableRef")) {
+                    File tableRef = new File(tableFile.getParent() + "/" + resultJSON.getString("tableRef") + ".json");
                     results.add(new TableReferenceResult(buildTable(tableRef)));
                 } else {
                     String text = "";
@@ -97,5 +96,10 @@ public class ResourceTableManager implements ITableManager {
     @Override
     public Table getTable(String campaign, String table) {
         return tables.get(campaign).get(table);
+    }
+
+    @Override
+    public List<String> getTableNames(String campaignId) {
+        return tables.get(campaignId).keySet().stream().toList();
     }
 }

@@ -24,8 +24,6 @@
     </head>
     <body onLoad="onLoad()">
         <div th:replace="common/navbar::navbar"></div>
-        <div>
-        </div>
         <main class="p-5" id="main">
             <h1 class="pb-5">Dice Roller</h1>
             <th:block th:each="i: ${#numbers.sequence(0,9)}">

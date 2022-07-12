@@ -8,14 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @org.springframework.web.bind.annotation.RestController
-public class RestController {
-    private Dice dice = new Dice();
-    private ITableManager tableManager;
-
-    public RestController() {
-        tableManager = new ResourceTableManager(dice);
-    }
-
+public class RestController extends BaseController {
     @GetMapping(value = {"/roll/{diceString}", "/roll/{diceString}/{repeat}"})
     public List<Integer> roll(@PathVariable("diceString") String diceString, @PathVariable("repeat") Optional<Integer> repeat) {
         List<Integer> results = new ArrayList<>();
@@ -42,5 +35,15 @@ public class RestController {
             results.add(tableManager.getTable(campaignId, tableId).roll());
         }
         return results;
+    }
+
+    @GetMapping("/tableRoll/campaigns")
+    public List<String> campaigns() {
+        return tableManager.getCampaigns();
+    }
+
+    @GetMapping("/tableRoll/{campaignId}/tables")
+    public List<String> tables(@PathVariable("campaignId") String campaignId) {
+        return tableManager.getTableNames(campaignId);
     }
 }

@@ -5,9 +5,101 @@
             function onLoad() {
                 setActivePage("tables");
             }
+
+            const onSelectCampaign = async (clicked_id) => {
+                var selectedCampaign = document.getElementById("campaign").value;
+                const response = await fetch('/tableRoll/' + selectedCampaign + "/tables");
+                const jsonResponse = await response.json();
+                 for (var i = 0; i < 5; i++) {
+                    document.getElementById("table" + i).innerHTML = '';
+                 }
+                for (t in jsonResponse) {
+                    for (var i = 0; i < 5; i++) {
+                        var select = document.getElementById("table" + i);
+                        var option = document.createElement("option");
+                        option.textContent =  jsonResponse[t];
+                        select.appendChild(option);
+                    }
+                }
+            }
+
+            const roll = async (tableNum) => {
+                var repeats = document.getElementById('repeats' + tableNum).value;
+                var tableId = document.getElementById('table' + tableNum).value;
+                var campaignId = document.getElementById("campaign").value;
+
+                if (!repeats) {
+                    repeats = 1;
+                }
+                const response = await fetch('/tableRoll/' + campaignId + '/' + tableId + '/' + repeats);
+                const jsonResponse = await response.json();
+                var resultsElement = document.getElementById('results' + tableNum);
+                resultsElement.innerHTML = '';
+                for (r in jsonResponse) {
+                    resultsElement.appendChild(buildResponseCard(jsonResponse[r]));
+                }
+            }
+
+            function buildResponseCard(r) {
+                var result = document.createElement("div");
+                result.className = "card border bg-light m-1";
+                result.style = "width: 20rem;";
+                var body = document.createElement("div");
+                body.className = "card-body";
+                result.appendChild(body);
+                var title = document.createElement("h5");
+                title.className = "card-title";
+                title.textContent = r[0].text;
+                body.appendChild(title);
+                if (r[0].reference) {
+                    var reference = document.createElement("h6");
+                    reference.className = "card-subtitle text-muted";
+                    reference.textContent = r[0].reference;
+                    body.appendChild(reference);
+                }
+                if (r[0].notes) {
+                    var notes = document.createElement("p");
+                    notes.className = "card-text";
+                    notes.textContent = r[0].notes;
+                    body.appendChild(notes);
+                }
+                console.log(result.outerHTML);
+                return result;
+            }
         </script>
     </head>
     <body onLoad="onLoad()">
         <div th:replace="common/navbar::navbar"></div>
+        <main class="p-5" id="main">
+            <h1 class="pb-5">Table Roller</h1>
+            <div class="pb-5 mb-1 row">
+                <label for="campaign" class="col-sm-1 col-form-label">Campaign</label>
+                <div class="col-sm-2">
+                    <select class="form-select" onchange="onSelectCampaign()" id="campaign">
+                        <option selected>Select a campaign</option>
+                        <th:block th:each="c: ${campaign}">
+                            <option th:text="${c}"></option>
+                        </th:block>
+                    </select>
+                </div>
+            </div>
+
+            <th:block th:each="i: ${#numbers.sequence(0,4)}">
+                <div class="mb-3 row">
+                    <label th:for="'table' + ${i}" class="col-sm-1 col-form-label">Table</label>
+                    <div class="col-sm-2">
+                        <select type="text" class="form-select" th:id="'table'+ ${i}"></select>
+                    </div>
+                    <label th:for="'repeats' + ${i}" class="col-sm-1 col-form-label">Repeats</label>
+                    <div class="col-sm-1">
+                        <input type="text" class="form-control" th:id="'repeats' + ${i}">
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="submit" th:id="${i}" class="btn btn-primary mb-3" onclick="roll(this.id)">Roll</button>
+                    </div>
+                    <div class="row" th:id="'results' + ${i}"></div>
+                </div>
+            </th:block>
+        </main>
     </body>
 </html>
