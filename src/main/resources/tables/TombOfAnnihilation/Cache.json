@@ -1,0 +1,212 @@
+{
+  "name": "Cache",
+  "description": "A random cache of supplies and items.",
+  "roll": "1d20",
+  "entries": [
+    {
+      "min": 1,
+      "max": 1,
+      "results": [
+        {
+          "text": "Rain Catcher and Mess Kit",
+          "reference": "TOA:32, TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 2,
+      "max": 2,
+      "results": [
+        {
+          "text": "10-Day Supply of Preserved Rations",
+          "reference": "TOA:196"
+        }
+      ]
+    } ,
+    {
+      "min": 3,
+      "max": 3,
+      "results": [
+        {
+          "text": "20-Day Supply of Preserved Rations.",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 4,
+      "max": 4,
+      "results": [
+        {
+          "text": "50-Day Supply of Preserved Rations.",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 5,
+      "max": 5,
+      "results": [
+        {
+          "text": "$roll(1d4) Casks of Water",
+          "notes": "They hold 5 gallons each.",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 6,
+      "max": 6,
+      "results": [
+        {
+          "text": "$roll(1d4) Casks of Tej",
+          "notes": "Each cask holds 1 gallon.",
+          "reference": "TOA:32, TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 7,
+      "max": 7,
+      "results": [
+        {
+          "text": "$roll(1d4) Climber's Kits",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 8,
+      "max": 8,
+      "results": [
+        {
+          "text": "Coffer with $roll(2d4) Vials of Antitoxin",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 9,
+      "max": 9,
+      "results": [
+        {
+          "text": "20-Day Dupply of Insect Repellent Salve",
+          "notes": "In a leather tube.",
+          "reference": "TOA:32, TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 10,
+      "max": 10,
+      "results": [
+        {
+          "text": "$roll(1d4) Quivers",
+          "notes": "Each containing $roll(1d20) arrows.",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 11,
+      "max": 11,
+      "results": [
+        {
+          "text": "Canoe with Six Paddles",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 12,
+      "max": 12,
+      "results": [
+        {
+          "text": "2 Hooded Lanterns and 10 Flasks of Lamp Oil",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 13,
+      "max": 13,
+      "results": [
+        {
+          "text": "Two-person tent and $roll(1d4) Explorer's Packs",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 14,
+      "max": 14,
+      "results": [
+        {
+          "text": "Wooden Box $roll(2d10) Daggers",
+          "notes": "Low quality used for trading.",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 15,
+      "max": 15,
+      "results": [
+        {
+          "text": "Navigator's Tools",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 16,
+      "max": 16,
+      "results": [
+        {
+          "text": "$roll(1d10) Changes of Woolen Clothing",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 17,
+      "max": 17,
+      "results": [
+        {
+          "text": "Cartographer's Tools",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 18,
+      "max": 18,
+      "results": [
+        {
+          "text": "Two-person Tent and $roll(1d4) Healer's Kits",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 19,
+      "max": 19,
+      "results": [
+        {
+          "text": "2 Two-person Tents, Folding Camp Table, and Four Folding Stools",
+          "reference": "TOA:196"
+        }
+      ]
+    },
+    {
+      "min": 20,
+      "max": 20,
+      "results": [
+        {
+          "text": "Wooden box with $roll(2d4) Potions of Healing",
+          "reference": "TOA:196"
+        }
+      ]
+    }
+  ]
+}

@@ -38,18 +38,4 @@ public class Dice {
         }
         return roll(dice, sides, modifier);
     }
-
-    public String replaceRolls(String text) {
-        String result = text;
-        int index = result.indexOf("$roll");
-        while (index != -1) {
-            int startIndex = result.indexOf("(", index);
-            int endIndex = result.indexOf(")", startIndex);
-            String roll = result.substring(startIndex + 1, endIndex);
-            String value = ((Integer) roll(roll)).toString();
-            result = result.substring(0,  index) + value + result.substring(endIndex + 1);
-            index = result.indexOf("$roll");
-        }
-        return result;
-    }
 }

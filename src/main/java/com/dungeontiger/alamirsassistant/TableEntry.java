@@ -7,13 +7,13 @@ public class TableEntry {
     private int min;
     private int max;
     private List<BaseTableResult> results;
-    private Dice dice;
+    private NLG nlg;
 
-    public TableEntry(Dice dice, int min, int max, List<BaseTableResult> results) {
+    public TableEntry(NLG nlg, int min, int max, List<BaseTableResult> results) {
         this.min = min;
         this.max = max;
         this.results = results;
-        this.dice = dice;
+        this.nlg = nlg;
     }
 
     boolean matches(int value) {
@@ -23,14 +23,19 @@ public class TableEntry {
     List<BaseTableResult> getResults() {
         List<BaseTableResult> returns = new ArrayList<>();
         for (BaseTableResult result : results) {
-            if (result instanceof TableResult) {
-                returns.add(new TableResult(dice.replaceRolls(((TableResult) result).getText()),
-                        dice.replaceRolls(((TableResult) result).getNotes()),
-                        ((TableResult) result).getReference()));
+            if (result instanceof Table) {
+                Table table = (Table)result;
+                returns.addAll(table.roll());
             } else if (result instanceof TableReferenceResult) {
                 TableReferenceResult tableRef = (TableReferenceResult) result;
                 returns.addAll(tableRef.roll());
+            } else if (result instanceof TableResult) {
+                TableResult tableResult = (TableResult) result;
+                returns.add(new TableResult(nlg.replaceRolls(tableResult.getText()), nlg.replaceRolls(tableResult.getNotes()), tableResult.getReference()));
             }
+        }
+        if (returns.size() == 0) {
+            throw new RuntimeException("No result found for this table entry. min=" + min + " max=" + max);
         }
         return returns;
     }

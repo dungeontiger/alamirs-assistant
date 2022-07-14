@@ -27,14 +27,17 @@
                 var repeats = document.getElementById('repeats' + tableNum).value;
                 var tableId = document.getElementById('table' + tableNum).value;
                 var campaignId = document.getElementById("campaign").value;
+                var resultsElement = document.getElementById('results' + tableNum);
+                while (resultsElement.childElementCount > 0) {
+                    resultsElement.removeChild(resultsElement.firstChild);
+                    await sleep(100);
+                }
 
                 if (!repeats) {
                     repeats = 1;
                 }
                 const response = await fetch('/tableRoll/' + campaignId + '/' + tableId + '/' + repeats);
                 const jsonResponse = await response.json();
-                var resultsElement = document.getElementById('results' + tableNum);
-                resultsElement.innerHTML = '';
                 for (r in jsonResponse) {
                     resultsElement.appendChild(buildResponseCard(jsonResponse[r]));
                 }
@@ -43,7 +46,7 @@
             function buildResponseCard(r) {
                 var result = document.createElement("div");
                 result.className = "card border bg-light m-1";
-                result.style = "width: 20rem;";
+                result.style = "width: 15rem;";
                 var body = document.createElement("div");
                 body.className = "card-body";
                 result.appendChild(body);
@@ -65,6 +68,10 @@
                 }
                 console.log(result.outerHTML);
                 return result;
+            }
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
             }
         </script>
     </head>

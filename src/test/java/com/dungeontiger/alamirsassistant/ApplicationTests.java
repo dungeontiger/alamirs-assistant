@@ -31,7 +31,7 @@ class ApplicationTests {
 
 	@Test
 	public void testRoll() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/roll/1d8").accept(MediaType.APPLICATION_JSON));
-		System.out.println(content());
+		mvc.perform(MockMvcRequestBuilders.get("/roll/1d8").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
 	}
 }

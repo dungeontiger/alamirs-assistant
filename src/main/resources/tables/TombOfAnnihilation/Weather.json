@@ -1,0 +1,61 @@
+{
+    "name": "Chult Weather",
+    "description": "Determines what rain, if any, occurs during an 8 hour period. During periods of heavy rain there is a 25% chance for a tropical storm.",
+    "roll": "1d20",
+    "entries": [
+        {
+            "min": 1,
+            "max": 12,
+            "results": [
+                {
+                    "text": "No Rain"
+                }
+            ]
+        }, {
+            "min": 13,
+            "max": 17,
+            "results": [
+                {
+                    "text": "Light Rain",
+                    "notes": "Can collect 0.5 gal of water in 8 hours.",
+                    "reference": "TOA:11"
+                }
+            ]
+        }, {
+            "min": 18,
+            "max": 20,
+            "results": [
+                {
+                    "table": {
+                        "name": "Chult Tropical Storm",
+                        "description": "During periods of heavy rain, there is a 25% chance for a tropical storm.",
+                        "roll": "1d100",
+                        "entries": [
+                            {
+                                "min": 1,
+                                "max": 74,
+                                "results": [
+                                    {
+                                        "text": "Heavy Rain",
+                                        "notes": "Can collect 1.5 gal of water in 8 hours. Visibility is limited to 150 ft. Beyond that only huge or large objects can be distinguished. Missile weapon range reduced by half.",
+                                        "reference": "TOA:11"
+                                    }
+                                ]
+                            }, {
+                                "min": 75,
+                                "max": 100,
+                                "results": [
+                                    {
+                                        "text": "Tropical Storm",
+                                        "notes": " Can collect 3 gal of water in 8 hours. Guides will hunker down and not travel. Sheets of rain, high winds and lightning are constant. Traveling by river is impossible (swamped after 15 minutes). Traveling by foot results in 1 level of exhaustion. Must make a DC 10 Con check or gain another. Visibility is very limited and missile fire is not possible.",
+                                        "reference": "TOA: 11"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

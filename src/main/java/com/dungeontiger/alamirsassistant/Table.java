@@ -2,7 +2,7 @@ package com.dungeontiger.alamirsassistant;
 
 import java.util.List;
 
-public class Table {
+public class Table extends BaseTableResult {
     private String name;
     private String id;
     private String roll;
@@ -26,7 +26,7 @@ public class Table {
                 return entry.getResults();
             }
         }
-        throw new RuntimeException("Did not find an entry. Rolled " + rolledValue.toString() + " against talbe " + id);
+        throw new RuntimeException("Did not find an entry. Rolled " + rolledValue.toString() + " against table " + id);
     }
 
     String getName() {

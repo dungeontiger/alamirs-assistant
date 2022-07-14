@@ -15,9 +15,11 @@ public class ResourceTableManager implements ITableManager {
     // campaign maps to a map of table id to table
     private Map<String, Map<String, Table>> tables = new HashMap<>();
     private Dice dice;
+    private NLG nlg;
 
-    public ResourceTableManager(Dice dice) {
+    public ResourceTableManager(Dice dice, NLG nlg) {
         this.dice = dice;
+        this.nlg = nlg;
         try
         {
             String tablesPath = getClass().getClassLoader().getResource("tables").getPath();
@@ -25,7 +27,8 @@ public class ResourceTableManager implements ITableManager {
                 String campaignId = campaignFile.getName();
                 for (File tableFile : campaignFile.listFiles()) {
                     String tableId = tableFile.getName().replaceAll(".json", "");
-                    Table table = buildTable(tableFile);
+                    JSONObject tableJSON = (JSONObject)JSON.parse(new FileInputStream(tableFile));
+                    Table table = buildTable(tableJSON, tableFile.getName().replaceAll(".json", ""), tableFile.getParent());
                     Map<String, Table> tableMap = tables.get(campaignId);
                     if (tableMap == null) {
                         tableMap = new HashMap<>();
@@ -39,10 +42,8 @@ public class ResourceTableManager implements ITableManager {
         }
     }
 
-    private Table buildTable(File tableFile) throws FileNotFoundException, JSONException {
-        JSONObject tableJSON = (JSONObject)JSON.parse(new FileInputStream(tableFile));
+    private Table buildTable(JSONObject tableJSON, String id, String basePath) throws JSONException, FileNotFoundException {
         String name = tableJSON.getString("name");
-        String id = tableFile.getName().replaceAll(".json", "");
         String description = tableJSON.get("description").toString();
         String roll = tableJSON.get("roll").toString();
         List<TableEntry> entries = new ArrayList<>();
@@ -56,9 +57,16 @@ public class ResourceTableManager implements ITableManager {
             for (Object f : resultsJSON) {
                 JSONObject resultJSON = (JSONObject) f;
                 if (resultJSON.has("tableRef")) {
-                    File tableRef = new File(tableFile.getParent() + "/" + resultJSON.getString("tableRef") + ".json");
-                    results.add(new TableReferenceResult(buildTable(tableRef)));
+                    // referencing another table file
+                    File tableRef = new File(basePath + "/" + resultJSON.getString("tableRef") + ".json");
+                    JSONObject tableRefJSON = (JSONObject)JSON.parse(new FileInputStream(tableRef));
+                    results.add(new TableReferenceResult(buildTable(tableRefJSON, "", basePath)));
+                } else if (resultJSON.has("table")) {
+                    // embedded subtable
+                    // for subtables, the id is not really need
+                    results.add(buildTable((JSONObject) resultJSON.get("table"), "", basePath));
                 } else {
+                    // simple result
                     String text = "";
                     if (resultJSON.has("text")) {
                         text = resultJSON.getString("text");
@@ -75,7 +83,7 @@ public class ResourceTableManager implements ITableManager {
                     results.add(tableResult);
                 }
             }
-            TableEntry tableEntry = new TableEntry(dice, min, max, results);
+            TableEntry tableEntry = new TableEntry(nlg, min, max, results);
             entries.add(tableEntry);
         }
 
