@@ -36,7 +36,7 @@ public class TableTest {
         BaseTableResult result = results.get(0);
         assertTrue(result instanceof TableResult);
         TableResult tableResult = (TableResult) result;
-        assertEquals("test", tableResult.getText());
+        assertEquals("test", tableResult.getTitle());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class TableTest {
         BaseTableResult result = results.get(0);
         assertTrue(result instanceof TableResult);
         TableResult tableResult = (TableResult) result;
-        assertEquals("2 Lesser Half", tableResult.getText());
+        assertEquals("2 Lesser Half", tableResult.getTitle());
     }
 }
 

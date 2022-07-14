@@ -31,7 +31,7 @@ public class TableEntry {
                 returns.addAll(tableRef.roll());
             } else if (result instanceof TableResult) {
                 TableResult tableResult = (TableResult) result;
-                returns.add(new TableResult(nlg.replaceRolls(tableResult.getText()), nlg.replaceRolls(tableResult.getNotes()), tableResult.getReference()));
+                returns.add(new TableResult(nlg.replaceRolls(tableResult.getTitle()), nlg.replaceRolls(tableResult.getText()), tableResult.getReference()));
             }
         }
         if (returns.size() == 0) {

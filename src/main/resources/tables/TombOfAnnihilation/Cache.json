@@ -8,7 +8,7 @@
       "max": 1,
       "results": [
         {
-          "text": "Rain Catcher and Mess Kit",
+          "title": "Rain Catcher and Mess Kit",
           "reference": "TOA:32, TOA:196"
         }
       ]
@@ -18,7 +18,7 @@
       "max": 2,
       "results": [
         {
-          "text": "10-Day Supply of Preserved Rations",
+          "title": "10-Day Supply of Preserved Rations",
           "reference": "TOA:196"
         }
       ]
@@ -28,7 +28,7 @@
       "max": 3,
       "results": [
         {
-          "text": "20-Day Supply of Preserved Rations.",
+          "title": "20-Day Supply of Preserved Rations.",
           "reference": "TOA:196"
         }
       ]
@@ -38,7 +38,7 @@
       "max": 4,
       "results": [
         {
-          "text": "50-Day Supply of Preserved Rations.",
+          "title": "50-Day Supply of Preserved Rations.",
           "reference": "TOA:196"
         }
       ]
@@ -48,8 +48,8 @@
       "max": 5,
       "results": [
         {
-          "text": "$roll(1d4) Casks of Water",
-          "notes": "They hold 5 gallons each.",
+          "title": "$roll(1d4) Casks of Water",
+          "text": "They hold 5 gallons each.",
           "reference": "TOA:196"
         }
       ]
@@ -59,8 +59,8 @@
       "max": 6,
       "results": [
         {
-          "text": "$roll(1d4) Casks of Tej",
-          "notes": "Each cask holds 1 gallon.",
+          "title": "$roll(1d4) Casks of Tej",
+          "text": "Each cask holds 1 gallon.",
           "reference": "TOA:32, TOA:196"
         }
       ]
@@ -70,7 +70,7 @@
       "max": 7,
       "results": [
         {
-          "text": "$roll(1d4) Climber's Kits",
+          "title": "$roll(1d4) Climber's Kits",
           "reference": "TOA:196"
         }
       ]
@@ -80,7 +80,7 @@
       "max": 8,
       "results": [
         {
-          "text": "Coffer with $roll(2d4) Vials of Antitoxin",
+          "title": "Coffer with $roll(2d4) Vials of Antitoxin",
           "reference": "TOA:196"
         }
       ]
@@ -90,8 +90,8 @@
       "max": 9,
       "results": [
         {
-          "text": "20-Day Dupply of Insect Repellent Salve",
-          "notes": "In a leather tube.",
+          "title": "20-Day Dupply of Insect Repellent Salve",
+          "text": "In a leather tube.",
           "reference": "TOA:32, TOA:196"
         }
       ]
@@ -101,8 +101,8 @@
       "max": 10,
       "results": [
         {
-          "text": "$roll(1d4) Quivers",
-          "notes": "Each containing $roll(1d20) arrows.",
+          "title": "$roll(1d4) Quivers",
+          "text": "Each containing $roll(1d20) arrows.",
           "reference": "TOA:196"
         }
       ]
@@ -112,7 +112,7 @@
       "max": 11,
       "results": [
         {
-          "text": "Canoe with Six Paddles",
+          "title": "Canoe with Six Paddles",
           "reference": "TOA:196"
         }
       ]
@@ -122,7 +122,7 @@
       "max": 12,
       "results": [
         {
-          "text": "2 Hooded Lanterns and 10 Flasks of Lamp Oil",
+          "title": "2 Hooded Lanterns and 10 Flasks of Lamp Oil",
           "reference": "TOA:196"
         }
       ]
@@ -132,7 +132,7 @@
       "max": 13,
       "results": [
         {
-          "text": "Two-person tent and $roll(1d4) Explorer's Packs",
+          "title": "Two-person tent and $roll(1d4) Explorer's Packs",
           "reference": "TOA:196"
         }
       ]
@@ -142,8 +142,8 @@
       "max": 14,
       "results": [
         {
-          "text": "Wooden Box $roll(2d10) Daggers",
-          "notes": "Low quality used for trading.",
+          "title": "Wooden Box $roll(2d10) Daggers",
+          "text": "Low quality used for trading.",
           "reference": "TOA:196"
         }
       ]
@@ -153,7 +153,7 @@
       "max": 15,
       "results": [
         {
-          "text": "Navigator's Tools",
+          "title": "Navigator's Tools",
           "reference": "TOA:196"
         }
       ]
@@ -163,7 +163,7 @@
       "max": 16,
       "results": [
         {
-          "text": "$roll(1d10) Changes of Woolen Clothing",
+          "title": "$roll(1d10) Changes of Woolen Clothing",
           "reference": "TOA:196"
         }
       ]
@@ -173,7 +173,7 @@
       "max": 17,
       "results": [
         {
-          "text": "Cartographer's Tools",
+          "title": "Cartographer's Tools",
           "reference": "TOA:196"
         }
       ]
@@ -183,7 +183,7 @@
       "max": 18,
       "results": [
         {
-          "text": "Two-person Tent and $roll(1d4) Healer's Kits",
+          "title": "Two-person Tent and $roll(1d4) Healer's Kits",
           "reference": "TOA:196"
         }
       ]
@@ -193,7 +193,7 @@
       "max": 19,
       "results": [
         {
-          "text": "2 Two-person Tents, Folding Camp Table, and Four Folding Stools",
+          "title": "2 Two-person Tents, Folding Camp Table, and Four Folding Stools",
           "reference": "TOA:196"
         }
       ]
@@ -203,7 +203,7 @@
       "max": 20,
       "results": [
         {
-          "text": "Wooden box with $roll(2d4) Potions of Healing",
+          "title": "Wooden box with $roll(2d4) Potions of Healing",
           "reference": "TOA:196"
         }
       ]

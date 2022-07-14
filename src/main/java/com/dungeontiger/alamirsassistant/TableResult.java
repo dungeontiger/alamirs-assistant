@@ -6,13 +6,13 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class TableResult extends BaseTableResult {
-    String text;
+    String title;
     String reference;
-    String notes;
+    String text;
 
-    public TableResult(String text, String notes, String reference) {
+    public TableResult(String title, String text, String reference) {
+        this.title = title;
         this.text = text;
-        this.notes = notes;
         this.reference = reference;
     }
 }

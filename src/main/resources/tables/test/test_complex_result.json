@@ -1,14 +1,91 @@
 {
   "name": "Test Complex Result",
   "description": "Test a list of results.",
-  "roll": "1d1",
+  "roll": "1d4",
   "entries": [
     {
       "min": 1,
       "max": 1,
       "results": [
         {
-          "text": "test"
+          "titleList": [
+            {
+              "text": "Test"
+            },
+            {
+              "text": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "min": 2,
+      "max": 2,
+      "results": [
+        {
+          "titleList": [
+            {
+              "text": "Test"
+            },
+            {
+              "roll": "1d6"
+            }
+          ]
+        }
+      ]
+    }, {
+      "min": 3,
+      "max": 3,
+      "results": [
+        {
+          "titleList": [
+            {
+              "text": "Test"
+            },
+            {
+              "monster": {
+                "name": "Beholder",
+                "pluralForm": "Beholders",
+                "amount": "1d6",
+                "HD": "19d10 + 76",
+                "AC": 18,
+                "dexModifier": 2,
+                "reference": "MM:28"
+              }
+            }
+          ]
+        }
+      ]
+    }, {
+      "min": 4,
+      "max": 4,
+      "results": [
+        {
+          "titleList": [
+            {
+              "monster": {
+                "name": "Ghast",
+                "pluralForm": "Ghasts",
+                "amount": "1d2",
+                "HD": "8d8",
+                "AC": 13,
+                "dexModifier": 3,
+                "reference": "MM:148"
+              }
+            },
+            {
+              "monster": {
+                "name": "Ghoul",
+                "pluralForm": "Ghouls",
+                "amount": "1d8",
+                "HD": "5d8",
+                "AC": 12,
+                "dexModifier": 2,
+                "reference": "MM:148"
+              }
+            }
+          ]
         }
       ]
     }

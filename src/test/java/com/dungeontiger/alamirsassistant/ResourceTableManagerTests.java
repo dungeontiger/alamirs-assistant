@@ -1,6 +1,5 @@
 package com.dungeontiger.alamirsassistant;
 
-import org.apache.wink.json4j.JSONException;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -32,7 +31,15 @@ public class ResourceTableManagerTests {
     @Test
     public void testTableNames() {
         ResourceTableManager tableManager = new ResourceTableManager(new Dice(), new NLG());
-        List<String> tables = tableManager.getTableNames("TombOfAnnihilation");
-        assertFalse(tables.contains("test"));
+        List<String> tablesNames = tableManager.getTableNames("TombOfAnnihilation");
+        assertFalse(tablesNames.contains("test"));
+    }
+
+    @Test
+    public void testGetTables() {
+        ResourceTableManager tableManager = new ResourceTableManager(new Dice(), new NLG());
+        List<Table> tables = tableManager.getTables("test");
+        assertEquals("test", tables.get(0).getId());
+        assertEquals("Test a bunch of results.", tables.get(0).getDescription());
     }
 }

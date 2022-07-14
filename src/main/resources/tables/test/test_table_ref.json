@@ -8,7 +8,7 @@
       "max": 1,
       "results": [
         {
-          "text": "test"
+          "title": "test"
         }
       ]
     },
@@ -27,7 +27,7 @@
                 "max": 50,
                 "results": [
                   {
-                    "text": "$roll(1d4) Lesser Half"
+                    "title": "$roll(1d4) Lesser Half"
                   }
                 ]
               },
@@ -36,7 +36,7 @@
                 "max": 100,
                 "results": [
                   {
-                    "text": "Greater Half"
+                    "title": "Greater Half"
                   }
                 ]
               }
@@ -50,8 +50,8 @@
       "max": 3,
       "results": [
         {
-          "text": "Result 3",
-          "notes": "This is a very nice long note. What do you think? Maybe I should send them a Lich."
+          "title": "Result 3",
+          "text": "This is a very nice long note. What do you think? Maybe I should send them a Lich."
         }
       ]
     },
@@ -60,8 +60,8 @@
       "max": 4,
       "results": [
         {
-          "text": "Result 4",
-          "notes": "This is a very nice long note. It is longer than the other one. What do you think? Maybe I should send them a Beholder.",
+          "title": "Result 4",
+          "text": "This is a very nice long note. It is longer than the other one. What do you think? Maybe I should send them a Beholder.",
           "reference": "MM:115, DMG:15, PH:12"
         }
       ]

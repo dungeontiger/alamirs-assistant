@@ -8,20 +8,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class ApplicationTests {
+class HTMLControllerTests {
 
 	@Autowired
 	private MockMvc mvc;
-
-	@Test
-	void contextLoads() {
-	}
 
 	@Test
 	void testRoot() throws Exception {
@@ -30,8 +24,14 @@ class ApplicationTests {
 	}
 
 	@Test
-	public void testRoll() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/roll/1d8").accept(MediaType.APPLICATION_JSON))
+	void testDice() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/dice").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
+	}
+
+	@Test
+	void testTables() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/tables").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
 }

@@ -67,19 +67,19 @@ public class ResourceTableManager implements ITableManager {
                     results.add(buildTable((JSONObject) resultJSON.get("table"), "", basePath));
                 } else {
                     // simple result
+                    String title = "";
+                    if (resultJSON.has("title")) {
+                        title = resultJSON.getString("title");
+                    }
                     String text = "";
                     if (resultJSON.has("text")) {
                         text = resultJSON.getString("text");
-                    }
-                    String notes = "";
-                    if (resultJSON.has("notes")) {
-                        notes = resultJSON.getString("notes");
                     }
                     String reference = "";
                     if (resultJSON.has("reference")) {
                         reference = resultJSON.getString("reference");
                     }
-                    TableResult tableResult = new TableResult(text, notes, reference);
+                    TableResult tableResult = new TableResult(title, text, reference);
                     results.add(tableResult);
                 }
             }

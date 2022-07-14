@@ -8,7 +8,7 @@
       "max": 1,
       "results": [
         {
-          "text": "Text Only"
+          "title": "Text Only"
         }
       ]
     },
@@ -17,7 +17,7 @@
       "max": 2,
       "results": [
         {
-          "text": "Text and Reference",
+          "title": "Text and Reference",
           "reference": "TOA:212, MM:15"
         }
       ]
@@ -27,8 +27,8 @@
       "max": 3,
       "results": [
         {
-          "text": "Text and Notes",
-          "notes": "This is a very nice long note. What do you think? Maybe I should send them a Lich."
+          "title": "Text and Notes",
+          "text": "This is a very nice long note. What do you think? Maybe I should send them a Lich."
         }
       ]
     },
@@ -37,8 +37,8 @@
       "max": 4,
       "results": [
         {
-          "text": "Text, References and Notes",
-          "notes": "This is a very nice long note. It is longer than the other one. What do you think? Maybe I should send them a Beholder.",
+          "title": "Text, References and Notes",
+          "text": "This is a very nice long note. It is longer than the other one. What do you think? Maybe I should send them a Beholder.",
           "reference": "MM:115, DMG:15, PH:12"
         }
       ]

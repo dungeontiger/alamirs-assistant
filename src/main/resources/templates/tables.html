@@ -52,7 +52,7 @@
                 result.appendChild(body);
                 var title = document.createElement("h5");
                 title.className = "card-title";
-                title.textContent = r[0].text;
+                title.textContent = r[0].title;
                 body.appendChild(title);
                 if (r[0].reference) {
                     var reference = document.createElement("h6");
@@ -63,7 +63,7 @@
                 if (r[0].notes) {
                     var notes = document.createElement("p");
                     notes.className = "card-text";
-                    notes.textContent = r[0].notes;
+                    notes.textContent = r[0].text;
                     body.appendChild(notes);
                 }
                 console.log(result.outerHTML);

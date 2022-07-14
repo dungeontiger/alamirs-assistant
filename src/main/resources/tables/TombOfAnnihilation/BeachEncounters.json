@@ -8,7 +8,7 @@
             "max": 15,
             "results": [
                 {
-                    "text": "No Encounter"
+                    "title": "No Encounter"
                 }
             ]
         },
@@ -27,10 +27,10 @@
                                 "max": 7,
                                 "results": [
                                     {
-                                        "text": "$roll(1d4+1) Aarkocra",
+                                        "title": "$roll(1d4+1) Aarkocra",
                                         "reference": "TOA:196, MM:12",
 
-                                        "notes": "They are circling and only noticed if passive Perception is 15 or higher. They do not approach unless the players demonstrate peaceful intentions. They are friendly and can point out landmarks to the players."
+                                        "text": "They are circling and only noticed if passive Perception is 15 or higher. They do not approach unless the players demonstrate peaceful intentions. They are friendly and can point out landmarks to the players."
                                     }
                                 ]
                             },
@@ -39,7 +39,7 @@
                                 "max": 8,
                                 "results": [
                                     {
-                                        "text": "Artus Cimber",
+                                        "title": "Artus Cimber",
                                         "reference": "TOA:196, TOA:212"
                                     }
                                 ]
@@ -58,8 +58,8 @@
                                 "max": 12,
                                 "results": [
                                     {
-                                        "text": "Chwinga",
-                                        "notes": "Attempts to steal something valuable from the players. It is noticed by a character with passive Perception 17 or higher. Something is left if exhange: a pretty shell, a handful of nuts or an uncut gem worth 10gp.",
+                                        "title": "Chwinga",
+                                        "text": "Attempts to steal something valuable from the players. It is noticed by a character with passive Perception 17 or higher. Something is left if exhange: a pretty shell, a handful of nuts or an uncut gem worth 10gp.",
                                         "reference": "TOA:197, TOA:217"
                                     }
                                 ]
@@ -69,8 +69,8 @@
                                 "max": 14,
                                 "results": [
                                     {
-                                        "text": "$roll(1d3) allosauruses.",
-                                        "notes": "Spotted 300 ft away. A DC 15 Survival check can find a safe haven from the predators (tree branch, etc).",
+                                        "title": "$roll(1d3) allosauruses.",
+                                        "text": "Spotted 300 ft away. A DC 15 Survival check can find a safe haven from the predators (tree branch, etc).",
                                         "reference": "TOA:197"
                                     }
                                 ]
@@ -80,8 +80,8 @@
                                 "max": 16,
                                 "results": [
                                     {
-                                        "text": "$roll(2d6) dimetrodons.",
-                                        "notes": "Just hanging out. On an odd roll they ignore the players. On an even roll they are hungry and attack.",
+                                        "title": "$roll(2d6) dimetrodons.",
+                                        "text": "Just hanging out. On an odd roll they ignore the players. On an even roll they are hungry and attack.",
                                         "reference": "TOA:197"
                                     }
                                 ]
@@ -91,8 +91,8 @@
                                 "max": 21,
                                 "results": [
                                     {
-                                        "text": "2 plesiosauruses.",
-                                        "notes": "They are fighting over a dead giant octopus out 300 feet. They move to attack the players if in the water.",
+                                        "title": "2 plesiosauruses.",
+                                        "text": "They are fighting over a dead giant octopus out 300 feet. They move to attack the players if in the water.",
                                         "reference": "TOA:197"
                                     }
                                 ]
@@ -102,8 +102,8 @@
                                 "max": 28,
                                 "results": [
                                     {
-                                        "text": "$roll(2d6) pteranodons.",
-                                        "notes": "They keep their distance and only attack if threatened.",
+                                        "title": "$roll(2d6) pteranodons.",
+                                        "text": "They keep their distance and only attack if threatened.",
                                         "reference": "TOA:198"
                                     }
                                 ]
@@ -113,8 +113,8 @@
                                 "max": 31,
                                 "results": [
                                     {
-                                        "text": "$roll(1d4+1) quetzalcoatluses.",
-                                        "notes": "They keep their distance and only attack if threatened.",
+                                        "title": "$roll(1d4+1) quetzalcoatluses.",
+                                        "text": "They keep their distance and only attack if threatened.",
                                         "reference": "TOA:198"
                                     }
                                 ]
@@ -124,8 +124,8 @@
                                 "max": 37,
                                 "results": [
                                     {
-                                        "text": "$roll(3d6) velocirators.",
-                                        "notes": "They burst out of cover and attack. Contest roll Dex vs Passive Perception to avoid surprise.",
+                                        "title": "$roll(3d6) velocirators.",
+                                        "text": "They burst out of cover and attack. Contest roll Dex vs Passive Perception to avoid surprise.",
                                         "reference": "TOA:198"
                                     }
                                 ]
@@ -135,8 +135,8 @@
                                 "max": 40,
                                 "results": [
                                     {
-                                        "text": "Young red dragon.",
-                                        "notes": "Flying and ignores the players unless they try to get its attention.",
+                                        "title": "Young red dragon.",
+                                        "text": "Flying and ignores the players unless they try to get its attention.",
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -146,8 +146,8 @@
                                 "max": 42,
                                 "results": [
                                     {
-                                        "text": "Emerald Enclave.",
-                                        "notes": "1 priest and $roll(1d4) scouts.",
+                                        "title": "Emerald Enclave.",
+                                        "text": "1 priest and $roll(1d4) scouts.",
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -157,8 +157,8 @@
                                 "max": 46,
                                 "results": [
                                     {
-                                        "text": "Explorers.",
-                                        "notes": "Mage, priest, scout, and $roll(1d6) tribal warriors.",
+                                        "title": "Explorers.",
+                                        "text": "Mage, priest, scout, and $roll(1d6) tribal warriors.",
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -168,8 +168,8 @@
                                 "max": 49,
                                 "results": [
                                     {
-                                        "text": "Flaming fist.",
-                                        "notes": "Knight or veteran, acolyte and a scout. $roll(2d6) guards and $roll(1d5-1) deinonychuses.",
+                                        "title": "Flaming fist.",
+                                        "text": "Knight or veteran, acolyte and a scout. $roll(2d6) guards and $roll(1d5-1) deinonychuses.",
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -179,8 +179,8 @@
                                 "max": 52,
                                 "results": [
                                     {
-                                        "text": "$roll(3d6) flying monkeys.",
-                                        "notes": "Characters must pass a DC 12 Dexerity saving throw to avoid loosing a useful item.",
+                                        "title": "$roll(3d6) flying monkeys.",
+                                        "text": "Characters must pass a DC 12 Dexerity saving throw to avoid loosing a useful item.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -190,8 +190,8 @@
                                 "max": 55,
                                 "results": [
                                     {
-                                        "text": "Flying snakes.",
-                                        "notes": "On an even roll, they encounter 1 flying snake, on an odd result they encounter $roll(3d6) flying snakes. Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persausion check.",
+                                        "title": "Flying snakes.",
+                                        "text": "On an even roll, they encounter 1 flying snake, on an odd result they encounter $roll(3d6) flying snakes. Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persausion check.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -201,8 +201,8 @@
                                 "max": 57,
                                 "results": [
                                     {
-                                        "text": "3 frost giants and $roll(1d2) winter wolves.",
-                                        "notes": "Attack if players withhold information or threaten them. 20% to be Drufi's search party TOA:64.",
+                                        "title": "3 frost giants and $roll(1d2) winter wolves.",
+                                        "text": "Attack if players withhold information or threaten them. 20% to be Drufi's search party TOA:64.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -212,8 +212,8 @@
                                 "max": 63,
                                 "results": [
                                     {
-                                        "text": "$roll(1d6) giant lizards.",
-                                        "notes": "Attack if only threatened.",
+                                        "title": "$roll(1d6) giant lizards.",
+                                        "text": "Attack if only threatened.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -223,8 +223,8 @@
                                 "max": 67,
                                 "results": [
                                     {
-                                        "text": "1 giant snapping turtles.",
-                                        "notes": "Attackes if players get within 30 ft.",
+                                        "title": "1 giant snapping turtles.",
+                                        "text": "Attackes if players get within 30 ft.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -234,8 +234,8 @@
                                 "max": 71,
                                 "results": [
                                     {
-                                        "text": "1 lizardfolk shaman and $roll(2d4) lizardfolk.",
-                                        "notes": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
+                                        "title": "1 lizardfolk shaman and $roll(2d4) lizardfolk.",
+                                        "text": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
                                         "reference": "TOA:201"
                                     }
                                 ]
@@ -245,8 +245,8 @@
                                 "max": 74,
                                 "results": [
                                     {
-                                        "text": "Red Wizard: 1 mage, $roll(1d6) guards and $roll(1d6) skeletons.",
-                                        "notes": "They are not looking for a fight. If it looks like they are going to be defeated they surrender and give a map.",
+                                        "title": "Red Wizard: 1 mage, $roll(1d6) guards and $roll(1d6) skeletons.",
+                                        "text": "They are not looking for a fight. If it looks like they are going to be defeated they surrender and give a map.",
                                         "reference": "TOA:201"
                                     }
                                 ]
@@ -256,8 +256,8 @@
                                 "max": 84,
                                 "results": [
                                     {
-                                        "text": "3 sea hags.",
-                                        "notes": "Roll 3 times for a treasure drop. They try to trick the players",
+                                        "title": "3 sea hags.",
+                                        "text": "Roll 3 times for a treasure drop. They try to trick the players",
                                         "reference": "TOA:202"
                                     }
                                 ]
@@ -267,8 +267,8 @@
                                 "max": 87,
                                 "results": [
                                     {
-                                        "text": "$roll(2d6) stirges.",
-                                        "notes": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
+                                        "title": "$roll(2d6) stirges.",
+                                        "text": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
                                         "reference": "TOA:202"
                                     }
                                 ]
@@ -278,8 +278,8 @@
                                 "max": 89,
                                 "results": [
                                     {
-                                        "text": "$roll(1d4) swarm of bats.",
-                                        "notes": "They are aggressive.",
+                                        "title": "$roll(1d4) swarm of bats.",
+                                        "text": "They are aggressive.",
                                         "reference": "TOA:202"
                                     }
                                 ]
@@ -289,8 +289,8 @@
                                 "max": 95,
                                 "results": [
                                     {
-                                        "text": "Tabaxi hunter.",
-                                        "notes": "Passive Perception 15 to notice them. They watch the party from 300 ft. Shadows the party and may help them.",
+                                        "title": "Tabaxi hunter.",
+                                        "text": "Passive Perception 15 to notice them. They watch the party from 300 ft. Shadows the party and may help them.",
                                         "reference": "TOA:203"
                                     }
                                 ]
@@ -300,8 +300,8 @@
                                 "max": 100,
                                 "results": [
                                     {
-                                        "text": "$roll(1d4) tri-flower fonds.",
-                                        "notes": "They look like ordinary plants until they attack. At night they sneak in and  try to hit the players with orange blossoms first.",
+                                        "title": "$roll(1d4) tri-flower fonds.",
+                                        "text": "They look like ordinary plants until they attack. At night they sneak in and  try to hit the players with orange blossoms first.",
                                         "reference": "TOA:203"
                                     }
                                 ]
