@@ -60,13 +60,12 @@
                     reference.textContent = r[0].reference;
                     body.appendChild(reference);
                 }
-                if (r[0].notes) {
+                if (r[0].text) {
                     var notes = document.createElement("p");
                     notes.className = "card-text";
                     notes.textContent = r[0].text;
                     body.appendChild(notes);
                 }
-                console.log(result.outerHTML);
                 return result;
             }
 

@@ -22,7 +22,7 @@ public class TableTest {
     public void testSimpleEncounter() {
         ResourceTableManager tableManager = new ResourceTableManager(new Dice(2000), new NLG());
         Table table = tableManager.getTable("TombOfAnnihilation", "Cache");
-        List<BaseTableResult> results = table.roll();
+        List<ResponseResult> results = table.roll();
         assertEquals(1, results.size());
     }
 
@@ -31,12 +31,10 @@ public class TableTest {
         when(dice.roll(anyString())).thenReturn(1);
         ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
         Table table = tableManager.getTable("test", "test_table_ref");
-        List<BaseTableResult> results = table.roll();
+        List<ResponseResult> results = table.roll();
         assertTrue(results.size() == 1);
-        BaseTableResult result = results.get(0);
-        assertTrue(result instanceof TableResult);
-        TableResult tableResult = (TableResult) result;
-        assertEquals("test", tableResult.getTitle());
+        ResponseResult result = results.get(0);
+        assertEquals("test", result.getTitle());
     }
 
     @Test
@@ -44,12 +42,48 @@ public class TableTest {
         when(dice.roll(anyString())).thenReturn(2);
         ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
         Table table = tableManager.getTable("test", "test_table_ref");
-        List<BaseTableResult> results = table.roll();
+        List<ResponseResult> results = table.roll();
         assertTrue(results.size() == 1);
-        BaseTableResult result = results.get(0);
-        assertTrue(result instanceof TableResult);
-        TableResult tableResult = (TableResult) result;
-        assertEquals("2 Lesser Half", tableResult.getTitle());
+        ResponseResult result = results.get(0);
+        assertEquals("2 Lesser Half", result.getTitle());
+    }
+
+    @Test
+    public void testComplexText() {
+        when(dice.roll(anyString())).thenReturn(1);
+        ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
+        Table table = tableManager.getTable("test", "test_complex_result");
+        ResponseResult result = table.roll().get(0);
+        assertEquals("Test1", result.getTitle());
+    }
+
+    @Test
+    public void testComplexTextAndRoll() {
+        when(dice.roll("1d5")).thenReturn(2);
+        when(dice.roll("1d6")).thenReturn(3);
+        ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
+        Table table = tableManager.getTable("test", "test_complex_result");
+        ResponseResult result = table.roll().get(0);
+        assertEquals("Test3", result.getTitle());
+    }
+
+    @Test
+    public void testComplexTextAndMonsetr() {
+        when(dice.roll("1d5")).thenReturn(3);
+        when(dice.roll("1d6")).thenReturn(3);
+        ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
+        Table table = tableManager.getTable("test", "test_complex_result");
+        ResponseResult result = table.roll().get(0);
+        assertEquals("Test 3 Beholders", result.getTitle());
+    }
+
+    @Test
+    public void testText() {
+        when(dice.roll("1d4")).thenReturn(3);
+        ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
+        Table table = tableManager.getTable("test", "test");
+        ResponseResult result = table.roll().get(0);
+        assertEquals("This is a very nice long note. What do you think? Maybe I should send them a Lich.", result.getText());
     }
 }
 

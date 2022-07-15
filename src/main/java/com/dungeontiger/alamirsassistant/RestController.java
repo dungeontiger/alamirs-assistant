@@ -23,10 +23,10 @@ public class RestController extends BaseController {
     }
 
     @GetMapping(value = {"/tableRoll/{campaignId}/{tableId}", "/tableRoll/{campaignId}/{tableId}/{repeat}"})
-    public List<List<BaseTableResult>> tableRoll(@PathVariable("campaignId") String campaignId,
+    public List<List<ResponseResult>> tableRoll(@PathVariable("campaignId") String campaignId,
                                                  @PathVariable("tableId") String tableId,
                                                  @PathVariable("repeat") Optional<Integer> repeat) {
-        List<List<BaseTableResult>> results = new ArrayList<>();
+        List<List<ResponseResult>> results = new ArrayList<>();
         int repeats = 1;
         if (repeat.isPresent()) {
             repeats = repeat.get();

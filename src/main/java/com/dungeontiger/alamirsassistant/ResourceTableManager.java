@@ -60,26 +60,33 @@ public class ResourceTableManager implements ITableManager {
                     // referencing another table file
                     File tableRef = new File(basePath + "/" + resultJSON.getString("tableRef") + ".json");
                     JSONObject tableRefJSON = (JSONObject)JSON.parse(new FileInputStream(tableRef));
-                    results.add(new TableReferenceResult(buildTable(tableRefJSON, "", basePath)));
+                    results.add(buildTable(tableRefJSON, "", basePath));
                 } else if (resultJSON.has("table")) {
                     // embedded subtable
-                    // for subtables, the id is not really need
                     results.add(buildTable((JSONObject) resultJSON.get("table"), "", basePath));
                 } else {
-                    // simple result
                     String title = "";
                     if (resultJSON.has("title")) {
                         title = resultJSON.getString("title");
+                    }
+                    List<ICompositeListItem> titleList = null;
+                    if (resultJSON.has("titleList")) {
+                        titleList = buildList(resultJSON.getJSONArray("titleList"));
                     }
                     String text = "";
                     if (resultJSON.has("text")) {
                         text = resultJSON.getString("text");
                     }
+                    List<ICompositeListItem> textList = null;
+                    if (resultJSON.has("textList")) {
+                        textList = buildList(resultJSON.getJSONArray("textList"));
+                    }
                     String reference = "";
                     if (resultJSON.has("reference")) {
                         reference = resultJSON.getString("reference");
                     }
-                    TableResult tableResult = new TableResult(title, text, reference);
+                    // this will include lists too
+                    TableResult tableResult = new TableResult(title, titleList, text, textList, reference);
                     results.add(tableResult);
                 }
             }
@@ -89,6 +96,30 @@ public class ResourceTableManager implements ITableManager {
 
         Table table = new Table(dice, id, name, description, roll, entries);
         return table;
+    }
+
+    private List<ICompositeListItem> buildList(JSONArray items) throws JSONException {
+        List<ICompositeListItem> results = new ArrayList<>();
+        for (int i = 0; i < items.length(); i++) {
+            JSONObject o = items.getJSONObject(i);
+            if (o.has("text")) {
+                results.add(new TextCompositeListItem(o.getString("text")));
+            } else if (o.has("roll")) {
+                results.add(new RollCompositeListItem(o.getString("roll"), dice));
+            } else if (o.has("monster")) {
+                JSONObject m = o.getJSONObject("monster");
+                results.add(new MonsterCompositeListItem(
+                        m.getString("amount"),
+                        m.getString("name"),
+                        m.getString("pluralForm"),
+                        m.getString("HP"),
+                        m.getInt("dexModifier"),
+                        m.getInt("AC"),
+                        m.getString("reference"),
+                        dice));
+            }
+        }
+        return results;
     }
 
     @Override

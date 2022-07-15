@@ -19,7 +19,7 @@ public class Table extends BaseTableResult {
         this.dice = dice;
     }
 
-    public List<BaseTableResult> roll() {
+    public List<ResponseResult> roll() {
         Integer rolledValue = dice.roll(roll);
         for (TableEntry entry : entries) {
             if (entry.matches(rolledValue)) {

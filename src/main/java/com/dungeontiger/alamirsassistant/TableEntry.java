@@ -20,18 +20,16 @@ public class TableEntry {
         return value >= min && value <= max;
     }
 
-    List<BaseTableResult> getResults() {
-        List<BaseTableResult> returns = new ArrayList<>();
+    List<ResponseResult> getResults() {
+        List<ResponseResult> returns = new ArrayList<>();
         for (BaseTableResult result : results) {
             if (result instanceof Table) {
                 Table table = (Table)result;
                 returns.addAll(table.roll());
-            } else if (result instanceof TableReferenceResult) {
-                TableReferenceResult tableRef = (TableReferenceResult) result;
-                returns.addAll(tableRef.roll());
-            } else if (result instanceof TableResult) {
+           } else if (result instanceof TableResult) {
                 TableResult tableResult = (TableResult) result;
-                returns.add(new TableResult(nlg.replaceRolls(tableResult.getTitle()), nlg.replaceRolls(tableResult.getText()), tableResult.getReference()));
+                // need to compose the composite lists
+                returns.add(new ResponseResult(tableResult.getTitle(nlg), tableResult.getText(nlg), tableResult.getReference()));
             }
         }
         if (returns.size() == 0) {

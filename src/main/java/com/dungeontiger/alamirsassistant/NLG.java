@@ -1,5 +1,7 @@
 package com.dungeontiger.alamirsassistant;
 
+import java.util.List;
+
 public class NLG {
     private Dice dice;
     public NLG() {
@@ -18,6 +20,14 @@ public class NLG {
             String value = ((Integer) dice.roll(roll)).toString();
             result = result.substring(0,  index) + value + result.substring(endIndex + 1);
             index = result.indexOf("$roll");
+        }
+        return result;
+    }
+
+    public String processList(List<ICompositeListItem> compositeList) {
+        String result = "";
+        for (ICompositeListItem item : compositeList) {
+            result += replaceRolls(item.getResult());
         }
         return result;
     }
