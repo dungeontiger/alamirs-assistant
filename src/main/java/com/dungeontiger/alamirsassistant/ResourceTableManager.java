@@ -108,10 +108,14 @@ public class ResourceTableManager implements ITableManager {
                 results.add(new RollCompositeListItem(o.getString("roll"), dice));
             } else if (o.has("monster")) {
                 JSONObject m = o.getJSONObject("monster");
+                String pluralForm = null;
+                if (m.has("pluralForm")) {
+                    pluralForm = m.getString("pluralForm");
+                }
                 results.add(new MonsterCompositeListItem(
                         m.getString("amount"),
                         m.getString("name"),
-                        m.getString("pluralForm"),
+                        pluralForm,
                         m.getString("HP"),
                         m.getInt("dexModifier"),
                         m.getInt("AC"),
