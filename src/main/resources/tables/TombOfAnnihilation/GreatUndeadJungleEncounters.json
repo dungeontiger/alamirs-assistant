@@ -1,0 +1,551 @@
+{
+  "name": "Greater Undead Encounters.",
+  "description": "Check for encounters in the jungle with greater undead. Roll three times a day.",
+  "roll": "1d20",
+  "entries": [
+    {
+      "min": 1,
+      "max": 15,
+      "results": [
+        {
+          "title": "No Encounter"
+        }
+      ]
+    },
+    {
+      "min": 16,
+      "max": 20,
+      "results": [
+        {
+          "table": {
+            "name": "Greater Undead Monsters",
+            "description": "Roll for the actual encounter.",
+            "roll": "1d100",
+            "entries": [
+              {
+                "min": 1,
+                "max": 1,
+                "results": [
+                  {
+                    "title": "Artus Cimber",
+                    "text": "Artus and Dragonbait are encountered. They can rush in the save the characters or the characters stumbles into their camp.",
+                    "reference": "TOA:196, TOA: 212TOA:218"
+                  }
+                ]
+              },
+              {
+                "min": 2,
+                "max": 2,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d3",
+                          "name": "Assassin Vine",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "10d10+30",
+                          "reference": "TOA:213"
+                        }
+                      }
+                    ],
+                    "text": "Assassin vines cannot be distinguished from normal plants - even with a wisdom check. They draw carrion to them so the characters might smell that. ",
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 3,
+                "max": 5,
+                "results": [
+                  {
+                    "tableRef": "Cache"
+                  }
+                ]
+              },
+              {
+                "min": 6,
+                "max": 6,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d3",
+                          "name": "Allosaurus",
+                          "pluralForm": "Allosauruses",
+                          "dexModifier": 1,
+                          "AC": 13,
+                          "HP": "6d10+18",
+                          "reference": "MM:79"
+                        }
+                      }
+                    ],
+                    "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 7,
+                "max": 7,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Ankylosaurus",
+                          "pluralForm": "Ankylosauruses",
+                          "dexModifier": 0,
+                          "AC": 15,
+                          "HP": "8d12+16",
+                          "reference": "MM:79"
+                        }
+                      }
+                    ],
+                    "text": "Eating plants and ignoring the party.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 8,
+                "max": 8,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Hadrosaurus",
+                          "pluralForm": "Hadrosauruses",
+                          "dexModifier": 0,
+                          "AC": 11,
+                          "HP": "3d10+3",
+                          "reference": "TOA:224"
+                        }
+                      }
+                    ],
+                    "text": "They are graving near by with $roll(1d6) young nearby. The young can be sold for 50 GP or 100 GP with DC 15 Persuasion check. The young are easily handled and separated, but the adults will fight.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 9,
+                "max": 9,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "2d6",
+                          "name": "Pteranodon",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d8",
+                          "reference": "MM:80"
+                        }
+                      }
+                    ],
+                    "text": "They are flying at a distance and only attack if threatened.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 10,
+                "max": 10,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Stegosaurus",
+                          "pluralForm": "Stegosauruses",
+                          "dexModifier": -1,
+                          "AC": 13,
+                          "HP": "8d12+24",
+                          "reference": "TOA:231"
+                        }
+                      }
+                    ],
+                    "text": "It is a curious animal that approaches the characters. Anyone who touches it gets a swipe from its tail.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 11,
+                "max": 12,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Tyrannosaurus",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "13d12+52",
+                          "reference": "MM:80"
+                        }
+                      }
+                    ],
+                    "text": "The beast is spotted 900 ft away. There is a 50% chance it is fighting with other creatures. This may cause the T-rex to be weakened. The players can hide from it with a successful DC 15 Stealth check. If any character is proficient in Survival, all characters roll with advantage.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 13,
+                "max": 14,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Velociraptor",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d4+3",
+                          "reference": "MM:235"
+                        }
+                      }
+                    ],
+                    "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 15,
+                "max": 16,
+                "results": [
+                  {
+                    "title": "Emerald Enclave",
+                    "textList": [
+                      {
+                        "text": "The group has one "
+                      },
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Priest",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "5d8+5",
+                          "reference": "MM:348"
+                        }
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "monster": {
+                          "amount": "1d4",
+                          "name": "Scout",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d8+3",
+                          "reference": "MM:249"
+                        }
+                      },
+                      {
+                        "text": ". The scouts will trade information with a non-evil party. The can be convinced to join the party for up to 3 days on a DC 12 group Persuasion check. With a Passive wisdom of 13 the players see a wooden platform that is 2d6x5 ft above the group. Players need a DC10 Althetics check to get up there. It is 10 ft square and can hold 6 characters."
+                      }
+                    ],
+                    "reference": "TOA:199"
+                  }
+                ]
+              },
+              {
+                "min": 17,
+                "max": 20,
+                "results": [
+                  {
+                    "title": "Dead Explorer"
+                  }
+                ]
+              },
+              {
+                "min": 21,
+                "max": 21,
+                "results": [
+                  {
+                    "title": "Explorers"
+                  }
+                ]
+              },
+              {
+                "min": 22,
+                "max": 23,
+                "results": [
+                  {
+                    "title": "Flaming Fists"
+                  }
+                ]
+              },
+              {
+                "min": 24,
+                "max": 24,
+                "results": [
+                  {
+                    "title": "Giant Wasps"
+                  }
+                ]
+              },
+              {
+                "min": 25,
+                "max": 25,
+                "results": [
+                  {
+                    "title": "Mantraps"
+                  }
+                ]
+              },
+              {
+                "min": 26,
+                "max": 26,
+                "results": [
+                  {
+                    "title": "Pterafolk"
+                  }
+                ]
+              },
+              {
+                "min": 27,
+                "max": 27,
+                "results": [
+                  {
+                    "title": "Rare Plants"
+                  }
+                ]
+              },
+              {
+                "min": 28,
+                "max": 28,
+                "results": [
+                  {
+                    "title": "Red Wizard"
+                  }
+                ]
+              },
+              {
+                "min": 29,
+                "max": 31,
+                "results": [
+                  {
+                    "title": "Constrictor Snake"
+                  }
+                ]
+              },
+              {
+                "min": 32,
+                "max": 32,
+                "results": [
+                  {
+                    "title": "Giant Constrictor Snake"
+                  }
+                ]
+              },
+              {
+                "min": 33,
+                "max": 33,
+                "results": [
+                  {
+                    "title": "Giant Poisonous Snake"
+                  }
+                ]
+              },
+              {
+                "min": 34,
+                "max": 36,
+                "results": [
+                  {
+                    "title": "Spiders"
+                  }
+                ]
+              },
+              {
+                "min": 37,
+                "max": 40,
+                "results": [
+                  {
+                    "title": "Status of Ubtao"
+                  }
+                ]
+              },
+              {
+                "min": 41,
+                "max": 44,
+                "results": [
+                  {
+                    "title": "Stirges"
+                  }
+                ]
+              },
+              {
+                "min": 45,
+                "max": 45,
+                "results": [
+                  {
+                    "title": "Su-monsters"
+                  }
+                ]
+              },
+              {
+                "min": 46,
+                "max": 46,
+                "results": [
+                  {
+                    "title": "Swarm of Bats"
+                  }
+                ]
+              },
+              {
+                "min": 47,
+                "max": 49,
+                "results": [
+                  {
+                    "title": "Swarm of Insects"
+                  }
+                ]
+              },
+              {
+                "min": 50,
+                "max": 50,
+                "results": [
+                  {
+                    "title": "Tri-flower Frond"
+                  }
+                ]
+              },
+              {
+                "min": 51,
+                "max": 51,
+                "results": [
+                  {
+                    "title": "Troll"
+                  }
+                ]
+              },
+              {
+                "min": 52,
+                "max": 63,
+                "results": [
+                  {
+                    "title": "Ghouls"
+                  }
+                ]
+              },
+              {
+                "min": 64,
+                "max": 67,
+                "results": [
+                  {
+                    "title": "Skeletons"
+                  }
+                ]
+              },
+              {
+                "min": 68,
+                "max": 70,
+                "results": [
+                  {
+                    "title": "Specter"
+                  }
+                ]
+              },
+              {
+                "min": 71,
+                "max": 73,
+                "results": [
+                  {
+                    "title": "Wight"
+                  }
+                ]
+              },
+              {
+                "min": 74,
+                "max": 85,
+                "results": [
+                  {
+                    "title": "Zombies"
+                  }
+                ]
+              },
+              {
+                "min": 86,
+                "max": 87,
+                "results": [
+                  {
+                    "title": "Vegepygmies"
+                  }
+                ]
+              },
+              {
+                "min": 88,
+                "max": 89,
+                "results": [
+                  {
+                    "title": "Wereboar"
+                  }
+                ]
+              },
+              {
+                "min": 90,
+                "max": 91,
+                "results": [
+                  {
+                    "title": "Weretiger"
+                  }
+                ]
+              },
+              {
+                "min": 92,
+                "max": 92,
+                "results": [
+                  {
+                    "title": "Winterscape"
+                  }
+                ]
+              },
+              {
+                "min": 93,
+                "max": 96,
+                "results": [
+                  {
+                    "title": "Yellow Musk Creeper and Zombies"
+                  }
+                ]
+              },
+              {
+                "min": 97,
+                "max": 98,
+                "results": [
+                  {
+                    "title": "Yaun-ti"
+                  }
+                ]
+              },
+              {
+                "min": 99,
+                "max": 100,
+                "results": [
+                  {
+                    "title": "Zorbos"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

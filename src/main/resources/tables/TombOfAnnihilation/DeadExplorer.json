@@ -1,0 +1,227 @@
+{
+  "name": "Dead Explorers",
+  "description": "A dead explorer is discovered.",
+  "roll": "1d20",
+  "entries": [
+    {
+      "min": 1,
+      "max": 1,
+      "results": [
+        {
+          "title": "Dead Halfling",
+          "text": "The bloated corpse of a dead halfling is riddled with arrows and is tangling from a tree vine. (They trespassed on grung sacred ground.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 2,
+      "max": 2,
+      "results": [
+        {
+          "title": "Humanoid Bones",
+          "text": "The humanoid is unarmored and lashed to a tree with vines. (The Batiri goblins doused them in honey and left them to the insects.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 3,
+      "max": 4,
+      "results": [
+        {
+          "title": "Crushed Dwarf",
+          "text": "The crushed remains of an unarmored dwarf shows signs of being trampled by a dinosaur.",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 4,
+      "max": 4,
+      "results": [
+        {
+          "title": "Charred Humanoid Bones",
+          "text": "The bones are charred and have been gnawed on. (They were murdered and cannibalized by starving companions.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 5,
+      "max": 5,
+      "results": [
+        {
+          "title": "Mangled Half-Elf",
+          "text": "The mangled body of a half-elf appears to be bludegoned to death. (They were dropped from a height by pterafolk.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 6,
+      "max": 6,
+      "results": [
+        {
+          "title": "Scattered Dwarf Bones",
+          "text": "The scattered bones of a dwarf who was torn to pieces before being devoured. (Velociraptors got them.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 7,
+      "max": 7,
+      "results": [
+        {
+          "title": "Purple Elvin Corpse",
+          "text": "They died only a few days ago from a poisonous snake bite.",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 8,
+      "max": 8,
+      "results": [
+        {
+          "title": "Human Corpse in Tree",
+          "text": "The fresh corspe is stuffed in a hollow tree. (Girillions plan to return later and eat it.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 9,
+      "max": 9,
+      "results": [
+        {
+          "title": "Sitting Skeleton",
+          "text": "A humanoid skeleton is seated on a folding chair clutching a fork and knife.",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 10,
+      "max": 10,
+      "results": [
+        {
+          "title": "Cocooned Gnome",
+          "text": "The desiccated husk of a gnome is cocooned in spider webs.",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 11,
+      "max": 11,
+      "results": [
+        {
+          "title": "Half Body of a Human",
+          "text": "The body of a human from the waist up only. There are signs that the explorer crawled a distance before dying. They were bitten in half by a t-rex. (They have a charter which identifies them as Lord Onoivan IV of Dales.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 12,
+      "max": 12,
+      "results": [
+        {
+          "title": "Charred Elven Skeleton",
+          "text": "The charred skeleton is inside a charred constrictor snake. (Both were killed by a Lightning Bolt.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 13,
+      "max": 13,
+      "results": [
+        {
+          "title": "Rotting Frog",
+          "text": "The rotting body of a giant frog with a shortsword poking out it. (If the frog is cut open a partially digested halfling is inside.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 14,
+      "max": 14,
+      "results": [
+        {
+          "title": "Taxabi Mess",
+          "text": "A tabaxi spread eagle on the ground, but with its limbs and head severed and crudely stitched back on in the wrong arrangement.",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 15,
+      "max": 15,
+      "results": [
+        {
+          "title": "Spiked Half-Orc",
+          "text": "A half-orc is spiked to an enormous tree by a broken off tirceratops horn.",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 16,
+      "max": 16,
+      "results": [
+        {
+          "title": "Spit Roasted Gnome",
+          "text": "A gnome is spitted over a burned out firepit. They are overcooked and not eaten. (Goblin tools and velocirator tracks are abound.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 17,
+      "max": 17,
+      "results": [
+        {
+          "title": "Headless Human",
+          "text": "A headless humanoid is hung upside down from a tree. Six Batiri goblins spears are thrust through the body. (It was a Red Wizard judging fom the robes.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 18,
+      "max": 18,
+      "results": [
+        {
+          "title": "Elf in a Tree",
+          "text": "An elf is balanced on a large tree trunk. (An attached note says they were hiding from an Allosaurus and were too afraid to come down.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 19,
+      "max": 19,
+      "results": [
+        {
+          "title": "Smoldering Remains of a Human",
+          "text": "The remains have a Flaming Fist style helmet and its legs are broken. (He succummed to a faeire dragon's euphoria breath weapon and stepped off a cliff. A companion tried to carry them back but they died.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    },
+    {
+      "min": 20,
+      "max": 20,
+      "results": [
+        {
+          "title": "Holy Dwarf",
+          "text": "A dwarf with 6 large holes piercing their armor and chest. (They were hit by a stegasaurus tail.)",
+          "reference": "TOA:198, TOA:199"
+        }
+      ]
+    }
+  ]
+}

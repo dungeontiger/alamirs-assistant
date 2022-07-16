@@ -1,0 +1,292 @@
+{
+  "name": "Treasure Drops",
+  "description": "Special treasure drops.",
+  "roll": "1d100",
+  "entries": [
+    {
+      "min": 1,
+      "max": 50,
+      "results": [
+        {
+          "title": "No Treasure",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 51,
+      "max": 52,
+      "results": [
+        {
+          "title": "Map",
+          "text": "A crude map dwan on a scrap of tanned dinosaur hide showing a path from a random landmark or lair to Port Nyanzaru. (250GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 53,
+      "max": 54,
+      "results": [
+        {
+          "title": "Gemstones",
+          "text": "$roll(1d4) gemstones in a small pouch. (10GP each)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 55,
+      "max": 56,
+      "results": [
+        {
+          "title": "Ring",
+          "text": "Malachile ring inlaid with electrum. (50GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 57,
+      "max": 58,
+      "results": [
+        {
+          "title": "Empty Vial",
+          "text": "An empty corked vial made from an aarakocra's engraved wing bone. (5GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 59,
+      "max": 60,
+      "results": [
+        {
+          "title": "Rotting Quiver",
+          "text": "It contains $roll(1d10) silvered arrows.",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 61,
+      "max": 62,
+      "results": [
+        {
+          "title": "Gold Nugget",
+          "text": "The size of a dwarf's fist. (50GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 63,
+      "max": 64,
+      "results": [
+        {
+          "title": "Vial",
+          "text": "A stoppered vial of serpent venom. (200GP)",
+          "reference": "TOA:197, DMG:258"
+        }
+      ]
+    },
+    {
+      "min": 65,
+      "max": 66,
+      "results": [
+        {
+          "title": "Ivory Smoking Pipe",
+          "text": "Engraved smoking pipe. (25GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 67,
+      "max": 68,
+      "results": [
+        {
+          "title": "Insect Repellent Case",
+          "text": "Case containing $roll(2d12) blocks of insect repellent incense.",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 69,
+      "max": 70,
+      "results": [
+        {
+          "title": "Iron Token",
+          "text": "An iron token bearing the symbol of a triceratops. (The sign of the Ytepka Society). Worth 50GP in Pory Nyanzaru.",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 71,
+      "max": 72,
+      "results": [
+        {
+          "title": "Potion of Animal Friendship",
+          "text": "Can cast Animal Friendship (save DC13) at will for 1 hour.",
+          "reference": "TOA:197, DMG:187"
+        }
+      ]
+    },
+    {
+      "min": 73,
+      "max": 74,
+      "results": [
+        {
+          "title": "Potion of Vitality",
+          "text": "Removes exhaustion, cures diseases and poison. Get max hit points when expending HD.",
+          "reference": "TOA:197, DMG:188"
+        }
+      ]
+    },
+    {
+      "min": 75,
+      "max": 76,
+      "results": [
+        {
+          "title": "Spell case",
+          "text": "Random 1st level spell",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 77,
+      "max": 78,
+      "results": [
+        {
+          "title": "Stoppered Vial",
+          "text": "Wyvern poison. (1,200GP)",
+          "reference": "TOA:197, DMG:258"
+        }
+      ]
+    },
+    {
+      "min": 79,
+      "max": 80,
+      "results": [
+        {
+          "title": "Obsidian Knife",
+          "text": "Worth 25GP",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 81,
+      "max": 82,
+      "results": [
+        {
+          "title": "Wooden Tube",
+          "text": "A stoppered wooden tube containing $roll(1d4) gemstones. (50GP each)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 83,
+      "max": 84,
+      "results": [
+        {
+          "title": "Onyx Orb",
+          "text": "A small onyx orb with a maze-like pattern carved on it. Usuable as a druidic focus. (75GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 85,
+      "max": 86,
+      "results": [
+        {
+          "title": "Batiri Goblin Mask",
+          "text": "A goblin mask made of painted wood set with nine gemstones. (10GP each)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 87,
+      "max": 88,
+      "results": [
+        {
+          "title": "Spyglass",
+          "text": "Worth 1,000GP",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 89,
+      "max": 90,
+      "results": [
+        {
+          "title": "Lute",
+          "text": "Has a broken string. (35GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 91,
+      "max": 92,
+      "results": [
+        {
+          "title": "Thieves' Tools",
+          "text": "Worth 25GP",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 93,
+      "max": 94,
+      "results": [
+        {
+          "title": "Excellent Lock",
+          "text": "An excellent lock without a key that requires a DC20 dex check to pick it using thieves tools. (50GP)",
+          "reference": "TOA:197"
+        }
+      ]
+    },
+    {
+      "min": 95,
+      "max": 96,
+      "results": [
+        {
+          "title": "Jar of Keoghtom's Ointment",
+          "text": "Cures poison and disease. Restores 2d8+2 hit points.",
+          "reference": "TOA:197, DMG:179"
+        }
+      ]
+    },
+    {
+      "min": 97,
+      "max": 98,
+      "results": [
+        {
+          "title": "Horn of Blasting",
+          "text": "Dangerous and powerful.",
+          "reference": "TOA:197, DMG:174"
+        }
+      ]
+    },
+    {
+      "min": 99,
+      "max": 100,
+      "results": [
+        {
+          "title": "Wand of Secrets",
+          "text": "Finds secret doors or traps.",
+          "reference": "TOA:197, DMG:211"
+        }
+      ]
+    }
+  ]
+}
