@@ -41,12 +41,15 @@ public class MonsterCompositeListItem implements ICompositeListItem {
             result += pluralForm;
         }
 
+        int minHP = dice.min(HP);
+        int avgHP = dice.avg(HP);
+        int maxHP = dice.max(HP);
         List<HP> HPs = new ArrayList<>();
         for (int i = 0; i < rolledAmount; i++) {
             int rolledHP = dice.roll(HP);
-            HPs.add(new HP(rolledHP, nlg.getRelativeSize(rolledHP, dice.min(HP), dice.max(HP))));
+            HPs.add(new HP(rolledHP, nlg.getRelativeSize(rolledHP, minHP, maxHP)));
         }
-        MonsterStats monsters = new MonsterStats(name, pluralForm, dice.roll(1, 20, dexModifier), AC, HPs, reference);
+        MonsterStats monsters = new MonsterStats(name, pluralForm, dice.roll(1, 20, dexModifier), AC, HPs, reference, minHP, avgHP, maxHP);
         return new CompositeListItemResult(result, monsters);
     }
 }

@@ -48,6 +48,10 @@ public class Dice {
         return min(pieces.dice, pieces.sides, pieces.modifier);
     }
 
+    public int avg(String diceString) {
+        return (min(diceString) + max(diceString)) / 2;
+    }
+
     private DicePieces parseString(String diceString) {
         int modifier = 0;
         Matcher m = dicePattern.matcher(diceString.replaceAll("\\s+",""));

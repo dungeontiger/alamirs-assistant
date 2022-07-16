@@ -83,7 +83,7 @@ function showCombatStats(monsters) {
     for (i in monsters) {
         var monster = monsters[i];
         var td = document.createElement("td");
-        td.className = "pe-1";
+        td.className = "pe-2";
         row.appendChild(td);
         var h5 = document.createElement("h5");
         td.appendChild(h5);
@@ -113,6 +113,9 @@ function showCombatStats(monsters) {
         header.appendChild(strong);
         strong.textContent = "Hit Points";
         td.appendChild(header);
+        var range = document.createElement("div");
+        range.textContent = "HP: " + monster.avgHP + " (" + monster.minHP + ", " + monster.maxHP + ")";
+        td.appendChild(range);
         for (i in monster.hps) {
             var hp = document.createElement("div");
             var index = parseInt(i) + 1;

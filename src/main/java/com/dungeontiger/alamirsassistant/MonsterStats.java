@@ -12,13 +12,19 @@ public class MonsterStats {
     private int AC;
     private List<HP> HPs;
     private String reference;
+    private int minHP;
+    private int avgHP;
+    private int maxHP;
 
-    public MonsterStats(String name, String pluralForm, int initiative, int AC, List<HP> HPs, String reference) {
+    public MonsterStats(String name, String pluralForm, int initiative, int AC, List<HP> HPs, String reference, int minHP, int avgHP, int maxHP) {
         this.name = name;
         this.pluralForm = pluralForm;
         this.initiative = initiative;
         this.AC = AC;
         this.HPs = HPs;
         this.reference = reference;
+        this.minHP = minHP;
+        this.avgHP = avgHP;
+        this.maxHP = maxHP;
     }
 }
