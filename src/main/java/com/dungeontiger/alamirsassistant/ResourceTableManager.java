@@ -116,7 +116,8 @@ public class ResourceTableManager implements ITableManager {
                         m.getInt("dexModifier"),
                         m.getInt("AC"),
                         m.getString("reference"),
-                        dice));
+                        dice,
+                        nlg));
             }
         }
         return results;

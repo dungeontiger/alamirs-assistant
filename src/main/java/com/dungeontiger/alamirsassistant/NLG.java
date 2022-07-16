@@ -31,4 +31,19 @@ public class NLG {
         }
         return result;
     }
+
+    public String getRelativeSize(int value, int min, int max) {
+        String size = "normal";
+        int delta = max - min;
+        if (value <= 0.1 * delta + min) {
+            size = "very small";
+        } else if (value <= 0.25 * delta + min) {
+            size = "small";
+        } else if (value > 0.90 * delta + min) {
+            size = "very large";
+        } else if (value > 0.75 * delta + min) {
+            size = "large";
+        }
+        return size;
+    }
 }

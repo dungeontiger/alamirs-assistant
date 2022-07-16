@@ -30,4 +30,15 @@ public class DiceTest {
         assertEquals(8, dice.roll("1d10"));
     }
 
+    @Test
+    public void testMin() {
+        Dice dice = new Dice();
+        assertEquals(35, dice.min("5d100 + 30"));
+    }
+
+    @Test
+    public void testMax() {
+        Dice dice = new Dice();
+        assertEquals(105, dice.max("5d20 + 5"));
+    }
 }

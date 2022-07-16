@@ -28,8 +28,10 @@ public class TableEntry {
                 returns.addAll(table.roll());
            } else if (result instanceof TableResult) {
                 TableResult tableResult = (TableResult) result;
-                // need to compose the composite lists
-                returns.add(new ResponseResult(tableResult.getTitle(nlg), tableResult.getText(nlg), tableResult.getReference()));
+                returns.add(new ResponseResult(tableResult.getTitle(nlg),
+                        tableResult.getText(nlg),
+                        tableResult.getReference(),
+                        tableResult.getMonsters()));
             }
         }
         if (returns.size() == 0) {

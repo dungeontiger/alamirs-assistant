@@ -38,5 +38,19 @@ public class TableResult extends BaseTableResult {
     public String getReference() {
         return reference;
     }
+
+    public List<MonsterStats> getMonsters() {
+        List<MonsterStats> monsters = new ArrayList<>();
+        List<ICompositeListItem> items = new ArrayList<>();
+        items.addAll(titleList);
+        items.addAll(textList);
+        for (ICompositeListItem item : items) {
+            MonsterStats monster = item.getMonsters();
+            if (monster != null) {
+                monsters.add(monster);
+            }
+        }
+        return monsters;
+    }
 }
 

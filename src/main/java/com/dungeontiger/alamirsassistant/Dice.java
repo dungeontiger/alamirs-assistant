@@ -26,6 +26,29 @@ public class Dice {
     }
 
     public int roll(String diceString) {
+        DicePieces pieces = parseString(diceString);
+        return roll(pieces.dice, pieces.sides, pieces.modifier);
+    }
+
+    public int max(int dice, int sides, int modifier) {
+        return sides * dice + modifier;
+    }
+
+    public int max(String diceString) {
+        DicePieces pieces = parseString(diceString);
+        return max(pieces.dice, pieces.sides, pieces.modifier);
+    }
+
+    public int min(int dice, int sides, int modifier) {
+        return dice + modifier;
+    }
+
+    public int min(String diceString) {
+        DicePieces pieces = parseString(diceString);
+        return min(pieces.dice, pieces.sides, pieces.modifier);
+    }
+
+    private DicePieces parseString(String diceString) {
         int modifier = 0;
         Matcher m = dicePattern.matcher(diceString.replaceAll("\\s+",""));
         if (!m.find()) {
@@ -36,6 +59,16 @@ public class Dice {
         if (m.groupCount() == 3 && !m.group(3).isEmpty()) {
             modifier = Integer.parseInt(m.group(3));
         }
-        return roll(dice, sides, modifier);
+        return new DicePieces(dice, sides, modifier);
+    }
+    private class DicePieces {
+        public int dice;
+        public int sides;
+        public int modifier;
+        public DicePieces(int dice, int sides, int modifier) {
+            this.dice = dice;
+            this.sides = sides;
+            this.modifier = modifier;
+        }
     }
 }
