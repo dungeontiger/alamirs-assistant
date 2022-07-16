@@ -1,0 +1,1236 @@
+{
+  "name": "Greater Undead Encounters.",
+  "description": "Check for encounters in the jungle with greater undead. Roll three times a day.",
+  "roll": "1d20",
+  "entries": [
+    {
+      "min": 1,
+      "max": 15,
+      "results": [
+        {
+          "title": "No Encounter"
+        }
+      ]
+    },
+    {
+      "min": 16,
+      "max": 20,
+      "results": [
+        {
+          "table": {
+            "name": "Greater Undead Monsters",
+            "description": "Roll for the actual encounter.",
+            "roll": "1d100",
+            "entries": [
+              {
+                "min": 1,
+                "max": 1,
+                "results": [
+                  {
+                    "title": "Artus Cimber",
+                    "text": "Artus and Dragonbait are encountered. They can rush in the save the characters or the characters stumbles into their camp.",
+                    "reference": "TOA:196, TOA: 212TOA:218"
+                  }
+                ]
+              },
+              {
+                "min": 2,
+                "max": 2,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d3",
+                          "name": "Assassin Vine",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "10d10+30",
+                          "reference": "TOA:213"
+                        }
+                      }
+                    ],
+                    "text": "Assassin vines cannot be distinguished from normal plants - even with a wisdom check. They draw carrion to them so the characters might smell that. ",
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 3,
+                "max": 5,
+                "results": [
+                  {
+                    "tableRef": "Cache"
+                  }
+                ]
+              },
+              {
+                "min": 6,
+                "max": 6,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d3",
+                          "name": "Allosaurus",
+                          "pluralForm": "Allosauruses",
+                          "dexModifier": 1,
+                          "AC": 13,
+                          "HP": "6d10+18",
+                          "reference": "MM:79"
+                        }
+                      }
+                    ],
+                    "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 7,
+                "max": 7,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Ankylosaurus",
+                          "pluralForm": "Ankylosauruses",
+                          "dexModifier": 0,
+                          "AC": 15,
+                          "HP": "8d12+16",
+                          "reference": "MM:79"
+                        }
+                      }
+                    ],
+                    "text": "Eating plants and ignoring the party.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 8,
+                "max": 8,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Hadrosaurus",
+                          "pluralForm": "Hadrosauruses",
+                          "dexModifier": 0,
+                          "AC": 11,
+                          "HP": "3d10+3",
+                          "reference": "TOA:224"
+                        }
+                      }
+                    ],
+                    "text": "They are graving near by with $roll(1d6) young nearby. The young can be sold for 50 GP or 100 GP with DC 15 Persuasion check. The young are easily handled and separated, but the adults will fight.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 9,
+                "max": 9,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "2d6",
+                          "name": "Pteranodon",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d8",
+                          "reference": "MM:80"
+                        }
+                      }
+                    ],
+                    "text": "They are flying at a distance and only attack if threatened.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 10,
+                "max": 10,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Stegosaurus",
+                          "pluralForm": "Stegosauruses",
+                          "dexModifier": -1,
+                          "AC": 13,
+                          "HP": "8d12+24",
+                          "reference": "TOA:231"
+                        }
+                      }
+                    ],
+                    "text": "It is a curious animal that approaches the characters. Anyone who touches it gets a swipe from its tail.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 11,
+                "max": 12,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Tyrannosaurus",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "13d12+52",
+                          "reference": "MM:80"
+                        }
+                      }
+                    ],
+                    "text": "The beast is spotted 900 ft away. There is a 50% chance it is fighting with other creatures. This may cause the T-rex to be weakened. The players can hide from it with a successful DC 15 Stealth check. If any character is proficient in Survival, all characters roll with advantage.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 13,
+                "max": 14,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Velociraptor",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d4+3",
+                          "reference": "MM:235"
+                        }
+                      }
+                    ],
+                    "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 15,
+                "max": 16,
+                "results": [
+                  {
+                    "title": "Emerald Enclave",
+                    "textList": [
+                      {
+                        "text": "The group has one "
+                      },
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Priest",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "5d8+5",
+                          "reference": "MM:348"
+                        }
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "monster": {
+                          "amount": "1d4",
+                          "name": "Scout",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d8+3",
+                          "reference": "MM:249"
+                        }
+                      },
+                      {
+                        "text": ". The scouts will trade information with a non-evil party. The can be convinced to join the party for up to 3 days on a DC 12 group Persuasion check. With a Passive wisdom of 13 the players see a wooden platform that is 2d6x5 ft above the group. Players need a DC10 Althetics check to get up there. It is 10 ft square and can hold 6 characters."
+                      }
+                    ],
+                    "reference": "TOA:199"
+                  }
+                ]
+              },
+              {
+                "min": 17,
+                "max": 20,
+                "results": [
+                  {
+                    "tableRef": "DeadExplorer"
+                  }
+                ]
+              },
+              {
+                "min": 21,
+                "max": 21,
+                "results": [
+                  {
+                    "title": "Explorers",
+                    "text": "The group includes a mage, a priest, a scout and $roll(1d6) tribal warriors.",
+                    "reference": "TOA:199"
+                  },
+                  {
+                    "table": {
+                      "name": "explorers",
+                      "description": "explorers",
+                      "roll": "1d6",
+                      "entries": [
+                        {
+                          "min": 1,
+                          "max": 2,
+                          "results": [
+                            {
+                              "text": "The explorers are lost and hungry."
+                            }
+                          ]
+                        },
+                        {
+                          "min": 3,
+                          "max": 4,
+                          "results": [
+                            {
+                              "text": "The explorers are in good shape and are currently hunting firenewts, ghouls, goblins or grungs."
+                            }
+                          ]
+                        },
+                        {
+                          "min": 5,
+                          "max": 5,
+                          "results": [
+                            {
+                              "text": "The explorers are healthy and currently heading to a nearby landmark to explore it."
+                            }
+                          ]
+                        },
+                        {
+                          "min": 6,
+                          "max": 6,
+                          "results": [
+                            {
+                              "text": "The explorers are healthy and heading back to Port Nyanzaru for rest and resupply."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "min": 22,
+                "max": 23,
+                "results": [
+                  {
+                    "title": "Flaming Fists",
+                    "text": "The group consists of a knight or veteran, an acolyte, a scout and $roll(2d6) guards. They sometimes have $roll(1d4) deinonychuses who are trained to fight. They are helpful to the party if they have a charter of exploration. If they don't have one, they try to confiscate their gear and advise them to go to the fort and get a charter.",
+                    "reference": "TOA:199"
+                  }
+                ]
+              },
+              {
+                "min": 24,
+                "max": 24,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Giant Wasp",
+                          "amount": "1d6",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "3d8",
+                          "reference": "MM:329"
+                        }
+                      }
+                    ],
+                    "text": "The wasps attack immediately and surprise the characters. They ignore armoured characters and go for the unarmoured ones first. At the end of the encounter anyone damaged must pass a DC10 Constitution save or be infected with Shivering Sickness.",
+                    "reference": "TOA:201, TOA:40"
+                  }
+                ]
+              },
+              {
+                "min": 25,
+                "max": 25,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Mantrap",
+                          "amount": "1d4+1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "7d10+7",
+                          "reference": "TOA:227"
+                        }
+                      }
+                    ],
+                    "text": "They are undetectable until they attack. Each plant is 10ft apart and can only attack characters that are within 5ft. This means that generally only one can attack on the first round.",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 26,
+                "max": 26,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Pterafok",
+                          "amount": "1d4+2",
+                          "dexModifier": 1,
+                          "AC": 12,
+                          "HP": "4d10+4",
+                          "reference": "TOA:229"
+                        }
+                      }
+                    ],
+                    "text": "They circle and watch the characters carefully. They only attack during the next encounter trying to pick off wounded players with their javelins. If they meet strong resistance they leave but might regroup and return.",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 27,
+                "max": 27,
+                "results": [
+                  {
+                    "table": {
+                      "name": "Rare plants",
+                      "description": "Rare plants",
+                      "roll": "1d6",
+                      "entries": [
+                        {
+                          "min": 1,
+                          "max": 1,
+                          "results": [
+                            {
+                              "title": "Rare Plant",
+                              "text": "$roll(2d6) Monkey Fruit growing on a tree.",
+                              "reference": "TOA:201, 205"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 2,
+                          "max": 2,
+                          "results": [
+                            {
+                              "title": "Rare Plant",
+                              "text": "Menga bush with $roll(2d6) ounces of leaves.",
+                              "reference": "TOA:201, 205"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 3,
+                          "max": 3,
+                          "results": [
+                            {
+                              "title": "Rare Plant",
+                              "text": "$roll(1d4) Ryath Roots growing in the ground.",
+                              "reference": "TOA:201, 205"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 4,
+                          "max": 4,
+                          "results": [
+                            {
+                              "title": "Rare Plant",
+                              "text": "$roll(4d6) Sinda Berries growing in a bush.",
+                              "reference": "TOA:201, 205"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 5,
+                          "max": 5,
+                          "results": [
+                            {
+                              "title": "Rare Plant",
+                              "text": "Wukka tree with $roll(2d6) Wukka nuts.",
+                              "reference": "TOA:201, 205"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 6,
+                          "max": 6,
+                          "results": [
+                            {
+                              "title": "Rare Plant",
+                              "text": "$roll(1d6) Zabou growing on a dead tree.",
+                              "reference": "TOA:201, 205"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "min": 28,
+                "max": 28,
+                "results": [
+                  {
+                    "title": "Red Wizard Party",
+                    "textList": [
+                      {
+                        "text": "The group consists of a "
+                      },
+                      {
+                        "monster": {
+                          "name": "Mage",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "9d8",
+                          "reference": "MM:347"
+                        }
+                      },
+                      {
+                        "text": ", "
+                      },
+                      {
+                        "monster": {
+                          "name": "Guard",
+                          "amount": "1d6",
+                          "dexModifier": 1,
+                          "AC": 11,
+                          "HP": "2d8+2",
+                          "reference": "MM:347"
+                        }
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "monster": {
+                          "name": "Skeleton",
+                          "amount": "1d6",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "2d8+4",
+                          "reference": "MM:272"
+                        }
+                      },
+                      {
+                        "text": "They all answer to Valindra Shadowmantle in the Heart of Ubtao. If this occurs outside Omu, these reinforcements are on the way to the city. If it occurs in the city, they are searching for the shrines. They are not interested in fighting and can prove a crude map if they players threaten them."
+                      }
+                    ],
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 29,
+                "max": 31,
+                "results": [
+                  {
+                    "titleList":[
+                      {
+                        "monster": {
+                          "name": "Constrictor Snake",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "2d10+2",
+                          "reference": "MM:320"
+                        }
+                      }
+                    ],
+                    "text": "The snake attacks a random person. They are surprised unless they have Passive Wisdom greater than 12.",
+                    "reference": "TOA:202"
+                  }
+                ]
+              },
+              {
+                "min": 32,
+                "max": 32,
+                "results": [
+                  {
+                    "titleList":[
+                      {
+                        "monster": {
+                          "name": "Giant Constrictor Snake",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "8d12+8",
+                          "reference": "MM:324"
+                        }
+                      }
+                    ],
+                    "text": "The snake attacks a random person. They are surprised unless they have Passive Wisdom greater than 12.",
+                    "reference": "TOA:202"
+                  }
+                ]
+              },
+              {
+                "min": 33,
+                "max": 33,
+                "results": [
+                  {
+                    "titleList":[
+                      {
+                        "monster": {
+                          "name": "Giant Poisonous Snake",
+                          "amount": "1d1",
+                          "dexModifier": 4,
+                          "AC": 14,
+                          "HP": "2d8+2",
+                          "reference": "MM:326"
+                        }
+                      }
+                    ],
+                    "text": "The snake attacks a random person. They are surprised unless they have Passive Wisdom greater than 14.",
+                    "reference": "TOA:202"
+                  }
+                ]
+              },
+              {
+                "min": 34,
+                "max": 36,
+                "results": [
+                  {
+                    "titleList":[
+                      {
+                        "monster": {
+                          "name": "Giant Spiders",
+                          "amount": "1d6",
+                          "dexModifier": 3,
+                          "AC": 14,
+                          "HP": "4d10+4",
+                          "reference": "MM:328"
+                        }
+                      }
+                    ],
+                    "text": "A character with Passive Wisdom of 13 can spot webs in the trees and alert the party. Otherwise the lead character stumbles into a web and is grappled unless they make a DC12 Athletics check. The web has hundreds of harmless baby spiders.",
+                    "reference": "TOA:202"
+                  }
+                ]
+              },
+              {
+                "min": 37,
+                "max": 40,
+                "results": [
+                  {
+                    "title": "Status of Ubtao",
+                    "text": "A character with Passive Wisdom of 12 notices it. The statue depicts a stylized Chultan King - Ubtao."
+                  },
+                  {
+                    "table": {
+                      "name": "Statue of Ubtoa",
+                      "description": "What's around the statue",
+                      "roll": "1d4",
+                      "entries": [
+                        {
+                          "min": 1,
+                          "max": 1,
+                          "results": [
+                            {
+                              "tableRef" : "TreasureDrop"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 2,
+                          "max": 2,
+                          "results": [
+                            {
+                              "text": "Goblin, grung and su-monster skulls are piled around the base of the statue."
+                            }
+                          ]
+                        },
+                        {
+                          "min": 3,
+                          "max": 3,
+                          "results": [
+                            {
+                              "text": "A glyph of wardening is on the statue. A character must pass a DC15 Investigation check to find it. Any character touching the statue causes the glyph to explode. The blast is 20ft radius and causes 5d8 damage but characters can pass a DC14 Dex save to take half. If triggered, there is a 75% that a nearby troll or stirges will come and investigate."
+                            }
+                          ]
+                        },
+                        {
+                          "min": 4,
+                          "max": 4,
+                          "results": [
+                            {
+                              "text": "The statue has grooves carved into its stomach which forms a maze. Any character studying this can find the path with a DC10 Intelligence check. If they do this, they are bestowed with a Find the Path spell as an action that they can cast at will. The statue resets each dawn."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "min": 41,
+                "max": 44,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Stirge",
+                          "amount": "2d6",
+                          "dexModifier": 3,
+                          "AC": 14,
+                          "HP": "1d4",
+                          "reference": "MM:284"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:202",
+                    "text": "If during the day, the players stumble into their nest. If at night they descend on the camp and attack."
+                  }
+                ]
+              },
+              {
+                "min": 45,
+                "max": 45,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Su-monster",
+                          "amount": "1d4+1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "5d8+5",
+                          "reference": "TOA:232"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:202",
+                    "text": "They approach looking dangerous, but try to get close enough to use their psychic crush. If things go bad they flee into the trees. If the players search the trees they may find treasure."
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  }
+                ]
+              },
+              {
+                "min": 46,
+                "max": 46,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Swarm of Bats",
+                          "pluralForm": "Swarms of Bats",
+                          "amount": "1d4",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "5d8",
+                          "reference": "MM:337"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:202",
+                    "text": "They attack immediately."
+                  }
+                ]
+              },
+              {
+                "min": 47,
+                "max": 49,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Swarm of Insects (Centipedes)",
+                          "pluralForm": "Swarms of Insects (Centipedes)",
+                          "amount": "1d4",
+                          "dexModifier": 1,
+                          "AC": 12,
+                          "HP": "5d8",
+                          "reference": "MM:338"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:202",
+                    "text": "They attack immediately. At the end of the encounter any character damaged by them must pass a DC11 Con save or get Shivering Sickness."
+                  }
+                ]
+              },
+              {
+                "min": 50,
+                "max": 50,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Tri-flower Frond",
+                          "amount": "1d4",
+                          "dexModifier": 0,
+                          "AC": 10,
+                          "HP": "2d8+2",
+                          "reference": "TOA:234"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "They cannot be distinguished from normal plants. They encounter is during the day the characters stumble into them. If at night, they try to use their spores to put them to sleep first."
+                  }
+                ]
+              },
+              {
+                "min": 51,
+                "max": 51,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Troll",
+                          "amount": "1d1",
+                          "dexModifier": 1,
+                          "AC": 15,
+                          "HP": "8d10+40",
+                          "reference": "MM:291"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "Hungry and attacks the players."
+                  }
+                ]
+              },
+              {
+                "min": 52,
+                "max": 63,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Ghast",
+                          "amount": "1d1",
+                          "dexModifier": 3,
+                          "AC": 13,
+                          "HP": "8d8",
+                          "reference": "MM:148"
+                        }
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "monster": {
+                          "name": "Ghoul",
+                          "amount": "2d6",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "5d8",
+                          "reference": "MM:148"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "The ghast has a blue triangle on its forehead. A passive Perception of 12 can smell the ghouls approach."
+                  }
+                ]
+              },
+              {
+                "min": 64,
+                "max": 67,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Skeleton",
+                          "amount": "3d6",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "2d8+4",
+                          "reference": "MM:272"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "If the encounter is during the day, the skeletons are on the ground and surprise the players by attacking in their mist."
+                  }
+                ]
+              },
+              {
+                "min": 68,
+                "max": 70,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Specter",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "5d8",
+                          "reference": "MM:279"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "A successful DC13 Survival check can find the specter's body as a dead explorer."
+                  },
+                  {
+                    "tableRef": "DeadExplorer"
+                  }
+                ]
+              },
+              {
+                "min": 71,
+                "max": 73,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Wight",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 14,
+                          "HP": "6d8+18",
+                          "reference": "MM:300"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "Hates Chultans and will attack them first or anyone wearing one of their holy symbols."
+                  }
+                ]
+              },
+              {
+                "min": 74,
+                "max": 85,
+                "results": [
+                  {
+                    "table": {
+                      "name": "Zombie Table",
+                      "description": "Roll for a type of zombies",
+                      "roll": "1d10",
+                      "entries" : [
+                        {
+                          "min": 1,
+                          "max": 3,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "name": "Zombie",
+                                    "amount": "3d6",
+                                    "dexModifier": -2,
+                                    "AC": 8,
+                                    "HP": "3d8+9",
+                                    "reference": "MM:316"
+                                  }
+                                }
+                              ],
+                              "text": "The zombies attack.",
+                              "reference": "TOA:203"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 3,
+                          "max": 5,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "name": "Ankylosaurus Zombie",
+                                    "amount": "1d1",
+                                    "dexModifier": -1,
+                                    "AC": 14,
+                                    "HP": "8d12+16",
+                                    "reference": "TOA:240"
+                                  }
+                                }
+                              ],
+                              "text": "The zombie attacks.",
+                              "reference": "TOA:203"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 6,
+                          "max": 7,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "name": "Girallon Zombie",
+                                    "amount": "1d4",
+                                    "dexModifier": 1,
+                                    "AC": 11,
+                                    "HP": "7d10+21",
+                                    "reference": "TOA:240"
+                                  }
+                                }
+                              ],
+                              "text": "The zombies attack.",
+                              "reference": "TOA:203"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 8,
+                          "max": 9,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "name": "Ogre Zombie",
+                                    "amount": "1d4",
+                                    "dexModifier": -2,
+                                    "AC": 8,
+                                    "HP": "9d10+36",
+                                    "reference": "MM:316"
+                                  }
+                                }
+                              ],
+                              "text": "The zombies attack.",
+                              "reference": "TOA:203"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 10,
+                          "max": 10,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "name": "Tyrannosaurus Zombie",
+                                    "amount": "1d1",
+                                    "dexModifier": -2,
+                                    "AC": 11,
+                                    "HP": "13d12+52",
+                                    "reference": "TOA:241"
+                                  }
+                                }
+                              ],
+                              "text": "The zombies attack.",
+                              "reference": "TOA:203"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "min": 86,
+                "max": 87,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Vegepygmie",
+                          "amount": "1d4",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "2d6+2",
+                          "reference": "TOA:234"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "Each is mounted on a Thorny. They flee if outnumbered but otherwise attack."
+                  }
+                ]
+              },
+              {
+                "min": 88,
+                "max": 89,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Wereboar",
+                          "amount": "1d1",
+                          "dexModifier": 0,
+                          "AC": 10,
+                          "HP": "12d8+24",
+                          "reference": "MM:209"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "Masquerades as a Chultan priest. Wears a maze like Ubtao holy symbol around its neck. It demands that the party turn back. It is guarding a Statue of Ubtao, a grove of Wukka trees or its lair. Its lair has treasure."
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  }
+                ]
+              },
+              {
+                "min": 90,
+                "max": 91,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Weretiger",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "16d8+48",
+                          "reference": "MM:210"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "Offers to guide the party through the wilderness. Will stay for 24 hours. During this time they will have no hostile encounters."
+                  }
+                ]
+              },
+              {
+                "min": 92,
+                "max": 92,
+                "results": [
+                  {
+                    "title": "Winterscape",
+                    "text": "A 120ft ring of frozen ground caused by Artus while fighting in the past.",
+                    "reference": "TOA:203"
+                  }
+                ]
+              },
+              {
+                "min": 93,
+                "max": 96,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Yellow Musk Zombies",
+                          "amount": "3d6",
+                          "dexModifier": -1,
+                          "AC": 9,
+                          "HP": "6d8+6",
+                          "reference": "TOA:237"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "name": "Yellow Musk Creeper",
+                          "amount": "1d1",
+                          "dexModifier": -4,
+                          "AC": 6,
+                          "HP": "11d8+11",
+                          "reference": "TOA:237"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:203",
+                    "text": "If during the day, they players stumble into the zombies. The creeper is at the center. If at night, the zombies try to drag the players to the nearby creeper."
+                  }
+                ]
+              },
+              {
+                "min": 97,
+                "max": 98,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Yuan-ti Pureblood",
+                          "amount": "1d6+1",
+                          "dexModifier": 1,
+                          "AC": 11,
+                          "HP": "9d8",
+                          "reference": "MM:310"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:204",
+                    "text": "This encounter happens if the players are more than 25 miles from Omu. They are trying to gathering information for Ras Nsi. They stay away from the players, but a succcessful DC 13 Perseption check might spot them while they withdraw."
+                  },
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Yuan-ti Malisons (type 1)",
+                          "amount": "1d4",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "12d8+12",
+                          "reference": "MM:309"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:204",
+                    "text": "This encounter happens if the players are within 25 miles of Omu. They are trying to gathering information for Ras Nsi. They stay away from the players, but a succcessful DC 14 Perseption check might spot them while they withdraw. If pursued they transform into snakes and escape."
+                  }
+                ]
+              },
+              {
+                "min": 99,
+                "max": 100,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Zorbo",
+                          "amount": "2d6",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "16d8+48",
+                          "reference": "MM:210"
+                        }
+                      }
+                    ],
+                    "reference": "TOA:204",
+                    "text": "If encountered during the day, they are traveling and show aggression to the players but only attack if threatened. If encountered during the night they are hungry and attack."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

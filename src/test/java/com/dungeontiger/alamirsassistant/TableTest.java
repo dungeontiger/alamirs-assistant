@@ -93,7 +93,7 @@ public class TableTest {
 
     @Test
     public void testGreaterUndeadEncounters() {
-        testEncounterTable("TombOfAninhilation", "GreatUndeadJungleEncounters");
+        testEncounterTable("TombOfAnnihilation", "GreaterUndeadJungleEncounters");
     }
 
     @Test

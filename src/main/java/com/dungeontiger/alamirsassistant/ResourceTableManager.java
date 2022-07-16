@@ -139,7 +139,11 @@ public class ResourceTableManager implements ITableManager {
 
     @Override
     public Table getTable(String campaign, String table) {
-        return tables.get(campaign).get(table);
+        try {
+            return tables.get(campaign).get(table);
+        } catch (Exception e) {
+            throw new RuntimeException("Cannot find table for " + campaign + " and id " + table + ".", e);
+        }
     }
 
     @Override

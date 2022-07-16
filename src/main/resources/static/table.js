@@ -53,10 +53,12 @@ function buildResponseCard(r) {
 }
 
 function buildResponse(response, container) {
-    var title = document.createElement("h5");
-    title.className = "card-title";
-    title.textContent = response.title;
-    container.appendChild(title);
+    if (response.title) {
+        var title = document.createElement("h5");
+        title.className = "card-title";
+        title.textContent = response.title;
+        container.appendChild(title);
+    }
     if (response.reference) {
         var reference = document.createElement("h6");
         reference.className = "card-subtitle text-muted";

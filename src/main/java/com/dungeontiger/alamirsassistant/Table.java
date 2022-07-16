@@ -23,7 +23,11 @@ public class Table extends BaseTableResult {
         Integer rolledValue = dice.roll(roll);
         for (TableEntry entry : entries) {
             if (entry.matches(rolledValue)) {
-                return entry.getResults();
+                try {
+                    return entry.getResults();
+                } catch (Exception e) {
+                    throw new RuntimeException("Failed to roll in table " + name + ".", e);
+                }
             }
         }
         throw new RuntimeException("Did not find an entry. Rolled " + rolledValue.toString() + " against table " + id);
