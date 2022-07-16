@@ -27,11 +27,7 @@ public class TableEntry {
                 Table table = (Table)result;
                 returns.addAll(table.roll());
            } else if (result instanceof TableResult) {
-                TableResult tableResult = (TableResult) result;
-                returns.add(new ResponseResult(tableResult.getTitle(nlg),
-                        tableResult.getText(nlg),
-                        tableResult.getReference(),
-                        tableResult.getMonsters()));
+                returns.add(((TableResult) result).getResponse());
             }
         }
         if (returns.size() == 0) {

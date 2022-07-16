@@ -10,8 +10,8 @@ public class RollCompositeListItem implements ICompositeListItem{
     }
 
     @Override
-    public String getResult() {
+    public CompositeListItemResult getResult() {
         Integer value = dice.roll(roll);
-        return value.toString();
+        return new CompositeListItemResult(value.toString());
     }
 }

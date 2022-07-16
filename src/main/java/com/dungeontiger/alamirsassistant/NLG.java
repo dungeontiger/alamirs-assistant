@@ -24,14 +24,6 @@ public class NLG {
         return result;
     }
 
-    public String processList(List<ICompositeListItem> compositeList) {
-        String result = "";
-        for (ICompositeListItem item : compositeList) {
-            result += replaceRolls(item.getResult());
-        }
-        return result;
-    }
-
     public String getRelativeSize(int value, int min, int max) {
         String size = "normal";
         int delta = max - min;

@@ -21,7 +21,7 @@ public class MonsterCompositeListItemTest {
         when(dice.roll(1,20,1)).thenReturn(14);
         MonsterCompositeListItem monsterItem = new MonsterCompositeListItem("2d4", "Orc", "Orcs",
                 "2d6+6", 1, 13, "MM:246", dice, nlg);
-        MonsterStats monsterStats = monsterItem.getMonsters();
+        MonsterStats monsterStats = monsterItem.getResult().getMonsters();
         assertEquals(14, monsterStats.getInitiative());
         assertEquals(3, monsterStats.getHPs().size());
         for (HP hp : monsterStats.getHPs()) {

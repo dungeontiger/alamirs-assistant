@@ -86,7 +86,7 @@ public class ResourceTableManager implements ITableManager {
                         reference = resultJSON.getString("reference");
                     }
                     // this will include lists too
-                    TableResult tableResult = new TableResult(title, titleList, text, textList, reference);
+                    TableResult tableResult = new TableResult(title, titleList, text, textList, reference, nlg);
                     results.add(tableResult);
                 }
             }

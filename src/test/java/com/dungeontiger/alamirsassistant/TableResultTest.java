@@ -28,8 +28,8 @@ public class TableResultTest {
         titleList.add(gnolls);
         MonsterCompositeListItem tabaxi = new MonsterCompositeListItem("2d4", "Tabaxi Hunter", "Tabaxi Hunterss", "9d8", 3, 14, "", dice, nlg);
         textList.add(tabaxi);
-        TableResult result = new TableResult("", titleList, "",  textList, "");
-        List<MonsterStats> monsterStats = result.getMonsters();
+        TableResult result = new TableResult("", titleList, "",  textList, "", nlg);
+        List<MonsterStats> monsterStats = result.getResponse().getMonsters();
         assertEquals(3, monsterStats.size());
     }
 }

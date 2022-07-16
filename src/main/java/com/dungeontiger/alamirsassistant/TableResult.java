@@ -10,8 +10,10 @@ public class TableResult extends BaseTableResult {
     private List<ICompositeListItem> titleList = new ArrayList<>();
     private String reference;
     private List<ICompositeListItem> textList = new ArrayList<>();
+    private NLG nlg;
 
-    public TableResult(String title, List<ICompositeListItem> titleList, String text, List<ICompositeListItem> textList, String reference) {
+    public TableResult(String title, List<ICompositeListItem> titleList, String text, List<ICompositeListItem> textList, String reference, NLG nlg) {
+        this.nlg = nlg;
         if (title != null)  {
             this.titleList.add(new TextCompositeListItem(title));
         }
@@ -27,30 +29,23 @@ public class TableResult extends BaseTableResult {
         this.reference = reference;
     }
 
-    public String getTitle(NLG nlg) {
-        return nlg.processList(titleList);
-    }
-
-    public String getText(NLG nlg) {
-        return nlg.processList(textList);
-    }
-
-    public String getReference() {
-        return reference;
-    }
-
-    public List<MonsterStats> getMonsters() {
+    public ResponseResult getResponse() {
         List<MonsterStats> monsters = new ArrayList<>();
-        List<ICompositeListItem> items = new ArrayList<>();
-        items.addAll(titleList);
-        items.addAll(textList);
+        String title = processList(titleList, monsters);
+        String text = processList(textList, monsters);
+        return new ResponseResult(title, text, reference, monsters);
+    }
+
+    private String processList(List<ICompositeListItem> items, List<MonsterStats> monsters) {
+        String text = "";
         for (ICompositeListItem item : items) {
-            MonsterStats monster = item.getMonsters();
-            if (monster != null) {
-                monsters.add(monster);
+            CompositeListItemResult itemResult = item.getResult();
+            text += nlg.replaceRolls(itemResult.getText());
+            if (itemResult.getMonsters() != null) {
+                monsters.add(itemResult.getMonsters());
             }
         }
-        return monsters;
+        return text;
     }
 }
 

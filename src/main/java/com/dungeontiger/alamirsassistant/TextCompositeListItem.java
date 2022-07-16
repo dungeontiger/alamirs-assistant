@@ -5,7 +5,7 @@ public class TextCompositeListItem implements ICompositeListItem {
     public TextCompositeListItem(String text) {
         this.text = text;
     }
-    public String getResult() {
-        return text;
+    public CompositeListItemResult getResult() {
+        return new CompositeListItemResult(text);
     }
 }

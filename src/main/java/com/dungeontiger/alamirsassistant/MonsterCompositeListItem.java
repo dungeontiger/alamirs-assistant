@@ -1,12 +1,10 @@
 package com.dungeontiger.alamirsassistant;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MonsterCompositeListItem implements ICompositeListItem {
     private String amount;
-    private Integer rolledAmount = null;
     private String name;
     private String pluralForm;
     private String HP;
@@ -33,30 +31,22 @@ public class MonsterCompositeListItem implements ICompositeListItem {
     }
 
     @Override
-    public String getResult() {
+    public CompositeListItemResult getResult() {
         String result = "";
-        if (rolledAmount == null) {
-            rolledAmount = dice.roll(amount);
-        }
+        Integer rolledAmount = dice.roll(amount);
         result += rolledAmount + " ";
         if (rolledAmount == 1) {
             result += name;
         } else {
             result += pluralForm;
         }
-        return result;
-    }
 
-    @Override
-    public MonsterStats getMonsters() {
         List<HP> HPs = new ArrayList<>();
-        if (rolledAmount == null) {
-            rolledAmount = dice.roll(amount);
-        }
         for (int i = 0; i < rolledAmount; i++) {
             int rolledHP = dice.roll(HP);
             HPs.add(new HP(rolledHP, nlg.getRelativeSize(rolledHP, dice.min(HP), dice.max(HP))));
         }
-        return new MonsterStats(name, pluralForm, dice.roll(1, 20, dexModifier), AC, HPs, reference);
+        MonsterStats monsters = new MonsterStats(name, pluralForm, dice.roll(1, 20, dexModifier), AC, HPs, reference);
+        return new CompositeListItemResult(result, monsters);
     }
 }
