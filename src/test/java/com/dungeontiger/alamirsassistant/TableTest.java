@@ -93,7 +93,15 @@ public class TableTest {
 
     @Test
     public void testGreaterUndeadEncounters() {
-        testEncounterTable("TombOfAnnihilation", "GreatUndeadJungleEncounters");
+        testEncounterTable("TombOfAninhilation", "GreatUndeadJungleEncounters");
+    }
+
+    @Test
+    public void testMultipleResults() {
+        ResourceTableManager tableManager = new ResourceTableManager(new Dice(), new NLG(dice));
+        Table table = tableManager.getTable("TombOfAnnihilation", "DeadExplorer");
+        List<ResponseResult> results = table.roll();
+        assertEquals(2, results.size());
     }
 
     private void testEncounterTable(String campaignName, String tableName) {

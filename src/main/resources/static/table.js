@@ -46,31 +46,37 @@ function buildResponseCard(r) {
     var body = document.createElement("div");
     body.className = "card-body";
     result.appendChild(body);
+    for (var i = 0 ; i < r.length; i++) {
+        buildResponse(r[i], body);
+    }
+    return result;
+}
+
+function buildResponse(response, container) {
     var title = document.createElement("h5");
     title.className = "card-title";
-    title.textContent = r[0].title;
-    body.appendChild(title);
-    if (r[0].reference) {
+    title.textContent = response.title;
+    container.appendChild(title);
+    if (response.reference) {
         var reference = document.createElement("h6");
         reference.className = "card-subtitle text-muted";
-        reference.textContent = r[0].reference;
-        body.appendChild(reference);
+        reference.textContent = response.reference;
+        container.appendChild(reference);
     }
-    if (r[0].text) {
+    if (response.text) {
         var notes = document.createElement("p");
         notes.className = "card-text";
-        notes.textContent = r[0].text;
-        body.appendChild(notes);
+        notes.textContent = response.text;
+        container.appendChild(notes);
     }
-    if (r[0].monsters.length > 0) {
+    if (response.monsters.length > 0) {
        var button = document.createElement("button");
        button.type = "button";
        button.className = "btn btn-secondary btn-small";
-       button.onclick = function() { showCombatStats(r[0].monsters); }
+       button.onclick = function() { showCombatStats(response.monsters); }
        button.textContent = 'Combat Stats';
-       body.appendChild(button);
+       container.appendChild(button);
     }
-    return result;
 }
 
 function showCombatStats(monsters) {
