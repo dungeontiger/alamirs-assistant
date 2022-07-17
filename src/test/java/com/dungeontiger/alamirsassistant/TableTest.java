@@ -97,6 +97,11 @@ public class TableTest {
     }
 
     @Test
+    public void testBeachEncounters() {
+        testEncounterTable("TombOfAnnihilation", "BeachEncounters");
+    }
+
+    @Test
     public void testMultipleResults() {
         ResourceTableManager tableManager = new ResourceTableManager(new Dice(), new NLG(dice));
         Table table = tableManager.getTable("TombOfAnnihilation", "DeadExplorer");

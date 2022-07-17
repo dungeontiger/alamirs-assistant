@@ -1,6 +1,6 @@
 {
-  "name": "Greater Undead Encounters.",
-  "description": "Check for encounters in the jungle with greater undead. Roll three times a day.",
+  "name": "Lesser Undead Encounters.",
+  "description": "Check for encounters in the jungle with lesser undead. Roll three times a day.",
   "roll": "1d20",
   "entries": [
     {
@@ -27,6 +27,29 @@
                 "max": 1,
                 "results": [
                   {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d4+3",
+                          "name": "Albino Dwarf",
+                          "pluralForm": "Albino Dwarves",
+                          "dexModifier": 1,
+                          "AC": 13,
+                          "HP": "4d8+12",
+                          "reference": "TOA:210"
+                        }
+                      }
+                    ],
+                    "text": "They attack from hidden burrows. Players are surprised unless they have passive Perception of 13. The dwarves don't kill the players but want to knock them out and steal their food and gear. If the players speak dwarven or show peaceful intents they break off the attack.",
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 2,
+                "max": 2,
+                "results": [
+                  {
                     "title": "Artus Cimber",
                     "text": "Artus and Dragonbait are encountered. They can rush in the save the characters or the characters stumbles into their camp.",
                     "reference": "TOA:196, TOA: 212, TOA:218"
@@ -34,8 +57,8 @@
                 ]
               },
               {
-                "min": 2,
-                "max": 2,
+                "min": 3,
+                "max": 5,
                 "results": [
                   {
                     "titleList": [
@@ -54,10 +77,31 @@
                     "reference": "TOA:196"
                   }
                 ]
+              },              {
+                "min": 6,
+                "max": 6,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d6+3",
+                          "name": "Axe Beak",
+                          "dexModifier": 1,
+                          "AC": 11,
+                          "HP": "3d10+3",
+                          "reference": "MM:317"
+                        }
+                      }
+                    ],
+                    "text": "They charge and attack.",
+                    "reference": "TOA:196, TOA: 212TOA:218"
+                  }
+                ]
               },
               {
-                "min": 3,
-                "max": 5,
+                "min": 7,
+                "max": 8,
                 "results": [
                   {
                     "tableRef": "Cache"
@@ -65,8 +109,33 @@
                 ]
               },
               {
-                "min": 6,
-                "max": 6,
+                "min": 9,
+                "max": 10,
+                "results": [
+                  {
+                    "title": "Cannibals",
+                    "textList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Tribal Warrior",
+                          "dexModifier": 0,
+                          "AC": 12,
+                          "HP": "2d8+2",
+                          "reference": "MM:350"
+                        }
+                      },
+                      {
+                        "text": " are hunting for food. They have blue triangles painted on their foreheads to show their devotion to Ras Nsi. If the encounter is during the day they are eating a zombie corpse. If at night they try to sneak in. Guards must pass a DC10 Perception check to not be surprised."
+                      }
+                    ],
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 11,
+                "max": 11,
                 "results": [
                   {
                     "titleList": [
@@ -88,8 +157,8 @@
                 ]
               },
               {
-                "min": 7,
-                "max": 7,
+                "min": 12,
+                "max": 12,
                 "results": [
                   {
                     "titleList": [
@@ -111,8 +180,31 @@
                 ]
               },
               {
-                "min": 8,
-                "max": 8,
+                "min": 13,
+                "max": 13,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d4+2",
+                          "name": "Deinonychus",
+                          "pluralForm": "Deinonychuses",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "4d8+8",
+                          "reference": "TOA:217"
+                        }
+                      }
+                    ],
+                    "text": "They chase a wild boar into the party. They decide the party is better prey and attack.",
+                    "reference": "TOA:196, TOA: 212TOA:218"
+                  }
+                ]
+              },
+              {
+                "min": 14,
+                "max": 14,
                 "results": [
                   {
                     "titleList": [
@@ -134,8 +226,8 @@
                 ]
               },
               {
-                "min": 9,
-                "max": 9,
+                "min": 15,
+                "max": 15,
                 "results": [
                   {
                     "titleList": [
@@ -156,8 +248,8 @@
                 ]
               },
               {
-                "min": 10,
-                "max": 10,
+                "min": 16,
+                "max": 16,
                 "results": [
                   {
                     "titleList": [
@@ -177,10 +269,33 @@
                     "reference": "TOA:198"
                   }
                 ]
+              },              {
+                "min": 17,
+                "max": 17,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Triceratops",
+                          "pluralForm": "Triceratopses",
+                          "dexModifier": -1,
+                          "AC": 13,
+                          "HP": "10d12+30",
+                          "reference": "MM:80"
+                        }
+                      }
+                    ],
+                    "text": "It does not attack unless the players disturb its nest. The nest contains one hatchling and two eggs. The hatchling and eggs are worth 50GP or 150GP with a Persuasion check in Port Nyanzaru.",
+                    "reference": "TOA:198"
+                  }
+                ]
               },
+
               {
-                "min": 11,
-                "max": 12,
+                "min": 18,
+                "max": 18,
                 "results": [
                   {
                     "titleList": [
@@ -201,30 +316,8 @@
                 ]
               },
               {
-                "min": 13,
-                "max": 14,
-                "results": [
-                  {
-                    "titleList": [
-                      {
-                        "monster": {
-                          "amount": "3d6",
-                          "name": "Velociraptor",
-                          "dexModifier": 2,
-                          "AC": 13,
-                          "HP": "3d4+3",
-                          "reference": "MM:235"
-                        }
-                      }
-                    ],
-                    "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
-                    "reference": "TOA:198"
-                  }
-                ]
-              },
-              {
-                "min": 15,
-                "max": 16,
+                "min": 19,
+                "max": 20,
                 "results": [
                   {
                     "title": "Emerald Enclave",
@@ -264,8 +357,8 @@
                 ]
               },
               {
-                "min": 17,
-                "max": 20,
+                "min": 21,
+                "max": 22,
                 "results": [
                   {
                     "tableRef": "DeadExplorer"
@@ -273,8 +366,8 @@
                 ]
               },
               {
-                "min": 21,
-                "max": 21,
+                "min": 23,
+                "max": 23,
                 "results": [
                   {
                     "title": "Explorers",
@@ -329,8 +422,8 @@
                 ]
               },
               {
-                "min": 22,
-                "max": 23,
+                "min": 24,
+                "max": 26,
                 "results": [
                   {
                     "title": "Flaming Fists",
@@ -340,8 +433,87 @@
                 ]
               },
               {
-                "min": 24,
-                "max": 24,
+                "min": 27,
+                "max": 27,
+                "results": [
+                  {
+                    "table": {
+                      "name": "Flying Snakes",
+                      "description": "Determine how many flying snakes are encountered.",
+                      "roll": "1d2",
+                      "entries": [
+                        {
+                          "min": 1,
+                          "max": 1,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "amount": "1d1",
+                                    "name": "Flying Snake",
+                                    "dexModifier": 4,
+                                    "AC": 14,
+                                    "HP": "2d4",
+                                    "reference": "MM:322"
+                                  }
+                                }
+                              ],
+                              "text": "Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persuasion check.",
+                              "reference": "TOA:200"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 2,
+                          "max": 2,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "amount": "1d1",
+                                    "name": "Flying Snake",
+                                    "dexModifier": 4,
+                                    "AC": 14,
+                                    "HP": "2d4",
+                                    "reference": "MM:322"
+                                  }
+                                }
+                              ],
+                              "text": "Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persuasion check.",
+                              "reference": "TOA:200"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]              },
+              {
+                "min": 28,
+                "max": 28,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d6",
+                          "name": "Giant Lizard",
+                          "dexModifier": 1,
+                          "AC": 12,
+                          "HP": "3d10+3",
+                          "reference": "MM:326"
+                        }
+                      }
+                    ],
+                    "text": "Attack if only threatened.",
+                    "reference": "TOA:200"
+                  }
+                ]              },
+              {
+                "min": 29,
+                "max": 29,
                 "results": [
                   {
                     "titleList": [
@@ -362,8 +534,111 @@
                 ]
               },
               {
-                "min": 25,
-                "max": 25,
+                "min": 30,
+                "max": 31,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Girallon",
+                          "amount": "1d1+1",
+                          "dexModifier": 3,
+                          "AC": 12,
+                          "HP": "7d10+21",
+                          "reference": "TOA:222"
+                        }
+                      }
+                    ],
+                    "text": "The players spot them quickly because they are loud and noisy. They can be avoided with a DC13 Stealth check. They have a cache and maybe treasure.",
+                    "reference": "TOA:200"
+                  },
+                  {
+                    "tableRef": "Cache"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  }
+                ]
+              },
+              {
+                "min": 32,
+                "max": 33,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Goblin Boss",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 17,
+                          "HP": "6d6",
+                          "reference": "MM:166"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "name": "Goblin",
+                          "amount": "2d6+3",
+                          "dexModifier": 2,
+                          "AC": 15,
+                          "HP": "2d6",
+                          "reference": "MM:166"
+                        }
+                      }
+                    ],
+                    "text": "If encountered during the day the goblins set up an ambush. Passive Perception 16 can see the telltale signs of an ambush. If at night, they sneak in and attack. The guards must pass a DC16 Perception check with disadvantage. If captured the goblins can bargin for their lives by acting as guides.",
+                    "reference": "TOA:200"
+                    }
+                ]
+              },
+              {
+                "min": 34,
+                "max": 35,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Grung Elite Warrior",
+                          "amount": "1d1",
+                          "dexModifier": 3,
+                          "AC": 13,
+                          "HP": "9d6+18",
+                          "reference": "TOA:223"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "name": "Grung",
+                          "amount": "2d6",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "2d6",
+                          "reference": "TOA:223"
+                        }
+                      }
+                    ],
+                    "text": "If during the day, the Grungs ambush from the trees. Passive Perception of 14 required to identify the ambush. If at night, they sneak in for an attack. The guards must pass a DC14 Perception check at disadvantage. If one is catpured it will agree to lead the characters to a cache in exchange for its life.",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 36,
+                "max": 39,
+                "results": [
+                  {
+                    "title": "Mad Monkey Mist",
+                    "text": "There is $roll(1d6) 20ft squares of Monkey Mist. Passive Perception of 13 will be able to notice before the party stumbles into the mist. If encountered at night, the mist drifts into the camp at 5ft per minute.",
+                    "reference": "TOA:201, TOA:40"
+                  }
+                ]
+              },
+              {
+                "min": 40,
+                "max": 41,
                 "results": [
                   {
                     "titleList": [
@@ -384,8 +659,30 @@
                 ]
               },
               {
-                "min": 26,
-                "max": 26,
+                "min": 42,
+                "max": 42,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Night Hag",
+                          "amount": "1d1",
+                          "dexModifier": 2,
+                          "AC": 17,
+                          "HP": "15d8+45",
+                          "reference": "MM:176"
+                        }
+                      }
+                    ],
+                    "text": "One of the Sewn Sisters from Chapter 5 is encountered. She shadows the players from the Etheral plane. During the night she takes blood or hair from one of the players.",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 43,
+                "max": 44,
                 "results": [
                   {
                     "titleList": [
@@ -406,8 +703,8 @@
                 ]
               },
               {
-                "min": 27,
-                "max": 27,
+                "min": 45,
+                "max": 45,
                 "results": [
                   {
                     "table": {
@@ -487,8 +784,8 @@
                 ]
               },
               {
-                "min": 28,
-                "max": 28,
+                "min": 46,
+                "max": 46,
                 "results": [
                   {
                     "title": "Red Wizard Party",
@@ -541,8 +838,8 @@
                 ]
               },
               {
-                "min": 29,
-                "max": 31,
+                "min": 47,
+                "max": 48,
                 "results": [
                   {
                     "titleList":[
@@ -563,8 +860,8 @@
                 ]
               },
               {
-                "min": 32,
-                "max": 32,
+                "min": 49,
+                "max": 49,
                 "results": [
                   {
                     "titleList":[
@@ -585,8 +882,8 @@
                 ]
               },
               {
-                "min": 33,
-                "max": 33,
+                "min": 50,
+                "max": 50,
                 "results": [
                   {
                     "titleList":[
@@ -607,8 +904,8 @@
                 ]
               },
               {
-                "min": 34,
-                "max": 36,
+                "min": 51,
+                "max": 52,
                 "results": [
                   {
                     "titleList":[
@@ -629,8 +926,8 @@
                 ]
               },
               {
-                "min": 37,
-                "max": 40,
+                "min": 53,
+                "max": 55,
                 "results": [
                   {
                     "title": "Status of Ubtao",
@@ -684,8 +981,8 @@
                 ]
               },
               {
-                "min": 41,
-                "max": 44,
+                "min": 56,
+                "max": 57,
                 "results": [
                   {
                     "titleList": [
@@ -706,8 +1003,8 @@
                 ]
               },
               {
-                "min": 45,
-                "max": 45,
+                "min": 58,
+                "max": 59,
                 "results": [
                   {
                     "titleList": [
@@ -731,8 +1028,8 @@
                 ]
               },
               {
-                "min": 46,
-                "max": 46,
+                "min": 60,
+                "max": 62,
                 "results": [
                   {
                     "titleList": [
@@ -754,8 +1051,8 @@
                 ]
               },
               {
-                "min": 47,
-                "max": 49,
+                "min": 63,
+                "max": 65,
                 "results": [
                   {
                     "titleList": [
@@ -777,8 +1074,8 @@
                 ]
               },
               {
-                "min": 50,
-                "max": 50,
+                "min": 66,
+                "max": 66,
                 "results": [
                   {
                     "titleList": [
@@ -799,8 +1096,8 @@
                 ]
               },
               {
-                "min": 51,
-                "max": 51,
+                "min": 67,
+                "max": 67,
                 "results": [
                   {
                     "titleList": [
@@ -821,8 +1118,8 @@
                 ]
               },
               {
-                "min": 52,
-                "max": 63,
+                "min": 68,
+                "max": 72,
                 "results": [
                   {
                     "titleList": [
@@ -856,8 +1153,8 @@
                 ]
               },
               {
-                "min": 64,
-                "max": 67,
+                "min": 73,
+                "max": 77,
                 "results": [
                   {
                     "titleList": [
@@ -878,8 +1175,8 @@
                 ]
               },
               {
-                "min": 68,
-                "max": 70,
+                "min": 78,
+                "max": 79,
                 "results": [
                   {
                     "titleList": [
@@ -903,8 +1200,8 @@
                 ]
               },
               {
-                "min": 71,
-                "max": 73,
+                "min": 80,
+                "max": 80,
                 "results": [
                   {
                     "titleList": [
@@ -925,8 +1222,8 @@
                 ]
               },
               {
-                "min": 74,
-                "max": 85,
+                "min": 81,
+                "max": 89,
                 "results": [
                   {
                     "table": {
@@ -1050,8 +1347,8 @@
                 ]
               },
               {
-                "min": 86,
-                "max": 87,
+                "min": 90,
+                "max": 91,
                 "results": [
                   {
                     "titleList": [
@@ -1072,8 +1369,8 @@
                 ]
               },
               {
-                "min": 88,
-                "max": 89,
+                "min": 92,
+                "max": 92,
                 "results": [
                   {
                     "titleList": [
@@ -1103,8 +1400,8 @@
                 ]
               },
               {
-                "min": 90,
-                "max": 91,
+                "min": 93,
+                "max": 93,
                 "results": [
                   {
                     "titleList": [
@@ -1125,8 +1422,8 @@
                 ]
               },
               {
-                "min": 92,
-                "max": 92,
+                "min": 94,
+                "max": 94,
                 "results": [
                   {
                     "title": "Winterscape",
@@ -1136,7 +1433,7 @@
                 ]
               },
               {
-                "min": 93,
+                "min": 95,
                 "max": 96,
                 "results": [
                   {
@@ -1207,6 +1504,71 @@
               },
               {
                 "min": 99,
+                "max": 99,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Zhent Assassin",
+                          "amount": "1d1",
+                          "dexModifier": 3,
+                          "AC": 15,
+                          "HP": "12d8+24",
+                          "reference": "MM:343"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Flying Snake",
+                          "dexModifier": 4,
+                          "AC": 14,
+                          "HP": "2d4",
+                          "reference": "MM:322"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "name": "Zhent Priest",
+                          "amount": "1d1",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "5d8+5",
+                          "reference": "MM:348"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "amount": "1d6",
+                          "name": "Tribal Warrior",
+                          "dexModifier": 0,
+                          "AC": 12,
+                          "HP": "2d8+2",
+                          "reference": "MM:350"
+                        }
+                      },
+                      {
+                        "monster": {
+                          "amount": "2d6",
+                          "name": "Thug",
+                          "dexModifier": 0,
+                          "AC": 11,
+                          "HP": "5d8+10",
+                          "reference": "MM:350"
+                        }
+                      }
+                    ],
+                    "text": "If Artus is not with the players they are ignored. If Artus is with them, they demand the ring and attack if not given it.",
+                    "reference": "TOA:204"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  }
+                ]
+              },
+              {
+                "min": 100,
                 "max": 100,
                 "results": [
                   {

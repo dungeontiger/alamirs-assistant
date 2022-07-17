@@ -42,60 +42,66 @@ public class ResourceTableManager implements ITableManager {
         }
     }
 
-    private Table buildTable(JSONObject tableJSON, String id, String basePath) throws JSONException, FileNotFoundException {
-        String name = tableJSON.getString("name");
-        String description = tableJSON.get("description").toString();
-        String roll = tableJSON.get("roll").toString();
-        List<TableEntry> entries = new ArrayList<>();
-        JSONArray entriesJSON = tableJSON.getJSONArray("entries");
-        for (Object e : entriesJSON) {
-            JSONObject entry = (JSONObject) e;
-            int min = entry.getInt("min");
-            int max = entry.getInt("max");
-            List<BaseTableResult> results = new ArrayList<>();
-            JSONArray resultsJSON = entry.getJSONArray("results");
-            for (Object f : resultsJSON) {
-                JSONObject resultJSON = (JSONObject) f;
-                if (resultJSON.has("tableRef")) {
-                    // referencing another table file
-                    File tableRef = new File(basePath + "/" + resultJSON.getString("tableRef") + ".json");
-                    JSONObject tableRefJSON = (JSONObject)JSON.parse(new FileInputStream(tableRef));
-                    results.add(buildTable(tableRefJSON, "", basePath));
-                } else if (resultJSON.has("table")) {
-                    // embedded subtable
-                    results.add(buildTable((JSONObject) resultJSON.get("table"), "", basePath));
-                } else {
-                    String title = "";
-                    if (resultJSON.has("title")) {
-                        title = resultJSON.getString("title");
+    private Table buildTable(JSONObject tableJSON, String id, String basePath) throws FileNotFoundException {
+        // these variables are just for exception reporting
+        String eTableName = "";
+        try {
+            String name = tableJSON.getString("name");
+            eTableName = name;
+            String description = tableJSON.get("description").toString();
+            String roll = tableJSON.get("roll").toString();
+            List<TableEntry> entries = new ArrayList<>();
+            JSONArray entriesJSON = tableJSON.getJSONArray("entries");
+            for (Object e : entriesJSON) {
+                JSONObject entry = (JSONObject) e;
+                int min = entry.getInt("min");
+                int max = entry.getInt("max");
+                List<BaseTableResult> results = new ArrayList<>();
+                JSONArray resultsJSON = entry.getJSONArray("results");
+                for (Object f : resultsJSON) {
+                    JSONObject resultJSON = (JSONObject) f;
+                    if (resultJSON.has("tableRef")) {
+                        // referencing another table file
+                        File tableRef = new File(basePath + "/" + resultJSON.getString("tableRef") + ".json");
+                        JSONObject tableRefJSON = (JSONObject)JSON.parse(new FileInputStream(tableRef));
+                        results.add(buildTable(tableRefJSON, "", basePath));
+                    } else if (resultJSON.has("table")) {
+                        // embedded subtable
+                        results.add(buildTable((JSONObject) resultJSON.get("table"), "", basePath));
+                    } else {
+                        String title = "";
+                        if (resultJSON.has("title")) {
+                            title = resultJSON.getString("title");
+                        }
+                        List<ICompositeListItem> titleList = null;
+                        if (resultJSON.has("titleList")) {
+                            titleList = buildList(resultJSON.getJSONArray("titleList"));
+                        }
+                        String text = "";
+                        if (resultJSON.has("text")) {
+                            text = resultJSON.getString("text");
+                        }
+                        List<ICompositeListItem> textList = null;
+                        if (resultJSON.has("textList")) {
+                            textList = buildList(resultJSON.getJSONArray("textList"));
+                        }
+                        String reference = "";
+                        if (resultJSON.has("reference")) {
+                            reference = resultJSON.getString("reference");
+                        }
+                        // this will include lists too
+                        TableResult tableResult = new TableResult(title, titleList, text, textList, reference, nlg);
+                        results.add(tableResult);
                     }
-                    List<ICompositeListItem> titleList = null;
-                    if (resultJSON.has("titleList")) {
-                        titleList = buildList(resultJSON.getJSONArray("titleList"));
-                    }
-                    String text = "";
-                    if (resultJSON.has("text")) {
-                        text = resultJSON.getString("text");
-                    }
-                    List<ICompositeListItem> textList = null;
-                    if (resultJSON.has("textList")) {
-                        textList = buildList(resultJSON.getJSONArray("textList"));
-                    }
-                    String reference = "";
-                    if (resultJSON.has("reference")) {
-                        reference = resultJSON.getString("reference");
-                    }
-                    // this will include lists too
-                    TableResult tableResult = new TableResult(title, titleList, text, textList, reference, nlg);
-                    results.add(tableResult);
                 }
+                TableEntry tableEntry = new TableEntry(nlg, min, max, results);
+                entries.add(tableEntry);
             }
-            TableEntry tableEntry = new TableEntry(nlg, min, max, results);
-            entries.add(tableEntry);
+            Table table = new Table(dice, id, name, description, roll, entries);
+            return table;
+        } catch (JSONException e) {
+            throw new RuntimeException("Failed to parse table: " + eTableName, e);
         }
-
-        Table table = new Table(dice, id, name, description, roll, entries);
-        return table;
     }
 
     private List<ICompositeListItem> buildList(JSONArray items) throws JSONException {

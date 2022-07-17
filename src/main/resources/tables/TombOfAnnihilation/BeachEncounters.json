@@ -29,7 +29,6 @@
                                     {
                                         "title": "$roll(1d4+1) Aarkocra",
                                         "reference": "TOA:196, MM:12",
-
                                         "text": "They are circling and only noticed if passive Perception is 15 or higher. They do not approach unless the players demonstrate peaceful intentions. They are friendly and can point out landmarks to the players."
                                     }
                                 ]
@@ -40,6 +39,7 @@
                                 "results": [
                                     {
                                         "title": "Artus Cimber",
+                                        "text": "Running away from a dinosaur or jumps in to help the players.",
                                         "reference": "TOA:196, TOA:212"
                                     }
                                 ]
@@ -69,8 +69,20 @@
                                 "max": 14,
                                 "results": [
                                     {
-                                        "title": "$roll(1d3) allosauruses.",
-                                        "text": "Spotted 300 ft away. A DC 15 Survival check can find a safe haven from the predators (tree branch, etc).",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d3",
+                                                    "name": "Allosaurus",
+                                                    "pluralForm": "Allosauruses",
+                                                    "dexModifier": 1,
+                                                    "AC": 13,
+                                                    "HP": "6d10+18",
+                                                    "reference": "MM:79"
+                                                }
+                                            }
+                                        ],
+                                        "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
                                         "reference": "TOA:197"
                                     }
                                 ]
@@ -80,9 +92,46 @@
                                 "max": 16,
                                 "results": [
                                     {
-                                        "title": "$roll(2d6) dimetrodons.",
-                                        "text": "Just hanging out. On an odd roll they ignore the players. On an even roll they are hungry and attack.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "2d6",
+                                                    "name": "Dimetrodon",
+                                                    "dexModifier": 0,
+                                                    "AC": 12,
+                                                    "HP": "3d6+6",
+                                                    "reference": "TOA:217"
+                                                }
+                                            }
+                                        ],
                                         "reference": "TOA:197"
+                                    },
+                                    {
+                                        "table": {
+                                            "name": "Dimetrodon",
+                                            "description": "Determine whether or not the dimetrodons are hungry and will attack.",
+                                            "roll": "1d2",
+                                            "entries": [
+                                                {
+                                                    "min": 1,
+                                                    "max": 1,
+                                                    "results": [
+                                                        {
+                                                            "text": "The dimetrodons ignore the players unless provoked."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 2,
+                                                    "max": 2,
+                                                    "results": [
+                                                        {
+                                                            "text": "The dimetrodons are hungry and attack the players if they are within 100ft."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             },
@@ -91,8 +140,20 @@
                                 "max": 21,
                                 "results": [
                                     {
-                                        "title": "2 plesiosauruses.",
-                                        "text": "They are fighting over a dead giant octopus out 300 feet. They move to attack the players if in the water.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1+1",
+                                                    "name": "Plesiosaurus",
+                                                    "pluralForm": "Plesiosauruses",
+                                                    "dexModifier": 2,
+                                                    "AC": 13,
+                                                    "HP": "3d6+6",
+                                                    "reference": "MM:80"
+                                                }
+                                            }
+                                        ],
+                                        "text": "They are fighting over a dead giant octopus out 300ft in the water. They move to attack the players if in the water. If the players are in a canoe on the river, they must pass a DC13 Athletics check to safely reach shore. A character can help. If they fail the canoe is destroyed and the players are attacked in the water.",
                                         "reference": "TOA:197"
                                     }
                                 ]
@@ -102,7 +163,18 @@
                                 "max": 28,
                                 "results": [
                                     {
-                                        "title": "$roll(2d6) pteranodons.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "2d6",
+                                                    "name": "Pterandon",
+                                                    "dexModifier": 2,
+                                                    "AC": 13,
+                                                    "HP": "3d6+6",
+                                                    "reference": "MM:80"
+                                                }
+                                            }
+                                        ],
                                         "text": "They keep their distance and only attack if threatened.",
                                         "reference": "TOA:198"
                                     }
@@ -113,7 +185,19 @@
                                 "max": 31,
                                 "results": [
                                     {
-                                        "title": "$roll(1d4+1) quetzalcoatluses.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1+1",
+                                                    "name": "Quetzalcoatlus",
+                                                    "pluralForm": "Quetzalcoatluses",
+                                                    "dexModifier": 1,
+                                                    "AC": 13,
+                                                    "HP": "4d12+4",
+                                                    "reference": "TOA:230"
+                                                }
+                                            }
+                                        ],
                                         "text": "They keep their distance and only attack if threatened.",
                                         "reference": "TOA:198"
                                     }
@@ -124,8 +208,19 @@
                                 "max": 37,
                                 "results": [
                                     {
-                                        "title": "$roll(3d6) velocirators.",
-                                        "text": "They burst out of cover and attack. Contest roll Dex vs Passive Perception to avoid surprise.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "3d6",
+                                                    "name": "Velociraptor",
+                                                    "dexModifier": 2,
+                                                    "AC": 13,
+                                                    "HP": "3d4+3",
+                                                    "reference": "MM:235"
+                                                }
+                                            }
+                                        ],
+                                        "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
                                         "reference": "TOA:198"
                                     }
                                 ]
@@ -135,8 +230,19 @@
                                 "max": 40,
                                 "results": [
                                     {
-                                        "title": "Young red dragon.",
-                                        "text": "Flying and ignores the players unless they try to get its attention.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1",
+                                                    "name": "Young Red Dragon",
+                                                    "dexModifier": 0,
+                                                    "AC": 19,
+                                                    "HP": "19d12+33",
+                                                    "reference": "MM:98"
+                                                }
+                                            }
+                                        ],
+                                        "text": "Flying and ignores the players unless they try to get its attention. If the players are within 50 miles of Wyrmheart, the dragon is circling that location. If not, it is flying in that direction. The dragon is called Tzindelor or Tinder.",
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -146,8 +252,38 @@
                                 "max": 42,
                                 "results": [
                                     {
-                                        "title": "Emerald Enclave.",
-                                        "text": "1 priest and $roll(1d4) scouts.",
+                                        "title": "Emerald Enclave",
+                                        "textList": [
+                                            {
+                                                "text": "The group has one "
+                                            },
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1",
+                                                    "name": "Priest",
+                                                    "dexModifier": 0,
+                                                    "AC": 13,
+                                                    "HP": "5d8+5",
+                                                    "reference": "MM:348"
+                                                }
+                                            },
+                                            {
+                                                "text": " and "
+                                            },
+                                            {
+                                                "monster": {
+                                                    "amount": "1d4",
+                                                    "name": "Scout",
+                                                    "dexModifier": 2,
+                                                    "AC": 13,
+                                                    "HP": "3d8+3",
+                                                    "reference": "MM:249"
+                                                }
+                                            },
+                                            {
+                                                "text": ". The scouts will trade information with a non-evil party. The can be convinced to join the party for up to 3 days on a DC 12 group Persuasion check. With a Passive wisdom of 13 the players see a wooden platform that is 2d6x5 ft above the group. Players need a DC10 Althetics check to get up there. It is 10 ft square and can hold 6 characters."
+                                            }
+                                        ],
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -157,9 +293,54 @@
                                 "max": 46,
                                 "results": [
                                     {
-                                        "title": "Explorers.",
-                                        "text": "Mage, priest, scout, and $roll(1d6) tribal warriors.",
+                                        "title": "Explorers",
+                                        "text": "The group includes a mage, a priest, a scout and $roll(1d6) tribal warriors.",
                                         "reference": "TOA:199"
+                                    },
+                                    {
+                                        "table": {
+                                            "name": "explorers",
+                                            "description": "explorers",
+                                            "roll": "1d6",
+                                            "entries": [
+                                                {
+                                                    "min": 1,
+                                                    "max": 2,
+                                                    "results": [
+                                                        {
+                                                            "text": "The explorers are lost and hungry."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 3,
+                                                    "max": 4,
+                                                    "results": [
+                                                        {
+                                                            "text": "The explorers are in good shape and are currently hunting firenewts, ghouls, goblins or grungs."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 5,
+                                                    "max": 5,
+                                                    "results": [
+                                                        {
+                                                            "text": "The explorers are healthy and currently heading to a nearby landmark to explore it."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 6,
+                                                    "max": 6,
+                                                    "results": [
+                                                        {
+                                                            "text": "The explorers are healthy and heading back to Port Nyanzaru for rest and resupply."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             },
@@ -168,8 +349,8 @@
                                 "max": 49,
                                 "results": [
                                     {
-                                        "title": "Flaming fist.",
-                                        "text": "Knight or veteran, acolyte and a scout. $roll(2d6) guards and $roll(1d5-1) deinonychuses.",
+                                        "title": "Flaming Fists",
+                                        "text": "The group consists of a knight or veteran, an acolyte, a scout and $roll(2d6) guards. They sometimes have $roll(1d4) deinonychuses who are trained to fight. They are helpful to the party if they have a charter of exploration. If they don't have one, they try to confiscate their gear and advise them to go to the fort and get a charter.",
                                         "reference": "TOA:199"
                                     }
                                 ]
@@ -179,8 +360,19 @@
                                 "max": 52,
                                 "results": [
                                     {
-                                        "title": "$roll(3d6) flying monkeys.",
-                                        "text": "Characters must pass a DC 12 Dexerity saving throw to avoid loosing a useful item.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "3d6",
+                                                    "name": "Flying Monkey",
+                                                    "dexModifier": 2,
+                                                    "AC": 12,
+                                                    "HP": "1d6",
+                                                    "reference": "TOA:220"
+                                                }
+                                            }
+                                        ],
+                                        "text": "If the encounter occurs near Mbala, the monkeys are the servants of Nanny Pu'pu. Characters must pass a DC 12 Dexerity saving throw to avoid loosing a useful item. Monkeys can be grappled, captured and taught tricks.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -190,9 +382,57 @@
                                 "max": 55,
                                 "results": [
                                     {
-                                        "title": "Flying snakes.",
-                                        "text": "On an even roll, they encounter 1 flying snake, on an odd result they encounter $roll(3d6) flying snakes. Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persausion check.",
-                                        "reference": "TOA:200"
+                                        "table": {
+                                            "name": "Flying Snakes",
+                                            "description": "Determine how many flying snakes are encountered.",
+                                            "roll": "1d2",
+                                            "entries": [
+                                                {
+                                                    "min": 1,
+                                                    "max": 1,
+                                                    "results": [
+                                                        {
+                                                            "titleList": [
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d1",
+                                                                        "name": "Flying Snake",
+                                                                        "dexModifier": 4,
+                                                                        "AC": 14,
+                                                                        "HP": "2d4",
+                                                                        "reference": "MM:322"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "text": "Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persuasion check.",
+                                                            "reference": "TOA:200"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 2,
+                                                    "max": 2,
+                                                    "results": [
+                                                        {
+                                                            "titleList": [
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d1",
+                                                                        "name": "Flying Snake",
+                                                                        "dexModifier": 4,
+                                                                        "AC": 14,
+                                                                        "HP": "2d4",
+                                                                        "reference": "MM:322"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "text": "Make a DC 13 Animal Handling check to catch one. They are worth 25gp or 50gp on DC 15 Persuasion check.",
+                                                            "reference": "TOA:200"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             },
@@ -201,9 +441,112 @@
                                 "max": 57,
                                 "results": [
                                     {
-                                        "title": "3 frost giants and $roll(1d2) winter wolves.",
-                                        "text": "Attack if players withhold information or threaten them. 20% to be Drufi's search party TOA:64.",
-                                        "reference": "TOA:200"
+                                        "table": {
+                                            "name": "Frost Giant",
+                                            "description": "Determine which frost giants are encounter",
+                                            "roll": "1d100",
+                                            "entries": [
+                                                {
+                                                    "min": 1,
+                                                    "max": 20,
+                                                    "results": [
+                                                        {
+                                                            "titleList": [
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d1+2",
+                                                                        "name": "Frost Giant",
+                                                                        "dexModifier": -1,
+                                                                        "AC": 15,
+                                                                        "HP": "12d12+60",
+                                                                        "reference": "MM:155"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d3",
+                                                                        "name": "Winter Wolf",
+                                                                        "pluralForm": "Winter Wolves",
+                                                                        "dexModifier": 1,
+                                                                        "AC": 13,
+                                                                        "HP": "10d10+20",
+                                                                        "reference": "MM:340"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "text": "Attack if players withhold information or threaten them. They are hunting Artus to get the Ring of Winter.",
+                                                            "reference": "TOA:200"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 1,
+                                                    "max": 20,
+                                                    "results": [
+                                                        {
+                                                            "titleList": [
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d1+2",
+                                                                        "name": "Frost Giant",
+                                                                        "dexModifier": -1,
+                                                                        "AC": 15,
+                                                                        "HP": "12d12+60",
+                                                                        "reference": "MM:155"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d3",
+                                                                        "name": "Winter Wolf",
+                                                                        "pluralForm": "Winter Wolves",
+                                                                        "dexModifier": 1,
+                                                                        "AC": 13,
+                                                                        "HP": "10d10+20",
+                                                                        "reference": "MM:340"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "text": "Attack if players withhold information or threaten them. They are hunting Artus to get the Ring of Winter.",
+                                                            "reference": "TOA:200"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "min": 21,
+                                                    "max": 100,
+                                                    "results": [
+                                                        {
+                                                            "titleList": [
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d1+2",
+                                                                        "name": "Frost Giant",
+                                                                        "dexModifier": -1,
+                                                                        "AC": 15,
+                                                                        "HP": "12d12+60",
+                                                                        "reference": "MM:155"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "monster": {
+                                                                        "amount": "1d3",
+                                                                        "name": "Winter Wolf",
+                                                                        "pluralForm": "Winter Wolves",
+                                                                        "dexModifier": 1,
+                                                                        "AC": 13,
+                                                                        "HP": "10d10+20",
+                                                                        "reference": "MM:340"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "text": "This is Hyalspyd's hunting party. Attack if players withhold information or threaten them. They are hunting Artus to get the Ring of Winter.",
+                                                            "reference": "TOA:200, TOA:64"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             },
@@ -212,7 +555,18 @@
                                 "max": 63,
                                 "results": [
                                     {
-                                        "title": "$roll(1d6) giant lizards.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d6",
+                                                    "name": "Giant Lizard",
+                                                    "dexModifier": 1,
+                                                    "AC": 12,
+                                                    "HP": "3d10+3",
+                                                    "reference": "MM:326"
+                                                }
+                                            }
+                                        ],
                                         "text": "Attack if only threatened.",
                                         "reference": "TOA:200"
                                     }
@@ -223,8 +577,19 @@
                                 "max": 67,
                                 "results": [
                                     {
-                                        "title": "1 giant snapping turtles.",
-                                        "text": "Attackes if players get within 30 ft.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1",
+                                                    "name": "Giant Snapping Turtle",
+                                                    "dexModifier": 0,
+                                                    "AC": 17,
+                                                    "HP": "10d10+20",
+                                                    "reference": "TOA:222"
+                                                }
+                                            }
+                                        ],
+                                        "text": "Attacks if players get within 30 ft.",
                                         "reference": "TOA:200"
                                     }
                                 ]
@@ -234,7 +599,28 @@
                                 "max": 71,
                                 "results": [
                                     {
-                                        "title": "1 lizardfolk shaman and $roll(2d4) lizardfolk.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1",
+                                                    "name": "Lizardfolk Shaman",
+                                                    "dexModifier": 0,
+                                                    "AC": 13,
+                                                    "HP": "5d8+5",
+                                                    "reference": "MM:205"
+                                                }
+                                            },
+                                            {
+                                                "monster": {
+                                                    "amount": "2d4",
+                                                    "name": "Lizardfolk",
+                                                    "dexModifier": 0,
+                                                    "AC": 15,
+                                                    "HP": "4d8+4",
+                                                    "reference": "MM:204"
+                                                }
+                                            }
+                                        ],
                                         "text": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
                                         "reference": "TOA:201"
                                     }
@@ -245,8 +631,51 @@
                                 "max": 74,
                                 "results": [
                                     {
-                                        "title": "Red Wizard: 1 mage, $roll(1d6) guards and $roll(1d6) skeletons.",
-                                        "text": "They are not looking for a fight. If it looks like they are going to be defeated they surrender and give a map.",
+                                        "title": "Red Wizard Party",
+                                        "textList": [
+                                            {
+                                                "text": "The group consists of a "
+                                            },
+                                            {
+                                                "monster": {
+                                                    "name": "Mage",
+                                                    "amount": "1d1",
+                                                    "dexModifier": 2,
+                                                    "AC": 12,
+                                                    "HP": "9d8",
+                                                    "reference": "MM:347"
+                                                }
+                                            },
+                                            {
+                                                "text": ", "
+                                            },
+                                            {
+                                                "monster": {
+                                                    "name": "Guard",
+                                                    "amount": "1d6",
+                                                    "dexModifier": 1,
+                                                    "AC": 11,
+                                                    "HP": "2d8+2",
+                                                    "reference": "MM:347"
+                                                }
+                                            },
+                                            {
+                                                "text": " and "
+                                            },
+                                            {
+                                                "monster": {
+                                                    "name": "Skeleton",
+                                                    "amount": "1d6",
+                                                    "dexModifier": 2,
+                                                    "AC": 13,
+                                                    "HP": "2d8+4",
+                                                    "reference": "MM:272"
+                                                }
+                                            },
+                                            {
+                                                "text": "They all answer to Valindra Shadowmantle in the Heart of Ubtao. If this occurs outside Omu, these reinforcements are on the way to the city. If it occurs in the city, they are searching for the shrines. They are not interested in fighting and can prove a crude map if they players threaten them."
+                                            }
+                                        ],
                                         "reference": "TOA:201"
                                     }
                                 ]
@@ -256,9 +685,29 @@
                                 "max": 84,
                                 "results": [
                                     {
-                                        "title": "3 sea hags.",
-                                        "text": "Roll 3 times for a treasure drop. They try to trick the players",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "amount": "1d1+2",
+                                                    "name": "Sea Hag",
+                                                    "dexModifier": 1,
+                                                    "AC": 14,
+                                                    "HP": "7d8+2",
+                                                    "reference": "MM:179"
+                                                }
+                                            }
+                                        ],
+                                        "text": "Roll 3 times for a treasure drop. They try to trick the players. They like to use a ruined canoe on the beach and pretend to be stranded and require rescue.",
                                         "reference": "TOA:202"
+                                    },
+                                    {
+                                        "tableRef": "TreasureDrop"
+                                    },
+                                    {
+                                        "tableRef": "TreasureDrop"
+                                    },
+                                    {
+                                        "tableRef": "TreasureDrop"
                                     }
                                 ]
                             },
@@ -267,29 +716,61 @@
                                 "max": 87,
                                 "results": [
                                     {
-                                        "title": "$roll(2d6) stirges.",
-                                        "text": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
-                                        "reference": "TOA:202"
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "name": "Stirge",
+                                                    "amount": "2d6",
+                                                    "dexModifier": 3,
+                                                    "AC": 14,
+                                                    "HP": "1d4",
+                                                    "reference": "MM:284"
+                                                }
+                                            }
+                                        ],
+                                        "reference": "TOA:202",
+                                        "text": "If during the day, the players stumble into their nest. If at night they descend on the camp and attack."
                                     }
-                                ]
-                            },
+                                ]                            },
                             {
                                 "min": 88,
                                 "max": 89,
                                 "results": [
                                     {
-                                        "title": "$roll(1d4) swarm of bats.",
-                                        "text": "They are aggressive.",
-                                        "reference": "TOA:202"
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "name": "Swarm of Bats",
+                                                    "pluralForm": "Swarms of Bats",
+                                                    "amount": "1d4",
+                                                    "dexModifier": 2,
+                                                    "AC": 12,
+                                                    "HP": "5d8",
+                                                    "reference": "MM:337"
+                                                }
+                                            }
+                                        ],
+                                        "reference": "TOA:202",
+                                        "text": "They attack immediately."
                                     }
-                                ]
-                            },
+                                ]                            },
                             {
                                 "min": 90,
                                 "max": 95,
                                 "results": [
                                     {
-                                        "title": "Tabaxi hunter.",
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "name": "Tabaxi Hunter",
+                                                    "amount": "1d1",
+                                                    "dexModifier": 3,
+                                                    "AC": 14,
+                                                    "HP": "9d8",
+                                                    "reference": "TOA:232"
+                                                }
+                                            }
+                                        ],
                                         "text": "Passive Perception 15 to notice them. They watch the party from 300 ft. Shadows the party and may help them.",
                                         "reference": "TOA:203"
                                     }
@@ -300,12 +781,22 @@
                                 "max": 100,
                                 "results": [
                                     {
-                                        "title": "$roll(1d4) tri-flower fonds.",
-                                        "text": "They look like ordinary plants until they attack. At night they sneak in and  try to hit the players with orange blossoms first.",
-                                        "reference": "TOA:203"
+                                        "titleList": [
+                                            {
+                                                "monster": {
+                                                    "name": "Tri-flower Frond",
+                                                    "amount": "1d4",
+                                                    "dexModifier": 0,
+                                                    "AC": 10,
+                                                    "HP": "2d8+2",
+                                                    "reference": "TOA:234"
+                                                }
+                                            }
+                                        ],
+                                        "reference": "TOA:203",
+                                        "text": "They cannot be distinguished from normal plants. They encounter is during the day the characters stumble into them. If at night, they try to use their spores to put them to sleep first."
                                     }
-                                ]
-                            }
+                                ]                            }
                         ]
                     }
                 }

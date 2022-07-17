@@ -130,7 +130,7 @@
         {
           "title": "Potion of Animal Friendship",
           "text": "Can cast Animal Friendship (save DC13) at will for 1 hour.",
-          "reference": "TOA:197, DMG:187"
+          "reference": "TOA:197, DMG:187, PH:212"
         }
       ]
     },
@@ -152,7 +152,7 @@
         {
           "title": "Spell case",
           "text": "Random 1st level spell",
-          "reference": "TOA:197"
+          "reference": "TOA:197; PH:207"
         }
       ]
     },
@@ -195,7 +195,7 @@
       "results": [
         {
           "title": "Onyx Orb",
-          "text": "A small onyx orb with a maze-like pattern carved on it. Usuable as a druidic focus. (75GP)",
+          "text": "A small onyx orb with a maze-like pattern carved on it. Usable as a druidic focus. (75GP)",
           "reference": "TOA:197"
         }
       ]
