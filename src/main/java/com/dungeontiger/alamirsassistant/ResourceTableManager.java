@@ -111,7 +111,12 @@ public class ResourceTableManager implements ITableManager {
             if (o.has("text")) {
                 results.add(new TextCompositeListItem(o.getString("text")));
             } else if (o.has("roll")) {
-                results.add(new RollCompositeListItem(o.getString("roll"), dice));
+                JSONObject r = o.getJSONObject("roll");
+                Integer multiply = null;
+                if (r.has("multiply")) {
+                    multiply = r.getInt("multiply");
+                }
+                results.add(new RollCompositeListItem(r.getString("dice"), multiply, dice));
             } else if (o.has("monster")) {
                 JSONObject m = o.getJSONObject("monster");
                 String pluralForm = null;

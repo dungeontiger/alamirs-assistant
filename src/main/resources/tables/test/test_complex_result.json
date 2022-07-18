@@ -1,7 +1,7 @@
 {
   "name": "Test Complex Result",
   "description": "Test a list of results.",
-  "roll": "1d5",
+  "roll": "1d6",
   "entries": [
     {
       "min": 1,
@@ -29,12 +29,15 @@
               "text": "Test"
             },
             {
-              "roll": "1d6"
+              "roll": {
+                "dice": "1d6"
+              }
             }
           ]
         }
       ]
-    }, {
+    },
+    {
       "min": 3,
       "max": 3,
       "results": [
@@ -60,7 +63,8 @@
           ]
         }
       ]
-    }, {
+    },
+    {
       "min": 4,
       "max": 4,
       "results": [
@@ -94,7 +98,8 @@
           ]
         }
       ]
-    }, {
+    },
+    {
       "min": 5,
       "max": 5,
       "results": [
@@ -115,7 +120,9 @@
               "text": " paragraph. I rolled "
             },
             {
-              "roll": "1d6"
+              "roll": {
+                "dice": "1d6"
+              }
             },
             {
               "text": ". And there are "
@@ -133,6 +140,22 @@
             },
             {
               "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "min": 6,
+      "max": 6,
+      "results": [
+        {
+          "titleList": [
+            {
+              "roll": {
+                "dice": "1d6",
+                "multiply": 1000
+              }
             }
           ]
         }

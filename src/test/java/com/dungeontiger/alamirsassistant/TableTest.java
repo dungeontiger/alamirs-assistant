@@ -109,6 +109,16 @@ public class TableTest {
         assertEquals(2, results.size());
     }
 
+    @Test
+    public void testMultiplyRoll() {
+        when(dice.roll("1d6")).thenReturn(6);
+        ResourceTableManager tableManager = new ResourceTableManager(dice, new NLG(dice));
+        Table table = tableManager.getTable("test", "test_complex_result");
+        List<ResponseResult> results = table.roll();
+        assertEquals(1, results.size());
+        assertEquals("6000", results.get(0).getTitle());
+    }
+
     private void testEncounterTable(String campaignName, String tableName) {
         // we want to test all encounters in this table
         // to do that we always want to roll an encounter, therefore 1d20 is an 18
