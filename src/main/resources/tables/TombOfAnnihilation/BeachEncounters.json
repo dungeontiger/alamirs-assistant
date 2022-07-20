@@ -463,37 +463,7 @@
                                                                     }
                                                                 },
                                                                 {
-                                                                    "monster": {
-                                                                        "amount": "1d3",
-                                                                        "name": "Winter Wolf",
-                                                                        "pluralForm": "Winter Wolves",
-                                                                        "dexModifier": 1,
-                                                                        "AC": 13,
-                                                                        "HP": "10d10+20",
-                                                                        "reference": "MM:340"
-                                                                    }
-                                                                }
-                                                            ],
-                                                            "text": "Attack if players withhold information or threaten them. They are hunting Artus to get the Ring of Winter.",
-                                                            "reference": "TOA:200"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "min": 1,
-                                                    "max": 20,
-                                                    "results": [
-                                                        {
-                                                            "titleList": [
-                                                                {
-                                                                    "monster": {
-                                                                        "amount": "1d1+2",
-                                                                        "name": "Frost Giant",
-                                                                        "dexModifier": -1,
-                                                                        "AC": 15,
-                                                                        "HP": "12d12+60",
-                                                                        "reference": "MM:155"
-                                                                    }
+                                                                    "text": " and "
                                                                 },
                                                                 {
                                                                     "monster": {
@@ -527,6 +497,9 @@
                                                                         "HP": "12d12+60",
                                                                         "reference": "MM:155"
                                                                     }
+                                                                },
+                                                                {
+                                                                    "text": " and "
                                                                 },
                                                                 {
                                                                     "monster": {
@@ -609,6 +582,9 @@
                                                     "HP": "5d8+5",
                                                     "reference": "MM:205"
                                                 }
+                                            },
+                                            {
+                                                "text": " and "
                                             },
                                             {
                                                 "monster": {
@@ -731,7 +707,8 @@
                                         "reference": "TOA:202",
                                         "text": "If during the day, the players stumble into their nest. If at night they descend on the camp and attack."
                                     }
-                                ]                            },
+                                ]
+                            },
                             {
                                 "min": 88,
                                 "max": 89,
@@ -753,7 +730,8 @@
                                         "reference": "TOA:202",
                                         "text": "They attack immediately."
                                     }
-                                ]                            },
+                                ]
+                            },
                             {
                                 "min": 90,
                                 "max": 95,

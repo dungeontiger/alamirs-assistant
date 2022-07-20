@@ -1,6 +1,6 @@
 {
-  "name": "Lesser Undead Encounters.",
-  "description": "Check for encounters in the jungle with lesser undead. Roll three times a day.",
+  "name": "No Undead Encounters.",
+  "description": "Check for encounters in the jungle with no undead. Roll three times a day.",
   "roll": "1d20",
   "entries": [
     {
@@ -18,7 +18,7 @@
       "results": [
         {
           "table": {
-            "name": "Lesser Undead Monsters",
+            "name": "No Undead Monsters",
             "description": "Roll for the actual encounter.",
             "roll": "1d100",
             "entries": [
@@ -50,6 +50,48 @@
                 "max": 2,
                 "results": [
                   {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Almiraj",
+                        "amount": "1d6",
+                        "dexModifier": 3,
+                        "AC": 13,
+                        "HP": "1d6",
+                        "reference": "TOA:211"
+                      }                      }
+                    ],
+                    "text": "Any character with passive Perception of 12 can spot them 60ft away. They run away if any character comes within 30ft. They can be trapped with an Animal Handling check of DC14.",
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 3,
+                "max": 4,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Ape",
+                        "amount": "1d4",
+                        "dexModifier": 2,
+                        "AC": 12,
+                        "HP": "3d8+6",
+                        "reference": "MM:317"
+                      }                      }
+                    ],
+                    "text": "The apes are eating fruit in a tree and look nervous. If the players back away they do not attack. In any other case they do to protect their food.",
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 5,
+                "max": 5,
+                "results": [
+                  {
                     "title": "Artus Cimber",
                     "text": "Artus and Dragonbait are encountered. They can rush in the save the characters or the characters stumbles into their camp.",
                     "reference": "TOA:196, TOA: 212, TOA:218"
@@ -57,8 +99,8 @@
                 ]
               },
               {
-                "min": 3,
-                "max": 5,
+                "min": 6,
+                "max": 7,
                 "results": [
                   {
                     "titleList": [
@@ -77,9 +119,10 @@
                     "reference": "TOA:196"
                   }
                 ]
-              },              {
-                "min": 6,
-                "max": 6,
+              },
+              {
+                "min": 8,
+                "max": 8,
                 "results": [
                   {
                     "titleList": [
@@ -100,8 +143,29 @@
                 ]
               },
               {
-                "min": 7,
-                "max": 8,
+                "min": 9,
+                "max": 9,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Baboon",
+                        "amount": "3d6",
+                        "dexModifier": 2,
+                        "AC": 12,
+                        "HP": "1d6",
+                        "reference": "MM:318"
+                      }                      }
+                    ],
+                    "text": "They can be distracted with a days worth of food, otherwise they attack.",
+                    "reference": "TOA:196"
+                  }
+                ]
+              },
+              {
+                "min": 10,
+                "max": 11,
                 "results": [
                   {
                     "tableRef": "Cache"
@@ -109,8 +173,8 @@
                 ]
               },
               {
-                "min": 9,
-                "max": 10,
+                "min": 12,
+                "max": 13,
                 "results": [
                   {
                     "title": "Cannibals",
@@ -134,8 +198,40 @@
                 ]
               },
               {
-                "min": 11,
-                "max": 11,
+                "min": 14,
+                "max": 15,
+                "results": [
+                  {
+                    "title": "Chwinga",
+                    "text": "Attempts to steal something valuable from the players. It is noticed by a character with passive Perception 17 or higher. Something is left if exhange: a pretty shell, a handful of nuts or an uncut gem worth 10gp.",
+                    "reference": "TOA:197, TOA:217"
+                  }
+                ]
+              },
+              {
+                "min": 16,
+                "max": 16,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Cyclops",
+                        "amount": "1d1",
+                        "dexModifier": 0,
+                        "AC": 14,
+                        "HP": "12d12+60",
+                        "reference": "MM:45"
+                      }                      }
+                    ],
+                    "text": "A cyclops is heading towards its home near Snapping Turtle Bay. It is not looking for a fight, but will if the players look hostile.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 17,
+                "max": 17,
                 "results": [
                   {
                     "titleList": [
@@ -157,8 +253,8 @@
                 ]
               },
               {
-                "min": 12,
-                "max": 12,
+                "min": 18,
+                "max": 18,
                 "results": [
                   {
                     "titleList": [
@@ -180,8 +276,29 @@
                 ]
               },
               {
-                "min": 13,
-                "max": 13,
+                "min": 19,
+                "max": 19,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Brontosaurus",
+                        "amount": "1d1",
+                        "dexModifier": -1,
+                        "AC": 15,
+                        "HP": "9d20+17",
+                        "reference": "TOA:215"
+                      }                      }
+                    ],
+                    "text": "Will only fight in self defence, but can accidentally step on a near by player. It does not even notice them.",
+                    "reference": "TOA:197"
+                  }
+                ]
+              },
+              {
+                "min": 20,
+                "max": 21,
                 "results": [
                   {
                     "titleList": [
@@ -203,8 +320,8 @@
                 ]
               },
               {
-                "min": 14,
-                "max": 14,
+                "min": 22,
+                "max": 23,
                 "results": [
                   {
                     "titleList": [
@@ -226,8 +343,8 @@
                 ]
               },
               {
-                "min": 15,
-                "max": 15,
+                "min": 24,
+                "max": 24,
                 "results": [
                   {
                     "titleList": [
@@ -248,8 +365,8 @@
                 ]
               },
               {
-                "min": 16,
-                "max": 16,
+                "min": 25,
+                "max": 26,
                 "results": [
                   {
                     "titleList": [
@@ -269,9 +386,10 @@
                     "reference": "TOA:198"
                   }
                 ]
-              },              {
-                "min": 17,
-                "max": 17,
+              },
+              {
+                "min": 27,
+                "max": 28,
                 "results": [
                   {
                     "titleList": [
@@ -294,8 +412,8 @@
               },
 
               {
-                "min": 18,
-                "max": 18,
+                "min": 29,
+                "max": 30,
                 "results": [
                   {
                     "titleList": [
@@ -316,8 +434,82 @@
                 ]
               },
               {
-                "min": 19,
-                "max": 20,
+                "min": 31,
+                "max": 35,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Velociraptor",
+                          "dexModifier": 2,
+                          "AC": 13,
+                          "HP": "3d4+3",
+                          "reference": "MM:235"
+                        }
+                      }
+                    ],
+                    "text": "They are attracted to the party's scent and are encountered 300 ft away. A DC 15 Survival check can be used to find a safe refuge from them.",
+                    "reference": "TOA:198"
+                  }
+                ]
+              },
+              {
+                "min": 36,
+                "max": 36,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Faerie Dragon",
+                        "amount": "1d1",
+                        "dexModifier": 5,
+                        "AC": 15,
+                        "HP": "4d4+4",
+                        "reference": "MM133"
+                      }                      }
+                    ],
+                    "text": "The dragon follows the players for a while. If they are in good spirits, it will play a few pranks on the players. After a while, if the players are not annoyed by the dragon's pranks, it agrees to answer 3 questions. It knows where Omu is and knows about the gargoyles and the snake people. It also knows about near by landmarks and points of interest.",
+                    "reference": "TOA:199"
+                  }
+                ]
+              },
+              {
+                "min": 37,
+                "max": 37,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Eblis",
+                          "amount": "1d4+1",
+                          "dexModifier": 3,
+                          "AC": 13,
+                          "HP": "4d10+4",
+                          "reference": "TOA:219"
+                        }
+                      }
+                    ],
+                    "text": "If encountered during the day, the characters stumble into a living area iwith reed huts and stilts. The Eblis attack weak or wounded characters. However, if the players look strong they agree to trade information for gems. If given a 50GP gem they will point the players in the direction of a landmark. They may have treasure in their huts. If at night, they try to capture a player and drag them away.",
+                    "reference": "TOA:199"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  },
+                  {
+                    "tableRef": "TreasureDrop"
+                  }
+                ]
+              },
+              {
+                "min": 38,
+                "max": 42,
                 "results": [
                   {
                     "title": "Emerald Enclave",
@@ -357,8 +549,8 @@
                 ]
               },
               {
-                "min": 21,
-                "max": 22,
+                "min": 43,
+                "max": 44,
                 "results": [
                   {
                     "tableRef": "DeadExplorer"
@@ -366,8 +558,8 @@
                 ]
               },
               {
-                "min": 23,
-                "max": 23,
+                "min": 45,
+                "max": 45,
                 "results": [
                   {
                     "title": "Explorers",
@@ -422,8 +614,30 @@
                 ]
               },
               {
-                "min": 24,
-                "max": 26,
+                "min": 46,
+                "max": 46,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Flail Snail",
+                          "amount": "1d1",
+                          "dexModifier": -3,
+                          "AC": 16,
+                          "HP": "5d10+25",
+                          "reference": "TOA:220"
+                        }
+                      }
+                    ],
+                    "text": "The players spot the slimy path of a snail. They can follow it with a successful DC10 Survival check. It's shell is worth 2,500 GP",
+                    "reference": "TOA:199"
+                  }
+                ]
+              },
+              {
+                "min": 47,
+                "max": 50,
                 "results": [
                   {
                     "title": "Flaming Fists",
@@ -433,8 +647,30 @@
                 ]
               },
               {
-                "min": 27,
-                "max": 27,
+                "min": 51,
+                "max": 51,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "3d6",
+                          "name": "Flying Monkey",
+                          "dexModifier": 2,
+                          "AC": 12,
+                          "HP": "1d6",
+                          "reference": "TOA:220"
+                        }
+                      }
+                    ],
+                    "text": "If the encounter occurs near Mbala, the monkeys are the servants of Nanny Pu'pu. Characters must pass a DC 12 Dexerity saving throw to avoid loosing a useful item. Monkeys can be grappled, captured and taught tricks.",
+                    "reference": "TOA:200"
+                  }
+                ]
+              },
+              {
+                "min": 52,
+                "max": 53,
                 "results": [
                   {
                     "table": {
@@ -492,8 +728,139 @@
                 ]
               },
               {
-                "min": 28,
-                "max": 28,
+                "min": 54,
+                "max": 55,
+                "results": [
+                  {
+                    "table": {
+                      "name": "Frost Giant",
+                      "description": "Determine which frost giants are encounter",
+                      "roll": "1d100",
+                      "entries": [
+                        {
+                          "min": 1,
+                          "max": 20,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "amount": "1d1+2",
+                                    "name": "Frost Giant",
+                                    "dexModifier": -1,
+                                    "AC": 15,
+                                    "HP": "12d12+60",
+                                    "reference": "MM:155"
+                                  }
+                                },
+                                {
+                                  "text": " and "
+                                },
+                                {
+                                  "monster": {
+                                    "amount": "1d3",
+                                    "name": "Winter Wolf",
+                                    "pluralForm": "Winter Wolves",
+                                    "dexModifier": 1,
+                                    "AC": 13,
+                                    "HP": "10d10+20",
+                                    "reference": "MM:340"
+                                  }
+                                }
+                              ],
+                              "text": "Attack if players withhold information or threaten them. They are hunting Artus to get the Ring of Winter.",
+                              "reference": "TOA:200"
+                            }
+                          ]
+                        },
+                        {
+                          "min": 21,
+                          "max": 100,
+                          "results": [
+                            {
+                              "titleList": [
+                                {
+                                  "monster": {
+                                    "amount": "1d1+2",
+                                    "name": "Frost Giant",
+                                    "dexModifier": -1,
+                                    "AC": 15,
+                                    "HP": "12d12+60",
+                                    "reference": "MM:155"
+                                  }
+                                },
+                                {
+                                  "text": " and "
+                                },
+                                {
+                                  "monster": {
+                                    "amount": "1d3",
+                                    "name": "Winter Wolf",
+                                    "pluralForm": "Winter Wolves",
+                                    "dexModifier": 1,
+                                    "AC": 13,
+                                    "HP": "10d10+20",
+                                    "reference": "MM:340"
+                                  }
+                                }
+                              ],
+                              "text": "This is Hyalspyd's hunting party. Attack if players withhold information or threaten them. They are hunting Artus to get the Ring of Winter.",
+                              "reference": "TOA:200, TOA:64"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "min": 56,
+                "max": 56,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Giant Boar",
+                          "amount": "1d4+1",
+                          "dexModifier": 0,
+                          "AC": 12,
+                          "HP": "5d10+15",
+                          "reference": "MM:323"
+                        }
+                      }
+                    ],
+                    "text": "The players hear the boars. They can sneak around them with a DC12 group Stealth check.",
+                    "reference": "TOA:200"
+                  }
+                ]
+              },
+              {
+                "min": 57,
+                "max": 57,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Giant Frog",
+                          "amount": "2d6",
+                          "dexModifier": 1,
+                          "AC": 11,
+                          "HP": "4d8",
+                          "reference": "MM:325"
+                        }
+                      }
+                    ],
+                    "text": "They try to eat anything in their path. The players have advanced warning due to the noise they make.",
+                    "reference": "TOA:200"
+                  }
+                ]
+              },
+              {
+                "min": 58,
+                "max": 58,
                 "results": [
                   {
                     "titleList": [
@@ -514,8 +881,29 @@
                 ]
               },
               {
-                "min": 29,
-                "max": 29,
+                "min": 59,
+                "max": 59,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                      "monster": {
+                        "name": "Giant Scorpion",
+                        "amount": "1d3",
+                        "dexModifier": 1,
+                        "AC": 15,
+                        "HP": "7d10+14",
+                        "reference": "MM:327"
+                      }                      }
+                    ],
+                    "text": "Passive Perception of 11 can detect them before they attack. They jump out of burrows and attack. Any player damaged by them must pass a DC11 Con save or get Shivering Sickness.",
+                    "reference": "TOA:200, TOA:40"
+                  }
+                ]
+              },
+              {
+                "min": 60,
+                "max": 60,
                 "results": [
                   {
                     "titleList": [
@@ -536,8 +924,8 @@
                 ]
               },
               {
-                "min": 30,
-                "max": 31,
+                "min": 61,
+                "max": 62,
                 "results": [
                   {
                     "titleList": [
@@ -564,8 +952,8 @@
                 ]
               },
               {
-                "min": 32,
-                "max": 33,
+                "min": 63,
+                "max": 64,
                 "results": [
                   {
                     "titleList": [
@@ -599,8 +987,8 @@
                 ]
               },
               {
-                "min": 34,
-                "max": 35,
+                "min": 65,
+                "max": 66,
                 "results": [
                   {
                     "titleList": [
@@ -634,8 +1022,88 @@
                 ]
               },
               {
-                "min": 36,
-                "max": 39,
+                "min": 67,
+                "max": 67,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Jaculis",
+                          "pluralForm": "Jaculises",
+                          "amount": "1d6",
+                          "dexModifier": 2,
+                          "AC": 14,
+                          "HP": "3d10",
+                          "reference": "TOA:225"
+                        }
+                      }
+                    ],
+                    "text": "Without warning they attack. Any player with Passive Perception of 14 is not surprised. All others are. Their skin is valuable as a magic item ingredient",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 68,
+                "max": 68,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Kamadan",
+                          "amount": "1d2",
+                          "dexModifier": 3,
+                          "AC": 13,
+                          "HP": "9d10+18",
+                          "reference": "TOA:225"
+                        }
+                      }
+                    ],
+                    "text": "The party is ambushed by the Kamadans. Any character with Passive Perception of 16 will not be surprised, all others will be. If defeated, the players can search for their lair. This requires a DC15 Survival check. If found, there is a 25% chance that  $roll(1d3) cubs are present. They can be sold for 150 GP or 300 GP with a DC15 Persuasion check.",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 69,
+                "max": 70,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "amount": "1d1",
+                          "name": "Lizardfolk Shaman",
+                          "dexModifier": 0,
+                          "AC": 13,
+                          "HP": "5d8+5",
+                          "reference": "MM:205"
+                        }
+                      },
+                      {
+                        "text": " and "
+                      },
+                      {
+                        "monster": {
+                          "amount": "2d4",
+                          "name": "Lizardfolk",
+                          "dexModifier": 0,
+                          "AC": 15,
+                          "HP": "4d8+4",
+                          "reference": "MM:204"
+                        }
+                      }
+                    ],
+                    "text": "They are hungry. They can be appeased with one day's rations per lizardfolk.",
+                    "reference": "TOA:201"
+                  }
+                ]
+              },
+              {
+                "min": 71,
+                "max": 72,
                 "results": [
                   {
                     "title": "Mad Monkey Mist",
@@ -645,8 +1113,8 @@
                 ]
               },
               {
-                "min": 40,
-                "max": 41,
+                "min": 73,
+                "max": 73,
                 "results": [
                   {
                     "titleList": [
@@ -667,8 +1135,8 @@
                 ]
               },
               {
-                "min": 42,
-                "max": 42,
+                "min": 74,
+                "max": 74,
                 "results": [
                   {
                     "titleList": [
@@ -689,8 +1157,8 @@
                 ]
               },
               {
-                "min": 43,
-                "max": 44,
+                "min": 75,
+                "max": 75,
                 "results": [
                   {
                     "titleList": [
@@ -711,8 +1179,8 @@
                 ]
               },
               {
-                "min": 45,
-                "max": 45,
+                "min": 76,
+                "max": 76,
                 "results": [
                   {
                     "table": {
@@ -792,8 +1260,8 @@
                 ]
               },
               {
-                "min": 46,
-                "max": 46,
+                "min": 77,
+                "max": 77,
                 "results": [
                   {
                     "title": "Red Wizard Party",
@@ -846,8 +1314,8 @@
                 ]
               },
               {
-                "min": 47,
-                "max": 48,
+                "min": 78,
+                "max": 79,
                 "results": [
                   {
                     "titleList":[
@@ -868,8 +1336,8 @@
                 ]
               },
               {
-                "min": 49,
-                "max": 49,
+                "min": 80,
+                "max": 80,
                 "results": [
                   {
                     "titleList":[
@@ -890,8 +1358,8 @@
                 ]
               },
               {
-                "min": 50,
-                "max": 50,
+                "min": 81,
+                "max": 81,
                 "results": [
                   {
                     "titleList":[
@@ -912,14 +1380,14 @@
                 ]
               },
               {
-                "min": 51,
-                "max": 52,
+                "min": 82,
+                "max": 82,
                 "results": [
                   {
                     "titleList":[
                       {
                         "monster": {
-                          "name": "Giant Spiders",
+                          "name": "Giant Spider",
                           "amount": "1d6",
                           "dexModifier": 3,
                           "AC": 14,
@@ -934,8 +1402,8 @@
                 ]
               },
               {
-                "min": 53,
-                "max": 55,
+                "min": 83,
+                "max": 85,
                 "results": [
                   {
                     "title": "Status of Ubtao",
@@ -989,8 +1457,8 @@
                 ]
               },
               {
-                "min": 56,
-                "max": 57,
+                "min": 86,
+                "max": 86,
                 "results": [
                   {
                     "titleList": [
@@ -1011,8 +1479,8 @@
                 ]
               },
               {
-                "min": 58,
-                "max": 59,
+                "min": 87,
+                "max": 87,
                 "results": [
                   {
                     "titleList": [
@@ -1036,8 +1504,8 @@
                 ]
               },
               {
-                "min": 60,
-                "max": 62,
+                "min": 88,
+                "max": 88,
                 "results": [
                   {
                     "titleList": [
@@ -1059,8 +1527,8 @@
                 ]
               },
               {
-                "min": 63,
-                "max": 65,
+                "min": 89,
+                "max": 89,
                 "results": [
                   {
                     "titleList": [
@@ -1082,8 +1550,51 @@
                 ]
               },
               {
-                "min": 66,
-                "max": 66,
+                "min": 90,
+                "max": 90,
+                "results": [
+                  {
+                    "titleList": [
+                      {
+                        "monster": {
+                          "name": "Tabaxi Hunter",
+                          "amount": "1d1",
+                          "dexModifier": 3,
+                          "AC": 14,
+                          "HP": "9d8",
+                          "reference": "TOA:232"
+                        }
+                      }
+                    ],
+                    "text": "Passive Perception 15 to notice them. They watch the party from 300 ft. Shadows the party and may help them.",
+                    "reference": "TOA:203"
+                  }
+                ]
+              },
+              {
+                "min": 91,
+                "max": 91,
+                "results": [
+                  {
+                    "title": "Tiger",
+                    "titleList": [
+                      {
+                        "name": "Tiger",
+                        "amount": "1d1",
+                        "dexModifier": 2,
+                        "AC": 12,
+                        "HP": "5d10+10",
+                        "reference": "MM:339"
+                      }
+                    ],
+                    "text": "The tiger can only be detected with a Passive Perception of 16. It pounces on a character from 40ft. If it looses half its hit points it retreats.",
+                    "reference": "TOA:203"
+                  }
+                ]
+              },
+              {
+                "min": 92,
+                "max": 92,
                 "results": [
                   {
                     "titleList": [
@@ -1104,259 +1615,8 @@
                 ]
               },
               {
-                "min": 67,
-                "max": 67,
-                "results": [
-                  {
-                    "titleList": [
-                      {
-                        "monster": {
-                          "name": "Troll",
-                          "amount": "1d1",
-                          "dexModifier": 1,
-                          "AC": 15,
-                          "HP": "8d10+40",
-                          "reference": "MM:291"
-                        }
-                      }
-                    ],
-                    "reference": "TOA:203",
-                    "text": "Hungry and attacks the players."
-                  }
-                ]
-              },
-              {
-                "min": 68,
-                "max": 72,
-                "results": [
-                  {
-                    "titleList": [
-                      {
-                        "monster": {
-                          "name": "Ghast",
-                          "amount": "1d1",
-                          "dexModifier": 3,
-                          "AC": 13,
-                          "HP": "8d8",
-                          "reference": "MM:148"
-                        }
-                      },
-                      {
-                        "text": " and "
-                      },
-                      {
-                        "monster": {
-                          "name": "Ghoul",
-                          "amount": "2d6",
-                          "dexModifier": 2,
-                          "AC": 12,
-                          "HP": "5d8",
-                          "reference": "MM:148"
-                        }
-                      }
-                    ],
-                    "reference": "TOA:203",
-                    "text": "The ghast has a blue triangle on its forehead. A passive Perception of 12 can smell the ghouls approach."
-                  }
-                ]
-              },
-              {
-                "min": 73,
-                "max": 77,
-                "results": [
-                  {
-                    "titleList": [
-                      {
-                        "monster": {
-                          "name": "Skeleton",
-                          "amount": "3d6",
-                          "dexModifier": 2,
-                          "AC": 13,
-                          "HP": "2d8+4",
-                          "reference": "MM:272"
-                        }
-                      }
-                    ],
-                    "reference": "TOA:203",
-                    "text": "If the encounter is during the day, the skeletons are on the ground and surprise the players by attacking in their mist."
-                  }
-                ]
-              },
-              {
-                "min": 78,
-                "max": 79,
-                "results": [
-                  {
-                    "titleList": [
-                      {
-                        "monster": {
-                          "name": "Specter",
-                          "amount": "1d1",
-                          "dexModifier": 2,
-                          "AC": 12,
-                          "HP": "5d8",
-                          "reference": "MM:279"
-                        }
-                      }
-                    ],
-                    "reference": "TOA:203",
-                    "text": "A successful DC13 Survival check can find the specter's body as a dead explorer."
-                  },
-                  {
-                    "tableRef": "DeadExplorer"
-                  }
-                ]
-              },
-              {
-                "min": 80,
-                "max": 80,
-                "results": [
-                  {
-                    "titleList": [
-                      {
-                        "monster": {
-                          "name": "Wight",
-                          "amount": "1d1",
-                          "dexModifier": 2,
-                          "AC": 14,
-                          "HP": "6d8+18",
-                          "reference": "MM:300"
-                        }
-                      }
-                    ],
-                    "reference": "TOA:203",
-                    "text": "Hates Chultans and will attack them first or anyone wearing one of their holy symbols."
-                  }
-                ]
-              },
-              {
-                "min": 81,
-                "max": 89,
-                "results": [
-                  {
-                    "table": {
-                      "name": "Zombie Table",
-                      "description": "Roll for a type of zombies",
-                      "roll": "1d10",
-                      "entries" : [
-                        {
-                          "min": 1,
-                          "max": 3,
-                          "results": [
-                            {
-                              "titleList": [
-                                {
-                                  "monster": {
-                                    "name": "Zombie",
-                                    "amount": "3d6",
-                                    "dexModifier": -2,
-                                    "AC": 8,
-                                    "HP": "3d8+9",
-                                    "reference": "MM:316"
-                                  }
-                                }
-                              ],
-                              "text": "The zombies attack.",
-                              "reference": "TOA:203"
-                            }
-                          ]
-                        },
-                        {
-                          "min": 3,
-                          "max": 5,
-                          "results": [
-                            {
-                              "titleList": [
-                                {
-                                  "monster": {
-                                    "name": "Ankylosaurus Zombie",
-                                    "amount": "1d1",
-                                    "dexModifier": -1,
-                                    "AC": 14,
-                                    "HP": "8d12+16",
-                                    "reference": "TOA:240"
-                                  }
-                                }
-                              ],
-                              "text": "The zombie attacks.",
-                              "reference": "TOA:203"
-                            }
-                          ]
-                        },
-                        {
-                          "min": 6,
-                          "max": 7,
-                          "results": [
-                            {
-                              "titleList": [
-                                {
-                                  "monster": {
-                                    "name": "Girallon Zombie",
-                                    "amount": "1d4",
-                                    "dexModifier": 1,
-                                    "AC": 11,
-                                    "HP": "7d10+21",
-                                    "reference": "TOA:240"
-                                  }
-                                }
-                              ],
-                              "text": "The zombies attack.",
-                              "reference": "TOA:203"
-                            }
-                          ]
-                        },
-                        {
-                          "min": 8,
-                          "max": 9,
-                          "results": [
-                            {
-                              "titleList": [
-                                {
-                                  "monster": {
-                                    "name": "Ogre Zombie",
-                                    "amount": "1d4",
-                                    "dexModifier": -2,
-                                    "AC": 8,
-                                    "HP": "9d10+36",
-                                    "reference": "MM:316"
-                                  }
-                                }
-                              ],
-                              "text": "The zombies attack.",
-                              "reference": "TOA:203"
-                            }
-                          ]
-                        },
-                        {
-                          "min": 10,
-                          "max": 10,
-                          "results": [
-                            {
-                              "titleList": [
-                                {
-                                  "monster": {
-                                    "name": "Tyrannosaurus Zombie",
-                                    "amount": "1d1",
-                                    "dexModifier": -2,
-                                    "AC": 11,
-                                    "HP": "13d12+52",
-                                    "reference": "TOA:241"
-                                  }
-                                }
-                              ],
-                              "text": "The zombies attack.",
-                              "reference": "TOA:203"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ]
-              },
-              {
-                "min": 90,
-                "max": 91,
+                "min": 93,
+                "max": 93,
                 "results": [
                   {
                     "titleList": [
@@ -1377,8 +1637,8 @@
                 ]
               },
               {
-                "min": 92,
-                "max": 92,
+                "min": 94,
+                "max": 94,
                 "results": [
                   {
                     "titleList": [
@@ -1408,8 +1668,8 @@
                 ]
               },
               {
-                "min": 93,
-                "max": 93,
+                "min": 95,
+                "max": 95,
                 "results": [
                   {
                     "titleList": [
@@ -1430,8 +1690,8 @@
                 ]
               },
               {
-                "min": 94,
-                "max": 94,
+                "min": 96,
+                "max": 96,
                 "results": [
                   {
                     "title": "Winterscape",
@@ -1441,20 +1701,23 @@
                 ]
               },
               {
-                "min": 95,
-                "max": 96,
+                "min": 97,
+                "max": 97,
                 "results": [
                   {
                     "titleList": [
                       {
                         "monster": {
-                          "name": "Yellow Musk Zombies",
+                          "name": "Yellow Musk Zombie",
                           "amount": "3d6",
                           "dexModifier": -1,
                           "AC": 9,
                           "HP": "6d8+6",
                           "reference": "TOA:237"
                         }
+                      },
+                      {
+                        "text": " and "
                       },
                       {
                         "monster": {
@@ -1473,7 +1736,7 @@
                 ]
               },
               {
-                "min": 97,
+                "min": 98,
                 "max": 98,
                 "results": [
                   {
@@ -1525,8 +1788,9 @@
                           "HP": "12d8+24",
                           "reference": "MM:343"
                         }
-                      },                      {
-                        "text": " , "
+                      },
+                      {
+                        "text": ", "
                       },
                       {
                         "monster": {
@@ -1539,7 +1803,7 @@
                         }
                       },
                       {
-                        "text": " , "
+                        "text": ", "
                       },
                       {
                         "monster": {
@@ -1552,7 +1816,7 @@
                         }
                       },
                       {
-                        "text": " , "
+                        "text": ", "
                       },
                       {
                         "monster": {
