@@ -21,4 +21,9 @@ public class HTMLController extends BaseController {
         model.addAttribute("campaign", tableManager.getCampaigns());
         return "tables";
     }
+
+    @GetMapping("/initiative")
+    public String initiative() {
+        return "initiative";
+    }
 }

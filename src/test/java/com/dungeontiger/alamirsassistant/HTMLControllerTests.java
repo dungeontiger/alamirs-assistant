@@ -34,4 +34,10 @@ class HTMLControllerTests {
 		mvc.perform(MockMvcRequestBuilders.get("/tables").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
+
+	@Test
+	void testInitiative() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/initiative").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
+	}
 }

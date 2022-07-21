@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="common/head::head"></th:block>
+    <script type="text/javascript" src="initiative.js"></script>
+    <script type="text/javascript">
+            function onLoad() {
+                setActivePage("initiative");
+            }
+        </script>
+</head>
+<body onLoad="onLoad()">
+    <div th:replace="common/navbar::navbar">
+    </div>
+    <main class="p-5" id="main">
+        <h1 class="pb-5">Initiative Tracker</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>
+                        Round: <span id="round">0</span>
+                    </h3>
+                    <div id="orderContainer" class="container m-2">
+
+                    </div>
+                    <div>
+                        <button onclick="onNext()" class="btn btn-primary">Next</button> <button onclick="onReset()" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Combatants</h3>
+                    <div>
+                        <select class="form-select form-select-lg mb-3" id="entryList" size="8">
+                        </select>
+                    </div>
+                    <div>
+                        <button onclick="onNew()" class="btn btn-primary">New</button> <button onclick="onEdit()" class="btn btn-primary">Edit</button> <button onclick="onDelete()" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade" id="combatant" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Combatant</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                Name:
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input id="name" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Initiative:
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input id="initiative_roll" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="onOK()" type="button" class="btn btn-primary">OK</button> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
